@@ -1,0 +1,306 @@
+.gui__layer-0 {
+    position: absolute;
+    z-index: 200;
+    background-color: rgba(0, 0, 0, 0.2);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gui__layer-0[visible="false"] {
+    display: none;
+}
+
+.gui__layer-0[visible="true"] {
+    display: flex;
+}
+
+.gui__auberge[visible="false"],
+.gui__guilde[visible="false"],
+.gui__taverne[visible="false"],
+.gui__forge[visible="false"],
+.gui__inventaire[visible="false"] {
+    display: none;
+}
+
+.gui__auberge[visible="true"],
+.gui__guilde[visible="true"],
+.gui__taverne[visible="true"],
+.gui__forge[visible="true"],
+.gui__inventaire[visible="true"] {
+    z-index: 210;
+    background-image: url('./assets/img/gui/auberge_taverne_forge_guilde.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gui__puit[visible="false"] {
+    display: none;
+}
+
+.gui__puit[visible="true"] {
+    z-index: 210;
+    background-image: url('./assets/img/gui/puit.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gui__border-top,
+.gui__border-left,
+.gui__border-bottom,
+.gui__border-right {
+    z-index: 220;
+    display: none;
+}
+
+.gui__border-top[visible="true"],
+.gui__border-left[visible="true"],
+.gui__border-bottom[visible="true"],
+.gui__border-right[visible="true"] {
+    display: block;
+}
+
+.gui__border-top[type="auberge"] {
+    //background-color: rgba(0, 255, 255, 0.452);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 9%;
+}
+
+.gui__border-left[type="auberge"] {
+    //background-color: rgba(43, 255, 0, 0.452);
+    top: 0;
+    left: 0;
+    width: 5%;
+    height: 100%;
+}
+
+.gui__border-bottom[type="auberge"] {
+    //background-color: rgba(0, 255, 255, 0.452);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 7%;
+}
+
+.gui__border-right[type="auberge"] {
+    //background-color: rgba(43, 255, 0, 0.452);
+    top: 0;
+    right: 0;
+    width: 4%;
+    height: 100%;
+}
+
+.gui__border-top[type="puit"] {
+    //background-color: rgba(0, 255, 255, 0.452);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 28%;
+}
+
+.gui__border-left[type="puit"] {
+    //background-color: rgba(43, 255, 0, 0.452);
+    top: 0;
+    left: 0;
+    width: 25.5%;
+    height: 100%;
+}
+
+.gui__border-bottom[type="puit"] {
+    //background-color: rgba(0, 255, 255, 0.452);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 27%;
+}
+
+.gui__border-right[type="puit"] {
+    //background-color: rgba(43, 255, 0, 0.452);
+    top: 0;
+    right: 0;
+    width: 25%;
+    height: 100%;
+}
+
+// ----------------------------
+
+// Gui in Guilde
+
+.gui__in-guilde {
+    //background-color: rgba(0, 255, 255, 0.089);
+    margin-top: 1%;
+    height: 78%;
+    margin-left: 1%;
+    width: 87.5%;
+}
+
+.gui__in-guilde[active="true"] {
+    display: flex;
+    flex-direction: column;
+
+    .gui__in-guilde-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 3% 0 2% 0;
+
+        >button {
+            text-align: center;
+            font-size: 2rem;
+            width: 23%;
+            padding: 1.5% 0;
+            //background-color: rgba(255, 0, 0, 0.13);
+            cursor: pointer;
+        }
+
+        >button[active="true"] {
+            color: rgb(201, 25, 171);
+        }
+    }
+
+    >div[active="false"] {
+        display: none;
+    }
+
+    .gui__in-guilde__quete[active="true"],
+    .gui__in-guilde__donjon[active="true"],
+    .gui__in-guilde__ND[active="true"],
+    .gui__in-guilde__succes[active="true"] {
+        flex-grow: 1;
+        //background-color: rgba(221, 174, 99, 0.363);
+    }
+
+    .gui__in-guilde__quete {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        p {
+            font-size: 2rem;
+            text-align: center;
+            margin: 1% 0;
+        }
+
+        .chapitre-display {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            //background-color: rgba(137, 43, 226, 0.137);
+            gap: 4%;
+            margin-bottom: 4%;
+
+            .arrow {
+                background-image: url('./assets/img/gui/fleche.webp');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 4%;
+                height: 30%;
+                cursor: pointer;
+                background-color: transparent;
+                border: 0;
+            }
+
+            .arrow[left] {
+                transform: rotate(180deg);
+            }
+
+            .arrow[clickable="false"] {
+                background-image: none;
+                cursor: default;
+            }
+
+            .chapitre-content {
+                height: 100%;
+                width: 70%;
+                //background-color: rgba(165, 42, 42, 0.281);
+                overflow-x: hidden;
+                position: relative;
+
+                >div {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+                    width: 100%;
+                    background-color: rgb(150, 221, 221);
+                    border: 0.25rem solid black;
+                    position: absolute;
+                    transition: transform 0.25s ease-in-out;
+
+                    .chapitre-container {
+                        height: 90%;
+                        width: 80%;
+                        //background-color: rgba(39, 235, 235, 0.377);
+                        position: relative;
+
+                        >div {
+                            height: 3rem;
+                            width: 3rem;
+                            border-radius: 3rem;
+                            border: 0.25rem solid black;
+                            position: absolute;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+
+                        >div[clickable="false"] {
+                            background-color: rgb(107, 107, 107);
+                            cursor: default;
+                        }
+
+                        >div[clickable="true"] {
+                            background-color: rgb(216, 102, 102);
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.gui__in-guilde[active="false"] {
+    display: none;
+}
+
+// ----------------------------
+
+// Gui in Inventaire
+
+.gui__in-inventaire {
+    background-color: rgba(0, 255, 255, 0.089);
+    margin-top: 1%;
+    height: 78%;
+    margin-left: 1%;
+    width: 87.5%;
+}
+
+.gui__in-inventaire[active="false"] {
+    display: none;
+}
+
+.gui__in-inventaire[active="true"] {
+    display: flex;
+}

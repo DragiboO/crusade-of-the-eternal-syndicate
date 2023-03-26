@@ -1,0 +1,381 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Anime Ace 2.0 BB", arial;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./assets/img/main-screen/menu.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(15px);
+}
+
+.main-screen {
+  overflow: hidden;
+  position: relative;
+  background: #777777;
+  background-image: url("./assets/img/main-screen/herbe_ciel.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main-screen > div {
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.main-screen .main-screen__forge[glow=true] {
+  z-index: 20;
+  background-image: url("./assets/img/main-screen/forge_glow_02.webp");
+}
+.main-screen .main-screen__forge[glow=false] {
+  z-index: 20;
+  background-image: url("./assets/img/main-screen/forge_02.webp");
+}
+.main-screen .main-screen__auberge[glow=true] {
+  z-index: 10;
+  background-image: url("./assets/img/main-screen/auberge_glow_02.webp");
+}
+.main-screen .main-screen__auberge[glow=false] {
+  z-index: 10;
+  background-image: url("./assets/img/main-screen/auberge_02.webp");
+}
+.main-screen .main-screen__guilde[glow=true] {
+  z-index: 20;
+  background-image: url("./assets/img/main-screen/guilde_glow_02.webp");
+}
+.main-screen .main-screen__guilde[glow=false] {
+  z-index: 20;
+  background-image: url("./assets/img/main-screen/guilde_02.webp");
+}
+.main-screen .main-screen__taverne[glow=true] {
+  z-index: 30;
+  background-image: url("./assets/img/main-screen/taverne_glow_02.webp");
+}
+.main-screen .main-screen__taverne[glow=false] {
+  z-index: 30;
+  background-image: url("./assets/img/main-screen/taverne_02.webp");
+}
+.main-screen .main-screen__puit[glow=true] {
+  z-index: 30;
+  background-image: url("./assets/img/main-screen/puit_plein_glow_02.webp");
+}
+.main-screen .main-screen__puit[glow=false] {
+  z-index: 30;
+  background-image: url("./assets/img/main-screen/puit_vide_02.webp");
+}
+.main-screen .main-screen__inventaire[glow=true] {
+  z-index: 40;
+  background-image: url("./assets/img/main-screen/inventaire_glow_02.webp");
+}
+.main-screen .main-screen__inventaire[glow=false] {
+  z-index: 40;
+  background-image: url("./assets/img/main-screen/inventaire_02.webp");
+}
+.main-screen .main-screen__forge-over {
+  z-index: 100;
+  cursor: pointer;
+}
+.main-screen .main-screen__auberge-over {
+  z-index: 100;
+  cursor: pointer;
+}
+.main-screen .main-screen__guilde-over {
+  z-index: 100;
+  cursor: pointer;
+}
+.main-screen .main-screen__taverne-over {
+  z-index: 100;
+  cursor: pointer;
+}
+.main-screen .main-screen__puit-over {
+  z-index: 100;
+  cursor: pointer;
+}
+.main-screen .main-screen__inventaire-over {
+  z-index: 100;
+  cursor: pointer;
+}
+
+.gui__layer-0 {
+  position: absolute;
+  z-index: 200;
+  background-color: rgba(0, 0, 0, 0.2);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gui__layer-0[visible=false] {
+  display: none;
+}
+
+.gui__layer-0[visible=true] {
+  display: flex;
+}
+
+.gui__auberge[visible=false],
+.gui__guilde[visible=false],
+.gui__taverne[visible=false],
+.gui__forge[visible=false],
+.gui__inventaire[visible=false] {
+  display: none;
+}
+
+.gui__auberge[visible=true],
+.gui__guilde[visible=true],
+.gui__taverne[visible=true],
+.gui__forge[visible=true],
+.gui__inventaire[visible=true] {
+  z-index: 210;
+  background-image: url("./assets/img/gui/auberge_taverne_forge_guilde.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gui__puit[visible=false] {
+  display: none;
+}
+
+.gui__puit[visible=true] {
+  z-index: 210;
+  background-image: url("./assets/img/gui/puit.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gui__border-top,
+.gui__border-left,
+.gui__border-bottom,
+.gui__border-right {
+  z-index: 220;
+  display: none;
+}
+
+.gui__border-top[visible=true],
+.gui__border-left[visible=true],
+.gui__border-bottom[visible=true],
+.gui__border-right[visible=true] {
+  display: block;
+}
+
+.gui__border-top[type=auberge] {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 9%;
+}
+
+.gui__border-left[type=auberge] {
+  top: 0;
+  left: 0;
+  width: 5%;
+  height: 100%;
+}
+
+.gui__border-bottom[type=auberge] {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 7%;
+}
+
+.gui__border-right[type=auberge] {
+  top: 0;
+  right: 0;
+  width: 4%;
+  height: 100%;
+}
+
+.gui__border-top[type=puit] {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 28%;
+}
+
+.gui__border-left[type=puit] {
+  top: 0;
+  left: 0;
+  width: 25.5%;
+  height: 100%;
+}
+
+.gui__border-bottom[type=puit] {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 27%;
+}
+
+.gui__border-right[type=puit] {
+  top: 0;
+  right: 0;
+  width: 25%;
+  height: 100%;
+}
+
+.gui__in-guilde {
+  margin-top: 1%;
+  height: 78%;
+  margin-left: 1%;
+  width: 87.5%;
+}
+
+.gui__in-guilde[active=true] {
+  display: flex;
+  flex-direction: column;
+}
+.gui__in-guilde[active=true] .gui__in-guilde-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 3% 0 2% 0;
+}
+.gui__in-guilde[active=true] .gui__in-guilde-menu > button {
+  text-align: center;
+  font-size: 2rem;
+  width: 23%;
+  padding: 1.5% 0;
+  cursor: pointer;
+}
+.gui__in-guilde[active=true] .gui__in-guilde-menu > button[active=true] {
+  color: #c919ab;
+}
+.gui__in-guilde[active=true] > div[active=false] {
+  display: none;
+}
+.gui__in-guilde[active=true] .gui__in-guilde__quete[active=true],
+.gui__in-guilde[active=true] .gui__in-guilde__donjon[active=true],
+.gui__in-guilde[active=true] .gui__in-guilde__ND[active=true],
+.gui__in-guilde[active=true] .gui__in-guilde__succes[active=true] {
+  flex-grow: 1;
+}
+.gui__in-guilde[active=true] .gui__in-guilde__quete {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.gui__in-guilde[active=true] .gui__in-guilde__quete p {
+  font-size: 2rem;
+  text-align: center;
+  margin: 1% 0;
+}
+.gui__in-guilde[active=true] .gui__in-guilde__quete .chapitre-display {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4%;
+  margin-bottom: 4%;
+}
+.gui__in-guilde[active=true] .gui__in-guilde__quete .chapitre-display .arrow {
+  background-image: url("./assets/img/gui/fleche.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 4%;
+  height: 30%;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+}
+.gui__in-guilde[active=true] .gui__in-guilde__quete .chapitre-display .arrow[left] {
+  transform: rotate(180deg);
+}
+.gui__in-guilde[active=true] .gui__in-guilde__quete .chapitre-display .arrow[clickable=false] {
+  background-image: none;
+  cursor: default;
+}
+.gui__in-guilde[active=true] .gui__in-guilde__quete .chapitre-display .chapitre-content {
+  height: 100%;
+  width: 70%;
+  overflow-x: hidden;
+  position: relative;
+}
+.gui__in-guilde[active=true] .gui__in-guilde__quete .chapitre-display .chapitre-content > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: #96dddd;
+  border: 0.25rem solid black;
+  position: absolute;
+  transition: transform 0.25s ease-in-out;
+}
+.gui__in-guilde[active=true] .gui__in-guilde__quete .chapitre-display .chapitre-content > div .chapitre-container {
+  height: 90%;
+  width: 80%;
+  position: relative;
+}
+.gui__in-guilde[active=true] .gui__in-guilde__quete .chapitre-display .chapitre-content > div .chapitre-container > div {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 3rem;
+  border: 0.25rem solid black;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gui__in-guilde[active=true] .gui__in-guilde__quete .chapitre-display .chapitre-content > div .chapitre-container > div[clickable=false] {
+  background-color: #6b6b6b;
+  cursor: default;
+}
+.gui__in-guilde[active=true] .gui__in-guilde__quete .chapitre-display .chapitre-content > div .chapitre-container > div[clickable=true] {
+  background-color: #d86666;
+  cursor: pointer;
+}
+
+.gui__in-guilde[active=false] {
+  display: none;
+}
+
+.gui__in-inventaire {
+  background-color: rgba(0, 255, 255, 0.089);
+  margin-top: 1%;
+  height: 78%;
+  margin-left: 1%;
+  width: 87.5%;
+}
+
+.gui__in-inventaire[active=false] {
+  display: none;
+}
+
+.gui__in-inventaire[active=true] {
+  display: flex;
+}
+
+/*# sourceMappingURL=style.css.map */

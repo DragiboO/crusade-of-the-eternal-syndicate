@@ -1,0 +1,124 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('./assets/img/main-screen/menu.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(15px);
+}
+
+.main-screen {
+    overflow: hidden;
+    position: relative;
+    background: #777777;
+    background-image: url('./assets/img/main-screen/herbe_ciel.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    >div {
+        position: absolute;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .main-screen__forge[glow="true"] {
+        z-index: 20;
+        background-image: url('./assets/img/main-screen/forge_glow_02.webp');
+    }
+
+    .main-screen__forge[glow="false"] {
+        z-index: 20;
+        background-image: url('./assets/img/main-screen/forge_02.webp');
+    }
+
+    .main-screen__auberge[glow="true"] {
+        z-index: 10;
+        background-image: url('./assets/img/main-screen/auberge_glow_02.webp');
+    }
+
+    .main-screen__auberge[glow="false"] {
+        z-index: 10;
+        background-image: url('./assets/img/main-screen/auberge_02.webp');
+    }
+
+    .main-screen__guilde[glow="true"] {
+        z-index: 20;
+        background-image: url('./assets/img/main-screen/guilde_glow_02.webp');
+    }
+
+    .main-screen__guilde[glow="false"] {
+        z-index: 20;
+        background-image: url('./assets/img/main-screen/guilde_02.webp');
+    }
+
+    .main-screen__taverne[glow="true"] {
+        z-index: 30;
+        background-image: url('./assets/img/main-screen/taverne_glow_02.webp');
+    }
+
+    .main-screen__taverne[glow="false"] {
+        z-index: 30;
+        background-image: url('./assets/img/main-screen/taverne_02.webp');
+    }
+
+    .main-screen__puit[glow="true"] {
+        z-index: 30;
+        background-image: url('./assets/img/main-screen/puit_plein_glow_02.webp');
+    }
+
+    .main-screen__puit[glow="false"] {
+        z-index: 30;
+        background-image: url('./assets/img/main-screen/puit_vide_02.webp');
+    }
+
+    .main-screen__inventaire[glow="true"] {
+        z-index: 40;
+        background-image: url('./assets/img/main-screen/inventaire_glow_02.webp');
+    }
+
+    .main-screen__inventaire[glow="false"] {
+        z-index: 40;
+        background-image: url('./assets/img/main-screen/inventaire_02.webp');
+    }
+
+    .main-screen__forge-over {
+        z-index: 100;
+        cursor: pointer;
+        //background-color: rgba(255, 0, 0, 0.329);
+    }
+
+    .main-screen__auberge-over {
+        z-index: 100;
+        cursor: pointer;
+        //background-color: rgba(21, 255, 0, 0.329);
+    }
+
+    .main-screen__guilde-over {
+        z-index: 100;
+        cursor: pointer;
+        //background-color: rgba(55, 0, 255, 0.329);
+    }
+
+    .main-screen__taverne-over {
+        z-index: 100;
+        cursor: pointer;
+        //background-color: rgba(0, 238, 255, 0.329);
+    }
+
+    .main-screen__puit-over {
+        z-index: 100;
+        cursor: pointer;
+        //background-color: rgba(201, 204, 21, 0.329);
+    }
+
+    .main-screen__inventaire-over {
+        z-index: 100;
+        cursor: pointer;
+        //background-color: rgba(230, 11, 230, 0.329);
+    }
+}

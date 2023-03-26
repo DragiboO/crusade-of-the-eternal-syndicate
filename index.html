@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://allfont.net/allfont.css?fonts=anime-ace-20-bb" rel="stylesheet" type="text/css" />
+    <script src="main.js" defer></script>
+    <title>Idle</title>
+</head>
+<body>
+    <section class="main-screen">
+        <div class="main-screen__forge" glow="false"></div>
+        <div class="main-screen__auberge" glow="false"></div>
+        <div class="main-screen__guilde" glow="false"></div>
+        <div class="main-screen__taverne" glow="false"></div>
+        <div class="main-screen__puit" glow="false"></div>
+        <div class="main-screen__inventaire" glow="false"></div>
+
+        <div class="main-screen__forge-over"></div>
+        <div class="main-screen__auberge-over"></div>
+        <div class="main-screen__guilde-over"></div>
+        <div class="main-screen__taverne-over"></div>
+        <div class="main-screen__puit-over"></div>
+        <div class="main-screen__inventaire-over"></div>
+
+        <div class="gui__layer-0" visible="false">
+            <div class="gui__auberge gui__taverne gui__forge gui__guilde gui__inventaire" visible="false">
+                <div class="gui__in-auberge" active="false"></div>
+
+                <div class="gui__in-taverne" active="false"></div>
+
+                <div class="gui__in-forge" active="false"></div>
+                
+                <div class="gui__in-guilde" active="false">
+                    <div class="gui__in-guilde-menu">
+                        <button class="gui__in-guilde-menu__quete" active="true">Quêtes</button>
+                        <button class="gui__in-guilde-menu__donjon"active="false">Donjons</button>
+                        <button class="gui__in-guilde-menu__ND" active="false">?</button>
+                        <button class="gui__in-guilde-menu__succes" active="false">Succès</button>
+                    </div>
+
+                    <hr>
+
+                    <div class="gui__in-guilde__quete" active="true">
+                        <p class="chapitre"></p>
+                        <div class="chapitre-display">
+                            <button class="arrow" left clickable="true" onclick="swapChapter('left')"></button>
+                            <div class="chapitre-content">
+                                <!-- Generated content in js -->
+                            </div>
+                            <button class="arrow" right clickable="true" onclick="swapChapter('right')"></button>
+                        </div>
+                    </div>
+                    <div class="gui__in-guilde__donjon" active="false">
+                        donjon
+                    </div>
+                    <div class="gui__in-guilde__ND" active="false">
+                        ND
+                    </div>
+                    <div class="gui__in-guilde__succes" active="false">
+                        succes
+                    </div>
+                </div>
+
+                <div class="gui__in-inventaire" active="false">
+                    
+                </div>
+            </div>
+            <div class="gui__puit" visible="false"></div>
+        </div>
+
+        <div class="gui__border-top" visible="false" type="auberge"></div>
+        <div class="gui__border-left" visible="false" type="auberge"></div>
+        <div class="gui__border-bottom" visible="false" type="auberge"></div>
+        <div class="gui__border-right" visible="false" type="auberge"></div>
+    </section>
+</body>
+</html>
