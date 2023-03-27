@@ -378,6 +378,226 @@ body {
   display: flex;
 }
 
+.chapter-template-1 > div {
+  position: absolute;
+}
+.chapter-template-1 :nth-child(1) {
+  top: 70%;
+  left: 0%;
+}
+.chapter-template-1 :nth-child(2) {
+  top: 20%;
+  left: 5%;
+}
+.chapter-template-1 :nth-child(3) {
+  top: 12%;
+  left: 20%;
+}
+.chapter-template-1 :nth-child(4) {
+  top: 45%;
+  left: 31%;
+}
+.chapter-template-1 :nth-child(5) {
+  top: 82%;
+  left: 35%;
+}
+.chapter-template-1 :nth-child(6) {
+  top: 87%;
+  left: 49%;
+}
+.chapter-template-1 :nth-child(7) {
+  top: 50%;
+  left: 56%;
+}
+.chapter-template-1 :nth-child(8) {
+  top: 30%;
+  left: 74%;
+}
+.chapter-template-1 :nth-child(9) {
+  top: 42%;
+  left: 89%;
+}
+.chapter-template-1 :nth-child(10) {
+  top: 45%;
+  left: 100%;
+}
+
+.chapter-template-2 > div {
+  position: absolute;
+}
+.chapter-template-2 :nth-child(1) {
+  top: 80%;
+  left: 0%;
+}
+.chapter-template-2 :nth-child(2) {
+  top: 80%;
+  left: 20%;
+}
+.chapter-template-2 :nth-child(3) {
+  top: 44%;
+  left: 44%;
+}
+.chapter-template-2 :nth-child(4) {
+  top: 17%;
+  left: 30%;
+}
+.chapter-template-2 :nth-child(5) {
+  top: 22%;
+  left: 14%;
+}
+.chapter-template-2 :nth-child(6) {
+  top: 51%;
+  left: 16%;
+}
+.chapter-template-2 :nth-child(7) {
+  top: 79%;
+  left: 40%;
+}
+.chapter-template-2 :nth-child(8) {
+  top: 52%;
+  left: 63%;
+}
+.chapter-template-2 :nth-child(9) {
+  top: 51%;
+  left: 89%;
+}
+.chapter-template-2 :nth-child(10) {
+  top: 70%;
+  left: 100%;
+}
+
+.chapter-template-3 > div {
+  position: absolute;
+}
+.chapter-template-3 :nth-child(1) {
+  top: 39%;
+  left: 0%;
+}
+.chapter-template-3 :nth-child(2) {
+  top: 14;
+  left: 14%;
+}
+.chapter-template-3 :nth-child(3) {
+  top: 17%;
+  left: 30%;
+}
+.chapter-template-3 :nth-child(4) {
+  top: 46%;
+  left: 28%;
+}
+.chapter-template-3 :nth-child(5) {
+  top: 76%;
+  left: 15%;
+}
+.chapter-template-3 :nth-child(6) {
+  top: 92%;
+  left: 32%;
+}
+.chapter-template-3 :nth-child(7) {
+  top: 73%;
+  left: 49%;
+}
+.chapter-template-3 :nth-child(8) {
+  top: 40%;
+  left: 63%;
+}
+.chapter-template-3 :nth-child(9) {
+  top: 27%;
+  left: 84%;
+}
+.chapter-template-3 :nth-child(10) {
+  top: 37%;
+  left: 100%;
+}
+
+.chapter-template-4 > div {
+  position: absolute;
+}
+.chapter-template-4 :nth-child(1) {
+  top: 78%;
+  left: 0%;
+}
+.chapter-template-4 :nth-child(2) {
+  top: 33%;
+  left: 5%;
+}
+.chapter-template-4 :nth-child(3) {
+  top: 10%;
+  left: 17%;
+}
+.chapter-template-4 :nth-child(4) {
+  top: 10%;
+  left: 34%;
+}
+.chapter-template-4 :nth-child(5) {
+  top: 37%;
+  left: 49%;
+}
+.chapter-template-4 :nth-child(6) {
+  top: 60%;
+  left: 41%;
+}
+.chapter-template-4 :nth-child(7) {
+  top: 85%;
+  left: 54%;
+}
+.chapter-template-4 :nth-child(8) {
+  top: 76%;
+  left: 73%;
+}
+.chapter-template-4 :nth-child(9) {
+  top: 51%;
+  left: 93%;
+}
+.chapter-template-4 :nth-child(10) {
+  top: 11%;
+  left: 97%;
+}
+
+.chapter-template-5 > div {
+  position: absolute;
+}
+.chapter-template-5 :nth-child(1) {
+  top: 9%;
+  left: 13%;
+}
+.chapter-template-5 :nth-child(2) {
+  top: 33%;
+  left: 2%;
+}
+.chapter-template-5 :nth-child(3) {
+  top: 66%;
+  left: 2%;
+}
+.chapter-template-5 :nth-child(4) {
+  top: 89%;
+  left: 20%;
+}
+.chapter-template-5 :nth-child(5) {
+  top: 70%;
+  left: 35%;
+}
+.chapter-template-5 :nth-child(6) {
+  top: 36%;
+  left: 43%;
+}
+.chapter-template-5 :nth-child(7) {
+  top: 14%;
+  left: 59%;
+}
+.chapter-template-5 :nth-child(8) {
+  top: 20%;
+  left: 76%;
+}
+.chapter-template-5 :nth-child(9) {
+  top: 42%;
+  left: 86%;
+}
+.chapter-template-5 :nth-child(10) {
+  top: 45%;
+  left: 100%;
+}
+
 .preload {
   background: url("./assets/img/main-screen/auberge_glow_02.webp") no-repeat -9999px -9999px, url("./assets/img/main-screen/forge_glow_02.webp") no-repeat -9999px -9999px, url("./assets/img/main-screen/guilde_glow_02.webp") no-repeat -9999px -9999px, url("./assets/img/main-screen/puit_plein_glow_02.webp") no-repeat -9999px -9999px, url("./assets/img/main-screen/taverne_glow_02.webp") no-repeat -9999px -9999px, url("./assets/img/main-screen/inventaire_glow_02.webp") no-repeat -9999px -9999px, url("./assets/img/gui/auberge_taverne_forge_guilde.webp") no-repeat -9999px -9999px;
 }

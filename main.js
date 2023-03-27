@@ -43,7 +43,7 @@ function randomName(length) {
     return name.charAt(0).toUpperCase() + name.slice(1);
 }
 
-removeLocalStorage('dataIdle')
+//removeLocalStorage('dataIdle')
 
 if (getLocalStorage('dataIdle') === null) {
     setLocalStorage('dataIdle', {
@@ -281,17 +281,31 @@ for (let i = 1; i <= 50; i++) {
     chapter.style.transform = `translateX(${(i - 1) * 100}%)`
     let chapterContainer = document.createElement('div')
     chapterContainer.classList.add('chapitre-container')
+    chapterContainer.classList.add('chapter-template-5')
 
     let coord = generatePoints()
+    //let coord = ['','','','','','','','','','']
+    console.log(coord)
 
-    coord.forEach((item, index) => {
-        let point = document.createElement('div')
-        point.innerText = index + 1
-        point.classList.add(`point-${index + 1 + (i - 1) * 10}`)
-        point.style.left = `${item.x}%`
-        point.style.top = `${item.y}%`
-        chapterContainer.appendChild(point)
-    })
+    if (i == 1) {
+        coord.forEach((item, index) => {
+            let point = document.createElement('div')
+            point.innerText = index + 1
+            point.classList.add(`point-${index + 1 + (i - 1) * 10}`)
+            chapterContainer.appendChild(point)
+        })
+    }
+
+    if (i != 1) {
+        coord.forEach((item, index) => {
+            let point = document.createElement('div')
+            point.innerText = index + 1
+            point.classList.add(`point-${index + 1 + (i - 1) * 10}`)
+            point.style.left = `${item.x}%`
+            point.style.top = `${item.y}%`
+            chapterContainer.appendChild(point)
+        })
+    }
 
     chapter.appendChild(chapterContainer)
     guiGuildeQueteChapitreContent.appendChild(chapter)
