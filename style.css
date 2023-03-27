@@ -378,4 +378,8 @@ body {
   display: flex;
 }
 
+.preload {
+  background: url("./assets/img/main-screen/auberge_glow_02.webp") no-repeat -9999px -9999px, url("./assets/img/main-screen/forge_glow_02.webp") no-repeat -9999px -9999px, url("./assets/img/main-screen/guilde_glow_02.webp") no-repeat -9999px -9999px, url("./assets/img/main-screen/puit_plein_glow_02.webp") no-repeat -9999px -9999px, url("./assets/img/main-screen/taverne_glow_02.webp") no-repeat -9999px -9999px, url("./assets/img/main-screen/inventaire_glow_02.webp") no-repeat -9999px -9999px, url("./assets/img/gui/auberge_taverne_forge_guilde.webp") no-repeat -9999px -9999px;
+}
+
 /*# sourceMappingURL=style.css.map */
