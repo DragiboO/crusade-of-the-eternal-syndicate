@@ -45,23 +45,25 @@ function randomName(length) {
 
 //removeLocalStorage('dataIdle')
 
-if (getLocalStorage('dataIdle') === null) {
-    setLocalStorage('dataIdle', {
-        "playerName": randomName(6),
-        "playerLevel": 1,
-        "playerExp": 0,
-        "inventory": [
-        ],
-        "chapter": 1,
-        "chapterMax": 50,
-        "chapterDisplay": 1,
-        "chapterLevelMax": 1,
-        "beer": 0,
-        "diamond": 0,
-        "dollar": 0,
-        "gold": 0,
-        "lastConnection": Date.now(),
-    })
+function createGameData() {
+    if (getLocalStorage('dataIdle') === null) {
+        setLocalStorage('dataIdle', {
+            "playerName": randomName(6),
+            "playerLevel": 1,
+            "playerExp": 0,
+            "inventory": [
+            ],
+            "chapter": 1,
+            "chapterMax": 50,
+            "chapterDisplay": 1,
+            "chapterLevelMax": 22,
+            "beer": 0,
+            "diamond": 0,
+            "dollar": 0,
+            "gold": 0,
+            "lastConnection": Date.now(),
+        })
+    }
 }
 
 let dataIdle = getLocalStorage('dataIdle')
@@ -81,19 +83,19 @@ async function saveIdle() {
     }
 }
 
-saveIdle()
-
 // ------------------------------
 
 // Set Element Size + Glow + Click
 
-window.addEventListener('load', () => {
-    sizeItem()
-})
-
-window.addEventListener('resize', () => {
-    sizeItem()
-})
+function setElementSize() {
+    window.addEventListener('load', () => {
+        sizeItem()
+    })
+    
+    window.addEventListener('resize', () => {
+        sizeItem()
+    })
+}
 
 let mainScreen = document.querySelector('.main-screen')
 
@@ -165,72 +167,81 @@ function sizeItem() {
 
 let classList = [forge, auberge, guilde, taverne, inventaire, puit]
 let classListOver = [forgeOver, aubergeOver, guildeOver, taverneOver, inventaireOver, puitOver]
-let guiInList =[guiInForge, guiInAuberge, guiInGuilde, guiInTaverne, guiInInventaire]
+let guiInList = [guiInForge, guiInAuberge, guiInGuilde, guiInTaverne, guiInInventaire]
 
-classListOver.forEach((item, index) => {
-    item.addEventListener('mouseover', () => {
-        classList[index].setAttribute('glow', 'true')
+function renderMainScreenOver() {
+    classListOver.forEach((item, index) => {
+        item.addEventListener('mouseover', () => {
+            classList[index].setAttribute('glow', 'true')
+        })
+        item.addEventListener('mouseout', () => {
+            classList[index].setAttribute('glow', 'false')
+        })
     })
-    item.addEventListener('mouseout', () => {
-        classList[index].setAttribute('glow', 'false')
+}
+
+function addMainScreenMenuBtn() {
+    classListOver.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            guiLayer0.setAttribute('visible', 'true')
+            if (index >= 0 && index <= 4) {
+                guiAuberge.setAttribute('visible', 'true')
+
+                guiBorderTop.setAttribute('visible', 'true')
+                guiBorderTop.setAttribute('type', 'auberge')
+
+                guiBorderLeft.setAttribute('visible', 'true')
+                guiBorderLeft.setAttribute('type', 'auberge')
+
+                guiBorderBottom.setAttribute('visible', 'true')
+                guiBorderBottom.setAttribute('type', 'auberge')
+
+                guiBorderRight.setAttribute('visible', 'true')
+                guiBorderRight.setAttribute('type', 'auberge')
+
+                guiInList.forEach((item) => {
+                    item.setAttribute('active', 'false')
+                })
+                guiInList[index].setAttribute('active', 'true')
+            } else if (index == 5) {
+                guiPuit.setAttribute('visible', 'true')
+
+                guiBorderTop.setAttribute('visible', 'true')
+                guiBorderTop.setAttribute('type', 'puit')
+
+                guiBorderLeft.setAttribute('visible', 'true')
+                guiBorderLeft.setAttribute('type', 'puit')
+
+                guiBorderBottom.setAttribute('visible', 'true')
+                guiBorderBottom.setAttribute('type', 'puit')
+
+                guiBorderRight.setAttribute('visible', 'true')
+                guiBorderRight.setAttribute('type', 'puit')
+            }
+        })
     })
-    item.addEventListener('click', () => {
-        guiLayer0.setAttribute('visible', 'true')
-        if (index >= 0 && index <= 4) {
-            guiAuberge.setAttribute('visible', 'true')
-
-            guiBorderTop.setAttribute('visible', 'true')
-            guiBorderTop.setAttribute('type', 'auberge')
-
-            guiBorderLeft.setAttribute('visible', 'true')
-            guiBorderLeft.setAttribute('type', 'auberge')
-
-            guiBorderBottom.setAttribute('visible', 'true')
-            guiBorderBottom.setAttribute('type', 'auberge')
-
-            guiBorderRight.setAttribute('visible', 'true')
-            guiBorderRight.setAttribute('type', 'auberge')
-
-            guiInList.forEach((item) => {
-                item.setAttribute('active', 'false')
-            })
-            guiInList[index].setAttribute('active', 'true')
-        } else if (index == 5) {
-            guiPuit.setAttribute('visible', 'true')
-
-            guiBorderTop.setAttribute('visible', 'true')
-            guiBorderTop.setAttribute('type', 'puit')
-
-            guiBorderLeft.setAttribute('visible', 'true')
-            guiBorderLeft.setAttribute('type', 'puit')
-
-            guiBorderBottom.setAttribute('visible', 'true')
-            guiBorderBottom.setAttribute('type', 'puit')
-
-            guiBorderRight.setAttribute('visible', 'true')
-            guiBorderRight.setAttribute('type', 'puit')
-        }
-    })
-})
+}
 
 let classListBorder = [guiBorderTop, guiBorderLeft, guiBorderBottom, guiBorderRight, document.querySelector('body')]
 
-classListBorder.forEach((item) => {
-    item.addEventListener('click', () => {
-        guiLayer0.setAttribute('visible', 'false')
-        guiAuberge.setAttribute('visible', 'false')
-        guiPuit.setAttribute('visible', 'false')
-
-        guiBorderTop.setAttribute('visible', 'false')
-        guiBorderLeft.setAttribute('visible', 'false')
-        guiBorderBottom.setAttribute('visible', 'false')
-        guiBorderRight.setAttribute('visible', 'false')
+function closeAllMainScreenMenu() {
+    classListBorder.forEach((item) => {
+        item.addEventListener('click', () => {
+            guiLayer0.setAttribute('visible', 'false')
+            guiAuberge.setAttribute('visible', 'false')
+            guiPuit.setAttribute('visible', 'false')
+    
+            guiBorderTop.setAttribute('visible', 'false')
+            guiBorderLeft.setAttribute('visible', 'false')
+            guiBorderBottom.setAttribute('visible', 'false')
+            guiBorderRight.setAttribute('visible', 'false')
+        })
     })
-})
-
-document.querySelector('.main-screen').addEventListener('click', (e) => {
-    e.stopPropagation()
-})
+    
+    document.querySelector('.main-screen').addEventListener('click', (e) => {
+        e.stopPropagation()
+    })
+}
 
 // -----------------------------------------------
 
@@ -249,24 +260,24 @@ let guiGuildeSucces = document.querySelector('.gui__in-guilde__succes')
 let guiGuildeMenuBtnList = [guiGuildeMenuQuete, guiGuildeMenuDonjon, guiGuildeMenuND, guiGuildeMenuSucces]
 let guiGuildeContentList = [guiGuildeQuete, guiGuildeDonjon, guiGuildeND, guiGuildeSucces]
 
-guiGuildeMenuBtnList.forEach((item, index) => {
-    item.addEventListener('click', () => {
-        guiGuildeMenuBtnList.forEach((item) => {
-            item.setAttribute('active', 'false')
+function renderGuildeMenu() {
+    guiGuildeMenuBtnList.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            guiGuildeMenuBtnList.forEach((item) => {
+                item.setAttribute('active', 'false')
+            })
+            guiGuildeContentList.forEach((item) => {
+                item.setAttribute('active', 'false')
+            })
+            item.setAttribute('active', 'true')
+            guiGuildeContentList[index].setAttribute('active', 'true')
         })
-        guiGuildeContentList.forEach((item) => {
-            item.setAttribute('active', 'false')
-        })
-        item.setAttribute('active', 'true')
-        guiGuildeContentList[index].setAttribute('active', 'true')
     })
-})
+}
 
 // -----------------------------------------------
 
 // Menu Guilde - Quete
-
-dataIdle.chapterMax = 50
 
 let guiGuildeQueteChapitreName = document.querySelector('.chapitre')
 
@@ -275,77 +286,34 @@ let guiGuildeQueteChapitreRight = document.getElementsByClassName('arrow')[1]
 
 let guiGuildeQueteChapitreContent = document.querySelector('.chapitre-content')
 
-for (let i = 1; i <= 50; i++) {
-    let chapter = document.createElement('div')
-    chapter.classList.add(`chapitre-${i}`)
-    chapter.style.transform = `translateX(${(i - 1) * 100}%)`
-    let chapterContainer = document.createElement('div')
-    chapterContainer.classList.add('chapitre-container')
-    chapterContainer.classList.add('chapter-template-5')
-
-    let coord = generatePoints()
-    //let coord = ['','','','','','','','','','']
-    console.log(coord)
-
-    if (i == 1) {
-        coord.forEach((item, index) => {
-            let point = document.createElement('div')
-            point.innerText = index + 1
-            point.classList.add(`point-${index + 1 + (i - 1) * 10}`)
+function renderChapter() {
+    for (let i = 1; i <= 50; i++) {
+        let chapter = document.createElement('div')
+        chapter.classList.add(`chapitre-${i}`)
+        chapter.style.transform = `translateX(${(i - 1) * 100}%)`
+        let chapterContainer = document.createElement('div')
+        chapterContainer.classList.add('chapitre-container')
+        chapterContainer.classList.add(`chapter-template-${i}`)
+    
+        for (let j = 1; j <= 10; j++) {
+            let point = document.createElement('button')
+            point.innerText = j
+            point.classList.add(`point-${j + (i - 1) * 10}`)
             chapterContainer.appendChild(point)
-        })
-    }
-
-    if (i != 1) {
-        coord.forEach((item, index) => {
-            let point = document.createElement('div')
-            point.innerText = index + 1
-            point.classList.add(`point-${index + 1 + (i - 1) * 10}`)
-            point.style.left = `${item.x}%`
-            point.style.top = `${item.y}%`
-            chapterContainer.appendChild(point)
-        })
-    }
-
-    chapter.appendChild(chapterContainer)
-    guiGuildeQueteChapitreContent.appendChild(chapter)
-}
-
-function generatePoints() {
-    const points = [];
-    const usedCoords = new Set();
-
-    while (points.length < 10) {
-        const x = Math.floor(Math.random() * 71) + 15
-        const y = Math.floor(Math.random() * 71) + 15
-        const coords = `${x},${y}`;
-
-        let tooClose = false;
-
-        for (let i = 0; i < points.length; i++) {
-            const dx = x - points[i].x;
-            const dy = y - points[i].y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
-
-            if (distance < 13) {
-                tooClose = true;
-                break;
-            }
         }
-
-        if (!usedCoords.has(coords) && !tooClose) {
-            usedCoords.add(coords);
-            points.push({ x, y });
+    
+        for (let j = 0; j <= 10; j++) {
+            let line = document.createElement('div')
+            
+                line.classList.add(`line-${j + (i - 1) * 10}-${j + (i - 1) * 10 + 1}`)
+            
+            chapterContainer.appendChild(line)
         }
+    
+        chapter.appendChild(chapterContainer)
+        guiGuildeQueteChapitreContent.appendChild(chapter)
     }
-
-    // Tri des points de gauche à droite
-    points.sort((a, b) => a.x - b.x);
-
-    return points;
 }
-
-swapChapter()
 
 function swapChapter(orientation) {
     switch (orientation) {
@@ -373,19 +341,38 @@ function swapChapter(orientation) {
         guiGuildeQueteChapitreRight.setAttribute('clickable', 'false')
     }
     guiGuildeQueteChapitreName.innerHTML = `Chapitre ${dataIdle.chapterDisplay}`
-    renderChapterLevelMax()
 }
 
 function renderChapterLevelMax() {
     for (let i = 1; i <= 500; i++) {
         let point = document.querySelector(`.point-${i}`)
-        point.setAttribute('clickable', 'false')
+        point.setAttribute('state', 'not-passed')
     }
     
     for (let i = 1; i <= dataIdle.chapterLevelMax; i++) {
         let point = document.querySelector(`.point-${i}`)
-        point.setAttribute('clickable', 'true')
+        point.setAttribute('state', 'passed')
     }
+
+    document.querySelector(`.point-${dataIdle.chapterLevelMax + 1}`).setAttribute('state', 'to-pass')
 }
 
-renderChapterLevelMax()
+// -----------------------------------------------
+
+// Game Initialization
+
+createGameData()
+saveIdle()
+
+setElementSize()
+renderMainScreenOver()
+addMainScreenMenuBtn()
+closeAllMainScreenMenu()
+
+renderGuildeMenu()
+
+    renderChapter()
+    swapChapter()
+    renderChapterLevelMax()
+
+// -----------------------------------------------

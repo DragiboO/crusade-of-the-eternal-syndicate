@@ -1,8 +1,4 @@
 .chapter-template-1 {
-    >div {
-        position: absolute;
-    }
-
     :nth-child(1) {
         top: 70%;
         left: 0%;
@@ -52,26 +48,99 @@
         top: 45%;
         left: 100%;
     }
+
+    :nth-child(11) {
+        top: calc(91% + 1.5rem);
+        left: calc(-13% + 1.5rem);
+        transform: rotateZ(-36deg);
+        width: 14%;
+    }
+
+    :nth-child(12) {
+        top: calc(70% + 1.5rem);
+        left: calc(0% + 1.5rem);
+        transform: rotateZ(-77deg);
+        width: 23%;
+    }
+
+    :nth-child(13) {
+        top: calc(20% + 1.5rem);
+        left: calc(5% + 1.5rem);
+        transform: rotateZ(-14deg);
+        width: 16%;
+    }
+
+    :nth-child(14) {
+        top: calc(12% + 1.5rem);
+        left: calc(20% + 1.5rem);
+        transform: rotateZ(51deg);
+        width: 18%;
+    }
+
+    :nth-child(15) {
+        top: calc(45% + 1.5rem);
+        left: calc(31% + 1.5rem);
+        transform: rotateZ(76deg);
+        width: 16%;
+    }
+
+    :nth-child(16) {
+        top: calc(82% + 1.5rem);
+        left: calc(35% + 1.5rem);
+        transform: rotateZ(7deg);
+        width: 12%;
+    }
+
+    :nth-child(17) {
+        top: calc(87% + 1.5rem);
+        left: calc(49% + 1.5rem);
+        transform: rotateZ(-66deg);
+        width: 18%;
+    }
+
+    :nth-child(18) {
+        top: calc(50% + 1.5rem);
+        left: calc(56% + 1.5rem);
+        transform: rotateZ(-26deg);
+        width: 21%;
+    }
+
+    :nth-child(19) {
+        top: calc(30% + 1.5rem);
+        left: calc(74% + 1.5rem);
+        transform: rotateZ(17deg);
+        width: 16%;
+    }
+
+    :nth-child(20) {
+        top: calc(42% + 1.5rem);
+        left: calc(89% + 1.5rem);
+        transform: rotateZ(5deg);
+        width: 9%;
+    }
+
+    :nth-child(21) {
+        top: calc(45% + 1.5rem);
+        left: calc(100% + 1.5rem);
+        transform: rotateZ(-19deg);
+        width: 16%;
+    }
 }
 
 .chapter-template-2 {
-    >div {
-        position: absolute;
-    }
-
     :nth-child(1) {
         top: 80%;
         left: 0%;
     }
 
     :nth-child(2) {
-        top: 80%;
+        top: 93%;
         left: 20%;
     }
 
     :nth-child(3) {
-        top: 44%;
-        left: 44%;
+        top: 46%;
+        left: 38%;
     }
 
     :nth-child(4) {
@@ -108,20 +177,93 @@
         top: 70%;
         left: 100%;
     }
+
+    :nth-child(11) {
+        top: calc(50% + 1.5rem);
+        left: calc(-13% + 1.5rem);
+        transform: rotateZ(43deg);
+        width: 16%;
+    }
+
+    :nth-child(12) {
+        top: calc(80% + 1.5rem);
+        left: calc(0% + 1.5rem);
+        transform: rotateZ(14deg);
+        width: 21%;
+    }
+
+    :nth-child(13) {
+        top: calc(93% + 1.5rem);
+        left: calc(20% + 1.5rem);
+        transform: rotateZ(-48deg);
+        width: 25%;
+    }
+
+    :nth-child(14) {
+        top: calc(46% + 1.5rem);
+        left: calc(38% + 1.5rem);
+        transform: rotateZ(-122deg);
+        width: 13%;
+    }
+
+    :nth-child(15) {
+        top: calc(17% + 1.5rem);
+        left: calc(30% + 1.5rem);
+        transform: rotateZ(173deg);
+        width: 14%;
+    }
+
+    :nth-child(16) {
+        top: calc(22% + 1.5rem);
+        left: calc(14% + 1.5rem);
+        transform: rotateZ(-279deg);
+        width: 10%;
+    }
+
+    :nth-child(17) {
+        top: calc(51% + 1.5rem);
+        left: calc(16% + 1.5rem);
+        transform: rotateZ(26deg);
+        width: 27%;
+    }
+
+    :nth-child(18) {
+        top: calc(79% + 1.5rem);
+        left: calc(40% + 1.5rem);
+        transform: rotateZ(-27deg);
+        width: 24%;
+    }
+
+    :nth-child(19) {
+        top: calc(52% + 1.5rem);
+        left: calc(63% + 1.5rem);
+        transform: rotateZ(-2deg);
+        width: 24%;
+    }
+
+    :nth-child(20) {
+        top: calc(51% + 1.5rem);
+        left: calc(89% + 1.5rem);
+        transform: rotateZ(35deg);
+        width: 11%;
+    }
+
+    :nth-child(21) {
+        top: calc(70% + 1.5rem);
+        left: calc(100% + 1.5rem);
+        transform: rotateZ(14deg);
+        width: 13%;
+    }
 }
 
 .chapter-template-3 {
-    >div {
-        position: absolute;
-    }
-
     :nth-child(1) {
         top: 39%;
         left: 0%;
     }
 
     :nth-child(2) {
-        top: 14;
+        top: 14%;
         left: 14%;
     }
 
@@ -164,13 +306,86 @@
         top: 37%;
         left: 100%;
     }
+
+    :nth-child(11) {
+        top: calc(45% + 1.5rem);
+        left: calc(-13% + 1.5rem);
+        transform: rotateZ(-13deg);
+        width: 11%;
+    }
+
+    :nth-child(12) {
+        top: calc(39% + 1.5rem);
+        left: calc(0% + 1.5rem);
+        transform: rotateZ(-38deg);
+        width: 16%;
+    }
+
+    :nth-child(13) {
+        top: calc(14% + 1.5rem);
+        left: calc(14% + 1.5rem);
+        transform: rotateZ(4deg);
+        width: 14%;
+    }
+
+    :nth-child(14) {
+        top: calc(17% + 1.5rem);
+        left: calc(30% + 1.5rem);
+        transform: rotateZ(100deg);
+        width: 10%;
+    }
+
+    :nth-child(15) {
+        top: calc(46% + 1.5rem);
+        left: calc(28% + 1.5rem);
+        transform: rotateZ(-223deg);
+        width: 16%;
+    }
+
+    :nth-child(16) {
+        top: calc(76% + 1.5rem);
+        left: calc(15% + 1.5rem);
+        transform: rotateZ(20deg);
+        width: 16%;
+    }
+
+    :nth-child(17) {
+        top: calc(92% + 1.5rem);
+        left: calc(32% + 1.5rem);
+        transform: rotateZ(-26deg);
+        width: 17%;
+    }
+
+    :nth-child(18) {
+        top: calc(73% + 1.5rem);
+        left: calc(49% + 1.5rem);
+        transform: rotateZ(-45deg);
+        width: 18%;
+    }
+
+    :nth-child(19) {
+        top: calc(40% + 1.5rem);
+        left: calc(63% + 1.5rem);
+        transform: rotateZ(-16deg);
+        width: 22%;
+    }
+
+    :nth-child(20) {
+        top: calc(27% + 1.5rem);
+        left: calc(84% + 1.5rem);
+        transform: rotateZ(14deg);
+        width: 14%;
+    }
+
+    :nth-child(21) {
+        top: calc(37% + 1.5rem);
+        left: calc(100% + 1.5rem);
+        transform: rotateZ(0deg);
+        width: 13%;
+    }
 }
 
 .chapter-template-4 {
-    >div {
-        position: absolute;
-    }
-
     :nth-child(1) {
         top: 78%;
         left: 0%;
@@ -220,13 +435,86 @@
         top: 11%;
         left: 97%;
     }
+
+    :nth-child(11) {
+        top: calc(90% + 1.5rem);
+        left: calc(-13% + 1.5rem);
+        transform: rotateZ(-23deg);
+        width: 12%;
+    }
+
+    :nth-child(12) {
+        top: calc(78% + 1.5rem);
+        left: calc(0% + 1.5rem);
+        transform: rotateZ(-75deg);
+        width: 18%;
+    }
+
+    :nth-child(13) {
+        top: calc(33% + 1.5rem);
+        left: calc(5% + 1.5rem);
+        transform: rotateZ(-41deg);
+        width: 14%;
+    }
+
+    :nth-child(14) {
+        top: calc(10% + 1.5rem);
+        left: calc(17% + 1.5rem);
+        transform: rotateZ(-1deg);
+        width: 17%;
+    }
+
+    :nth-child(15) {
+        top: calc(10% + 1.5rem);
+        left: calc(34% + 1.5rem);
+        transform: rotateZ(36deg);
+        width: 17%;
+    }
+
+    :nth-child(16) {
+        top: calc(37% + 1.5rem);
+        left: calc(49% + 1.5rem);
+        transform: rotateZ(130deg);
+        width: 10%;
+    }
+
+    :nth-child(17) {
+        top: calc(60% + 1.5rem);
+        left: calc(41% + 1.5rem);
+        transform: rotateZ(38deg);
+        width: 19%;
+    }
+
+    :nth-child(18) {
+        top: calc(85% + 1.5rem);
+        left: calc(54% + 1.5rem);
+        transform: rotateZ(-12deg);
+        width: 18%;
+    }
+
+    :nth-child(19) {
+        top: calc(76% + 1.5rem);
+        left: calc(73% + 1.5rem);
+        transform: rotateZ(-28deg);
+        width: 21%;
+    }
+
+    :nth-child(20) {
+        top: calc(51% + 1.5rem);
+        left: calc(93% + 1.5rem);
+        transform: rotateZ(-77deg);
+        width: 15%;
+    }
+
+    :nth-child(21) {
+        top: calc(11% + 1.5rem);
+        left: calc(97% + 1.5rem);
+        transform: rotateZ(-25deg);
+        width: 17%;
+    }
 }
 
 .chapter-template-5 {
-    >div {
-        position: absolute;
-    }
-
     :nth-child(1) {
         top: 9%;
         left: 13%;
@@ -275,5 +563,728 @@
     :nth-child(10) {
         top: 45%;
         left: 100%;
+    }
+
+    :nth-child(11) {
+        top: calc(-14% + 1.5rem);
+        left: calc(16% + 1.5rem);
+        transform: rotateZ(108deg);
+        width: 8%;
+    }
+
+    :nth-child(12) {
+        top: calc(9% + 1.5rem);
+        left: calc(13% + 1.5rem);
+        transform: rotateZ(139deg);
+        width: 12%;
+    }
+
+    :nth-child(13) {
+        top: calc(33% + 1.5rem);
+        left: calc(2% + 1.5rem);
+        transform: rotateZ(90deg);
+        width: 11%;
+    }
+
+    :nth-child(14) {
+        top: calc(66% + 1.5rem);
+        left: calc(2% + 1.5rem);
+        transform: rotateZ(27deg);
+        width: 18%;
+    }
+
+    :nth-child(15) {
+        top: calc(89% + 1.5rem);
+        left: calc(20% + 1.5rem);
+        transform: rotateZ(-28deg);
+        width: 15%;
+    }
+
+    :nth-child(16) {
+        top: calc(70% + 1.5rem);
+        left: calc(35% + 1.5rem);
+        transform: rotateZ(-61deg);
+        width: 14%;
+    }
+
+    :nth-child(17) {
+        top: calc(36% + 1.5rem);
+        left: calc(43% + 1.5rem);
+        transform: rotateZ(-31deg);
+        width: 19%;
+    }
+
+    :nth-child(18) {
+        top: calc(14% + 1.5rem);
+        left: calc(59% + 1.5rem);
+        transform: rotateZ(7deg);
+        width: 17%;
+    }
+
+    :nth-child(19) {
+        top: calc(20% + 1.5rem);
+        left: calc(76% + 1.5rem);
+        transform: rotateZ(41deg);
+        width: 11%;
+    }
+
+    :nth-child(20) {
+        top: calc(42% + 1.5rem);
+        left: calc(86% + 1.5rem);
+        transform: rotateZ(4deg);
+        width: 12%;
+    }
+
+    :nth-child(21) {
+        top: calc(45% + 1.5rem);
+        left: calc(100% + 1.5rem);
+        transform: rotateZ(-17deg);
+        width: 14%;
+    }
+}
+
+.chapter-template-6 {
+    :nth-child(1) {
+        top: 2%;
+        left: 0%;
+    }
+
+    :nth-child(2) {
+        top: 12%;
+        left: 17%;
+    }
+
+    :nth-child(3) {
+        top: 31%;
+        left: 37%;
+    }
+
+    :nth-child(4) {
+        top: 70%;
+        left: 40%;
+    }
+
+    :nth-child(5) {
+        top: 89%;
+        left: 20%;
+    }
+
+    :nth-child(6) {
+        top: 57%;
+        left: 7%;
+    }
+
+    :nth-child(7) {
+        top: 5%;
+        left: 38%;
+    }
+
+    :nth-child(8) {
+        top: 18%;
+        left: 62%;
+    }
+
+    :nth-child(9) {
+        top: 48%;
+        left: 80%;
+    }
+
+    :nth-child(10) {
+        top: 86%;
+        left: 88%;
+    }
+
+    :nth-child(11) {
+        top: calc(11% + 1.5rem);
+        left: calc(-13% + 1.5rem);
+        transform: rotateZ(-19deg);
+        width: 12%;
+    }
+
+    :nth-child(12) {
+        top: calc(2% + 1.5rem);
+        left: calc(0% + 1.5rem);
+        transform: rotateZ(12deg);
+        width: 16%;
+    }
+
+    :nth-child(13) {
+        top: calc(12% + 1.5rem);
+        left: calc(17% + 1.5rem);
+        transform: rotateZ(20deg);
+        width: 19%;
+    }
+
+    :nth-child(14) {
+        top: calc(31% + 1.5rem);
+        left: calc(37% + 1.5rem);
+        transform: rotateZ(80deg);
+        width: 14%;
+    }
+
+    :nth-child(15) {
+        top: calc(70% + 1.5rem);
+        left: calc(40% + 1.5rem);
+        transform: rotateZ(159deg);
+        width: 19%;
+    }
+
+    :nth-child(16) {
+        top: calc(89% + 1.5rem);
+        left: calc(20% + 1.5rem);
+        transform: rotateZ(-134deg);
+        width: 17%;
+    }
+
+    :nth-child(17) {
+        top: calc(57% + 1.5rem);
+        left: calc(7% + 1.5rem);
+        transform: rotateZ(-35.5deg);
+        width: 36%;
+    }
+
+    :nth-child(18) {
+        top: calc(5% + 1.5rem);
+        left: calc(38% + 1.5rem);
+        transform: rotateZ(12deg);
+        width: 22%;
+    }
+
+    :nth-child(19) {
+        top: calc(18% + 1.5rem);
+        left: calc(62% + 1.5rem);
+        transform: rotateZ(35deg);
+        width: 20%;
+    }
+
+    :nth-child(20) {
+        top: calc(48% + 1.5rem);
+        left: calc(80% + 1.5rem);
+        transform: rotateZ(64deg);
+        width: 15%;
+    }
+
+    :nth-child(21) {
+        top: calc(86% + 1.5rem);
+        left: calc(88% + 1.5rem);
+        transform: rotateZ(30deg);
+        width: 22%;
+    }
+}
+
+.chapter-template-7 {
+    :nth-child(1) {
+        top: 89%;
+        left: 0%;
+    }
+
+    :nth-child(2) {
+        top: 64%;
+        left: 4%;
+    }
+
+    :nth-child(3) {
+        top: 33%;
+        left: 2%;
+    }
+
+    :nth-child(4) {
+        top: 4%;
+        left: 9%;
+    }
+
+    :nth-child(5) {
+        top: 13%;
+        left: 26%;
+    }
+
+    :nth-child(6) {
+        top: 35%;
+        left: 41%;
+    }
+
+    :nth-child(7) {
+        top: 67%;
+        left: 51%;
+    }
+
+    :nth-child(8) {
+        top: 87%;
+        left: 68%;
+    }
+
+    :nth-child(9) {
+        top: 70%;
+        left: 90%;
+    }
+
+    :nth-child(10) {
+        top: 35%;
+        left: 98%;
+    }
+
+    :nth-child(11) {
+        top: calc(99% + 1.5rem);
+        left: calc(-13% + 1.5rem);
+        transform: rotateZ(-19deg);
+        width: 12%;
+    }
+
+    :nth-child(12) {
+        top: calc(89% + 1.5rem);
+        left: calc(0% + 1.5rem);
+        transform: rotateZ(-69deg);
+        width: 9%;
+    }
+
+    :nth-child(13) {
+        top: calc(64% + 1.5rem);
+        left: calc(4% + 1.5rem);
+        transform: rotateZ(-99deg);
+        width: 11%;
+    }
+
+    :nth-child(14) {
+        top: calc(33% + 1.5rem);
+        left: calc(2% + 1.5rem);
+        transform: rotateZ(-61deg);
+        width: 12%;
+    }
+
+    :nth-child(15) {
+        top: calc(4% + 1.5rem);
+        left: calc(9% + 1.5rem);
+        transform: rotateZ(10deg);
+        width: 16%;
+    }
+
+    :nth-child(16) {
+        top: calc(13% + 1.5rem);
+        left: calc(26% + 1.5rem);
+        transform: rotateZ(31deg);
+        width: 16%;
+    }
+
+    :nth-child(17) {
+        top: calc(35% + 1.5rem);
+        left: calc(41% + 1.5rem);
+        transform: rotateZ(53deg);
+        width: 14%;
+    }
+
+    :nth-child(18) {
+        top: calc(67% + 1.5rem);
+        left: calc(51% + 1.5rem);
+        transform: rotateZ(25deg);
+        width: 17%;
+    }
+
+    :nth-child(19) {
+        top: calc(87% + 1.5rem);
+        left: calc(68% + 1.5rem);
+        transform: rotateZ(-19deg);
+        width: 21%;
+    }
+
+    :nth-child(20) {
+        top: calc(70% + 1.5rem);
+        left: calc(90% + 1.5rem);
+        transform: rotateZ(-63deg);
+        width: 15%;
+    }
+
+    :nth-child(21) {
+        top: calc(35% + 1.5rem);
+        left: calc(98% + 1.5rem);
+        transform: rotateZ(-30deg);
+        width: 17%;
+    }
+}
+
+.chapter-template-8 {
+    :nth-child(1) {
+        top: 65%;
+        left: 5%;
+    }
+
+    :nth-child(2) {
+        top: 28%;
+        left: 20%;
+    }
+
+    :nth-child(3) {
+        top: 13%;
+        left: 38%;
+    }
+
+    :nth-child(4) {
+        top: 34%;
+        left: 43%;
+    }
+
+    :nth-child(5) {
+        top: 78%;
+        left: 40%;
+    }
+
+    :nth-child(6) {
+        top: 85%;
+        left: 25%;
+    }
+
+    :nth-child(7) {
+        top: 62%;
+        left: 25%;
+    }
+
+    :nth-child(8) {
+        top: 51%;
+        left: 63%;
+    }
+
+    :nth-child(9) {
+        top: 69%;
+        left: 84%;
+    }
+
+    :nth-child(10) {
+        top: 27%;
+        left: 100%;
+    }
+
+    :nth-child(11) {
+        top: calc(79% + 1.5rem);
+        left: calc(-13% + 1.5rem);
+        transform: rotateZ(-19deg);
+        width: 17%;
+    }
+
+    :nth-child(12) {
+        top: calc(65% + 1.5rem);
+        left: calc(5% + 1.5rem);
+        transform: rotateZ(-47deg);
+        width: 20%;
+    }
+
+    :nth-child(13) {
+        top: calc(28% + 1.5rem);
+        left: calc(20% + 1.5rem);
+        transform: rotateZ(-20deg);
+        width: 17%;
+    }
+
+    :nth-child(14) {
+        top: calc(13% + 1.5rem);
+        left: calc(38% + 1.5rem);
+        transform: rotateZ(61deg);
+        width: 8%;
+    }
+
+    :nth-child(15) {
+        top: calc(34% + 1.5rem);
+        left: calc(43% + 1.5rem);
+        transform: rotateZ(100deg);
+        width: 20%;
+    }
+
+    :nth-child(16) {
+        top: calc(78% + 1.5rem);
+        left: calc(40% + 1.5rem);
+        transform: rotateZ(170deg);
+        width: 13%;
+    }
+
+    :nth-child(17) {
+        top: calc(85% + 1.5rem);
+        left: calc(25% + 1.5rem);
+        transform: rotateZ(-89deg);
+        width: 8%;
+    }
+
+    :nth-child(18) {
+        top: calc(62% + 1.5rem);
+        left: calc(25% + 1.5rem);
+        transform: rotateZ(-7deg);
+        width: 36%;
+    }
+
+    :nth-child(19) {
+        top: calc(51% + 1.5rem);
+        left: calc(63% + 1.5rem);
+        transform: rotateZ(19deg);
+        width: 20%;
+    }
+
+    :nth-child(20) {
+        top: calc(69% + 1.5rem);
+        left: calc(84% + 1.5rem);
+        transform: rotateZ(-48deg);
+        width: 22%;
+    }
+
+    :nth-child(21) {
+        top: calc(27% + 1.5rem);
+        left: calc(100% + 1.5rem);
+        transform: rotateZ(-17deg);
+        width: 13%;
+    }
+}
+
+.chapter-template-9 {
+    :nth-child(1) {
+        top: 20%;
+        left: 2%;
+    }
+
+    :nth-child(2) {
+        top: 55%;
+        left: 5%;
+    }
+
+    :nth-child(3) {
+        top: 80%;
+        left: 15%;
+    }
+
+    :nth-child(4) {
+        top: 69%;
+        left: 33%;
+    }
+
+    :nth-child(5) {
+        top: 36%;
+        left: 43%;
+    }
+
+    :nth-child(6) {
+        
+        top: 5%;
+        left: 52%;
+    }
+
+    :nth-child(7) {
+        top: 0%;
+        left: 69%;
+    }
+
+    :nth-child(8) {
+        top: 36%;
+        left: 73%;
+    }
+
+    :nth-child(9) {
+        top: 63%;
+        left: 84%;
+    }
+
+    :nth-child(10) {
+        top: 82%;
+        left: 100%;
+    }
+
+    :nth-child(11) {
+        top: calc(10% + 1.5rem);
+        left: calc(-13% + 1.5rem);
+        transform: rotateZ(13deg);
+        width: 13%;
+    }
+
+    :nth-child(12) {
+        top: calc(20% + 1.5rem);
+        left: calc(2% + 1.5rem);
+        transform: rotateZ(79deg);
+        width: 15%;
+    }
+
+    :nth-child(13) {
+        top: calc(55% + 1.5rem);
+        left: calc(5% + 1.5rem);
+        transform: rotateZ(46deg);
+        width: 12%;
+    }
+
+    :nth-child(14) {
+        top: calc(80% + 1.5rem);
+        left: calc(15% + 1.5rem);
+        transform: rotateZ(-16deg);
+        width: 17%;
+    }
+
+    :nth-child(15) {
+        top: calc(69% + 1.5rem);
+        left: calc(33% + 1.5rem);
+        transform: rotateZ(-55deg);
+        width: 15%;
+    }
+
+    :nth-child(16) {
+        top: calc(36% + 1.5rem);
+        left: calc(43% + 1.5rem);
+        transform: rotateZ(-56deg);
+        width: 14%;
+    }
+
+    :nth-child(17) {
+        top: calc(5% + 1.5rem);
+        left: calc(52% + 1.5rem);
+        transform: rotateZ(-9deg);
+        width: 15%;
+    }
+
+    :nth-child(18) {
+        top: calc(0% + 1.5rem);
+        left: calc(69% + 1.5rem);
+        transform: rotateZ(75deg);
+        width: 13%;
+    }
+
+    :nth-child(19) {
+        top: calc(36% + 1.5rem);
+        left: calc(73% + 1.5rem);
+        transform: rotateZ(45deg);
+        width: 13%;
+    }
+
+    :nth-child(20) {
+        top: calc(63% + 1.5rem);
+        left: calc(84% + 1.5rem);
+        transform: rotateZ(25deg);
+        width: 16%;
+    }
+
+    :nth-child(21) {
+        top: calc(82% + 1.5rem);
+        left: calc(100% + 1.5rem);
+        transform: rotateZ(-18deg);
+        width: 13%;
+    }
+}
+
+.chapter-template-10 {
+    :nth-child(1) {
+        top: 38%;
+        left: 5%;
+    }
+
+    :nth-child(2) {
+        top: 79%;
+        left: 9%;
+    }
+
+    :nth-child(3) {
+        top: 96%;
+        left: 16%;
+    }
+
+    :nth-child(4) {
+        top: 100%;
+        left: 31%;
+    }
+
+    :nth-child(5) {
+        top: 72%;
+        left: 46%;
+    }
+
+    :nth-child(6) {
+        top: 41%;
+        left: 35%;
+    }
+
+    :nth-child(7) {
+        top: 8%;
+        left: 47%;
+    }
+
+    :nth-child(8) {
+        top: 0%;
+        left: 72%;
+    }
+
+    :nth-child(9) {
+        top: 38%;
+        left: 84%;
+    }
+
+    :nth-child(10) {
+        top: 81%;
+        left: 86%;
+    }
+
+    :nth-child(11) {
+        top: calc(16% + 1.5rem);
+        left: calc(-13% + 1.5rem);
+        transform: rotateZ(25deg);
+        width: 18%;
+    }
+
+    :nth-child(12) {
+        top: calc(38% + 1.5rem);
+        left: calc(5% + 1.5rem);
+        transform: rotateZ(77deg);
+        width: 15%;
+    }
+
+    :nth-child(13) {
+        top: calc(79% + 1.5rem);
+        left: calc(9% + 1.5rem);
+        transform: rotateZ(46deg);
+        width: 8%;
+    }
+
+    :nth-child(14) {
+        top: calc(96% + 1.5rem);
+        left: calc(16% + 1.5rem);
+        transform: rotateZ(3deg);
+        width: 13%;
+    }
+
+    :nth-child(15) {
+        top: calc(100% + 1.5rem);
+        left: calc(31% + 1.5rem);
+        transform: rotateZ(-38deg);
+        width: 17%;
+    }
+
+    :nth-child(16) {
+        top: calc(72% + 1.5rem);
+        left: calc(46% + 1.5rem);
+        transform: rotateZ(-130deg);
+        width: 15%;
+    }
+
+    :nth-child(17) {
+        top: calc(41% + 1.5rem);
+        left: calc(35% + 1.5rem);
+        transform: rotateZ(-51deg);
+        width: 16%;
+    }
+
+    :nth-child(18) {
+        top: calc(8% + 1.5rem);
+        left: calc(47% + 1.5rem);
+        transform: rotateZ(-9deg);
+        width: 23%;
+    }
+
+    :nth-child(19) {
+        top: calc(0% + 1.5rem);
+        left: calc(72% + 1.5rem);
+        transform: rotateZ(52deg);
+        width: 17%;
+    }
+
+    :nth-child(20) {
+        top: calc(38% + 1.5rem);
+        left: calc(84% + 1.5rem);
+        transform: rotateZ(84deg);
+        width: 16%;
+    }
+
+    :nth-child(21) {
+        top: calc(81% + 1.5rem);
+        left: calc(86% + 1.5rem);
+        transform: rotateZ(50deg);
+        width: 17%;
     }
 }

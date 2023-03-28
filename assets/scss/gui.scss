@@ -234,7 +234,7 @@
                 height: 100%;
                 width: 70%;
                 //background-color: rgba(165, 42, 42, 0.281);
-                overflow-x: hidden;
+                overflow: hidden;
                 position: relative;
 
                 >div {
@@ -249,30 +249,45 @@
                     transition: transform 0.25s ease-in-out;
 
                     .chapitre-container {
-                        height: 90%;
+                        height: 80%;
                         width: 80%;
                         //background-color: rgba(39, 235, 235, 0.377);
                         position: relative;
+                        margin-right: 3rem;
+                        margin-bottom: 3rem;
 
-                        >div {
+                        button {
                             height: 3rem;
                             width: 3rem;
+                            font-size: 1.25rem;
                             border-radius: 3rem;
                             border: 0.25rem solid black;
                             position: absolute;
                             display: flex;
                             align-items: center;
                             justify-content: center;
+                            z-index: 221;
                         }
 
-                        >div[clickable="false"] {
+                        button[state="not-passed"] {
                             background-color: rgb(107, 107, 107);
                             cursor: default;
                         }
 
-                        >div[clickable="true"] {
+                        button[state="passed"] {
+                            background-color: rgb(70, 202, 92);
+                            cursor: pointer;
+                        }
+
+                        button[state="to-pass"] {
                             background-color: rgb(216, 102, 102);
                             cursor: pointer;
+                        }
+
+                        div {
+                            position: absolute;
+                            border-top: 0.5rem dashed;
+                            transform-origin: left;
                         }
                     }
                 }
