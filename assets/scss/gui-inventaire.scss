@@ -1,0 +1,19 @@
+// Gui in Inventaire
+
+.gui__in-inventaire {
+    background-color: rgba(0, 255, 255, 0.089);
+    margin-top: 1%;
+    height: 78%;
+    margin-left: 1%;
+    width: 87.5%;
+}
+
+.gui__in-inventaire[active="true"] {
+    display: flex;
+}
+
+.gui__in-inventaire[active="false"] {
+    display: none;
+}
+
+// ----------------------------

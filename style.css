@@ -381,223 +381,6 @@ body {
   display: none;
 }
 
-.gui__in-inventaire {
-  background-color: rgba(0, 255, 255, 0.089);
-  margin-top: 1%;
-  height: 78%;
-  margin-left: 1%;
-  width: 87.5%;
-}
-
-.gui__in-inventaire[active=true] {
-  display: flex;
-}
-
-.gui__in-inventaire[active=false] {
-  display: none;
-}
-
-.gui__in-taverne {
-  margin-top: 1%;
-  height: 78%;
-  margin-left: 1%;
-  width: 87.5%;
-}
-
-.gui__in-taverne[active=true] {
-  display: flex;
-  flex-direction: column;
-}
-.gui__in-taverne[active=true] .gui__in-taverne-menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 3% 0 2% 0;
-}
-.gui__in-taverne[active=true] .gui__in-taverne-menu > button {
-  text-align: center;
-  font-size: 2rem;
-  width: 23%;
-  padding: 1.5% 0;
-  cursor: pointer;
-}
-.gui__in-taverne[active=true] .gui__in-taverne-menu > button[active=true] {
-  color: #c919ab;
-}
-.gui__in-taverne[active=true] .gui__in-taverne-invoc {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1%;
-  /* 1st, 4th, 7th */
-  /* 2nd, 5th, 8th */
-  /* 3rd, 6th, 9th */
-  /* 1-3 */
-  /* 4-6 */
-  /* 7-9 */
-}
-.gui__in-taverne[active=true] .gui__in-taverne-invoc .card {
-  --perspective: 500px;
-  --rotateX: 0;
-  --rotateY: 0;
-  --angle: 15deg;
-  transform: perspective(var(--perspective)) rotateX(var(--rotateX)) rotateY(var(--rotateY));
-  transition: transform 250ms ease;
-  height: 85%;
-  width: 13%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 0.75rem;
-  border-radius: 0.5rem;
-}
-.gui__in-taverne[active=true] .gui__in-taverne-invoc .card > div:nth-child(1) {
-  flex-grow: 1;
-  width: 100%;
-  position: relative;
-  background-color: transparent;
-  border: 0.375rem solid;
-  border-radius: 0.25rem;
-}
-.gui__in-taverne[active=true] .gui__in-taverne-invoc .card img {
-  position: absolute;
-  width: 23%;
-  height: 23%;
-  object-fit: contain;
-}
-.gui__in-taverne[active=true] .gui__in-taverne-invoc .card p {
-  margin-top: 5%;
-  text-align: center;
-  width: 100%;
-  font-size: 1rem;
-  background-color: white;
-  border: 0.125rem solid black;
-  padding: 0.125rem 0;
-}
-.gui__in-taverne[active=true] .gui__in-taverne-invoc .card .mouse-position-tracker {
-  position: absolute;
-  inset: 0;
-}
-.gui__in-taverne[active=true] .gui__in-taverne-invoc .card .mouse-position-tracker > div {
-  position: absolute;
-  width: 33.3333333333%;
-  height: 33.3333333333%;
-  z-index: 222;
-}
-.gui__in-taverne[active=true] .gui__in-taverne-invoc .card:has(.mouse-position-tracker > div:nth-child(1):hover) {
-  --rotateX: var(--angle);
-  --rotateY: calc(var(--angle) * -1);
-}
-.gui__in-taverne[active=true] .gui__in-taverne-invoc .card:has(.mouse-position-tracker > div:nth-child(2):hover) {
-  --rotateX: var(--angle);
-}
-.gui__in-taverne[active=true] .gui__in-taverne-invoc .card:has(.mouse-position-tracker > div:nth-child(3):hover) {
-  --rotateX: var(--angle);
-  --rotateY: var(--angle);
-}
-.gui__in-taverne[active=true] .gui__in-taverne-invoc .card:has(.mouse-position-tracker > div:nth-child(4):hover) {
-  --rotateY: calc(var(--angle) * -1);
-}
-.gui__in-taverne[active=true] .gui__in-taverne-invoc .card:has(.mouse-position-tracker > div:nth-child(6):hover) {
-  --rotateY: var(--angle);
-}
-.gui__in-taverne[active=true] .gui__in-taverne-invoc .card:has(.mouse-position-tracker > div:nth-child(7):hover) {
-  --rotateX: calc(var(--angle) * -1);
-  --rotateY: calc(var(--angle) * -1);
-}
-.gui__in-taverne[active=true] .gui__in-taverne-invoc .card:has(.mouse-position-tracker > div:nth-child(8):hover) {
-  --rotateX: calc(var(--angle) * -1);
-}
-.gui__in-taverne[active=true] .gui__in-taverne-invoc .card:has(.mouse-position-tracker > div:nth-child(9):hover) {
-  --rotateX: calc(var(--angle) * -1);
-  --rotateY: var(--angle);
-}
-.gui__in-taverne[active=true] .gui__in-taverne-invoc .mouse-position-tracker > div:nth-of-type(3n - 2) {
-  left: 0;
-}
-.gui__in-taverne[active=true] .gui__in-taverne-invoc .mouse-position-tracker > div:nth-of-type(3n - 1) {
-  left: 33.3333333333%;
-}
-.gui__in-taverne[active=true] .gui__in-taverne-invoc .mouse-position-tracker > div:nth-of-type(3n) {
-  right: 0;
-}
-.gui__in-taverne[active=true] .gui__in-taverne-invoc .mouse-position-tracker > div:nth-child(n+1):nth-child(-n+3) {
-  top: 0;
-}
-.gui__in-taverne[active=true] .gui__in-taverne-invoc .mouse-position-tracker > div:nth-child(n+4):nth-child(-n+6) {
-  top: 33.3333333333%;
-}
-.gui__in-taverne[active=true] .gui__in-taverne-invoc .mouse-position-tracker > div:nth-child(n+7):nth-child(-n+9) {
-  bottom: 0;
-}
-.gui__in-taverne[active=true] .gui__in-taverne-invoc > div[rarity=rare] > div:nth-child(1) {
-  border-color: #a5c6f0;
-  box-shadow: 0 0 2rem #a5c6f0, inset 0 0 2rem #a5c6f0;
-}
-.gui__in-taverne[active=true] .gui__in-taverne-invoc > div[rarity=rare] p {
-  background-color: #a5c6f0;
-}
-.gui__in-taverne[active=true] .gui__in-taverne-invoc > div[rarity=epic] > div:nth-child(1) {
-  border-color: #df90e2;
-  box-shadow: 0 0 2rem #df90e2, inset 0 0 2rem #df90e2;
-}
-.gui__in-taverne[active=true] .gui__in-taverne-invoc > div[rarity=epic] p {
-  background-color: #df90e2;
-}
-.gui__in-taverne[active=true] .gui__in-taverne-invoc > div[rarity=legendary] > div:nth-child(1) {
-  border-color: #df8984;
-  box-shadow: 0 0 2rem #df8984, inset 0 0 2rem #df8984;
-}
-.gui__in-taverne[active=true] .gui__in-taverne-invoc > div[rarity=legendary] p {
-  background-color: #df8984;
-}
-.gui__in-taverne[active=true] .gui__in-taverne-invoc > div[rarity=mythic] {
-  padding: 0;
-}
-.gui__in-taverne[active=true] .gui__in-taverne-invoc > div[rarity=mythic] > div:nth-child(1) {
-  background-image: url("./assets/img/hero/type/borderM.webp");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  border: 0;
-}
-.gui__in-taverne[active=true] .gui__in-taverne-invoc > div[rarity=mythic] img {
-  margin-bottom: 0.75rem;
-}
-.gui__in-taverne[active=true] .gui__in-taverne-invoc > div[rarity=mythic] p {
-  width: calc(100% - 1.5rem);
-  margin: 0 auto 0.75rem auto;
-  background-image: linear-gradient(to right, #cc3333, #cccc33, #33cc33, #33cccc, #3333cc, #cc33cc, #cc3333);
-}
-.gui__in-taverne[active=true] .gui__in-taverne-btn-invoc {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 5%;
-  height: 10%;
-  margin: 2% 0;
-}
-.gui__in-taverne[active=true] .gui__in-taverne-btn-invoc > button {
-  width: 15%;
-  height: 80%;
-  background-color: transparent;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-.gui__in-taverne[active=false] {
-  display: none;
-}
-
 .chapter-template-1 :nth-child(1) {
   top: 70%;
   left: 0%;
@@ -1666,6 +1449,273 @@ body {
   left: calc(86% + 1.5rem);
   transform: rotateZ(50deg);
   width: 17%;
+}
+
+.gui__in-taverne {
+  margin-top: 1%;
+  height: 78%;
+  margin-left: 1%;
+  width: 87.5%;
+}
+
+.gui__in-taverne[active=true] {
+  display: flex;
+  flex-direction: column;
+}
+.gui__in-taverne[active=true] .gui__in-taverne-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 3% 0 2% 0;
+}
+.gui__in-taverne[active=true] .gui__in-taverne-menu > button {
+  text-align: center;
+  font-size: 2rem;
+  width: 23%;
+  padding: 1.5% 0;
+  cursor: pointer;
+}
+.gui__in-taverne[active=true] .gui__in-taverne-menu > button[active=true] {
+  color: #c919ab;
+}
+.gui__in-taverne[active=true] .gui__in-taverne-invoc[type=single] {
+  justify-content: center;
+}
+.gui__in-taverne[active=true] .gui__in-taverne-invoc[type=multi] {
+  justify-content: flex-start;
+}
+.gui__in-taverne[active=true] .gui__in-taverne-invoc[type=multi] .card:nth-child(1) {
+  margin-left: 1.5%;
+}
+.gui__in-taverne[active=true] .gui__in-taverne__invoc[active=true],
+.gui__in-taverne[active=true] .gui__in-taverne__shop[active=true] {
+  display: flex;
+}
+.gui__in-taverne[active=true] .gui__in-taverne__invoc[active=false],
+.gui__in-taverne[active=true] .gui__in-taverne__shop[active=false] {
+  display: none;
+}
+.gui__in-taverne[active=true] .gui__in-taverne__invoc {
+  flex-grow: 1;
+  flex-direction: column;
+}
+.gui__in-taverne[active=true] .gui__in-taverne-invoc {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1%;
+  /* 1st, 4th, 7th */
+  /* 2nd, 5th, 8th */
+  /* 3rd, 6th, 9th */
+  /* 1-3 */
+  /* 4-6 */
+  /* 7-9 */
+}
+.gui__in-taverne[active=true] .gui__in-taverne-invoc .card {
+  --perspective: 500px;
+  --rotateX: 0;
+  --rotateY: 0;
+  --angle: 15deg;
+  transform: perspective(var(--perspective)) rotateX(var(--rotateX)) rotateY(var(--rotateY));
+  transition: transform 250ms ease;
+  animation: opacity 350ms cubic-bezier(0.5, 0.01, 1, 0);
+  height: 85%;
+  width: 13%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+.gui__in-taverne[active=true] .gui__in-taverne-invoc .card > div:nth-child(1) {
+  flex-grow: 1;
+  width: 100%;
+  position: relative;
+  background-color: transparent;
+  border: 0.375rem solid;
+  border-radius: 0.25rem;
+}
+.gui__in-taverne[active=true] .gui__in-taverne-invoc .card img {
+  position: absolute;
+  width: 23%;
+  height: 23%;
+  object-fit: contain;
+}
+.gui__in-taverne[active=true] .gui__in-taverne-invoc .card p {
+  margin-top: 5%;
+  text-align: center;
+  width: 100%;
+  font-size: 1rem;
+  background-color: white;
+  border: 0.125rem solid black;
+  padding: 0.125rem 0;
+}
+.gui__in-taverne[active=true] .gui__in-taverne-invoc .card .mouse-position-tracker {
+  position: absolute;
+  inset: 0;
+}
+.gui__in-taverne[active=true] .gui__in-taverne-invoc .card .mouse-position-tracker > div {
+  position: absolute;
+  width: 33.3333333333%;
+  height: 33.3333333333%;
+  z-index: 222;
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+.gui__in-taverne[active=true] .gui__in-taverne-invoc .card:has(.mouse-position-tracker > div:nth-child(1):hover) {
+  --rotateX: var(--angle);
+  --rotateY: calc(var(--angle) * -1);
+}
+.gui__in-taverne[active=true] .gui__in-taverne-invoc .card:has(.mouse-position-tracker > div:nth-child(2):hover) {
+  --rotateX: var(--angle);
+}
+.gui__in-taverne[active=true] .gui__in-taverne-invoc .card:has(.mouse-position-tracker > div:nth-child(3):hover) {
+  --rotateX: var(--angle);
+  --rotateY: var(--angle);
+}
+.gui__in-taverne[active=true] .gui__in-taverne-invoc .card:has(.mouse-position-tracker > div:nth-child(4):hover) {
+  --rotateY: calc(var(--angle) * -1);
+}
+.gui__in-taverne[active=true] .gui__in-taverne-invoc .card:has(.mouse-position-tracker > div:nth-child(6):hover) {
+  --rotateY: var(--angle);
+}
+.gui__in-taverne[active=true] .gui__in-taverne-invoc .card:has(.mouse-position-tracker > div:nth-child(7):hover) {
+  --rotateX: calc(var(--angle) * -1);
+  --rotateY: calc(var(--angle) * -1);
+}
+.gui__in-taverne[active=true] .gui__in-taverne-invoc .card:has(.mouse-position-tracker > div:nth-child(8):hover) {
+  --rotateX: calc(var(--angle) * -1);
+}
+.gui__in-taverne[active=true] .gui__in-taverne-invoc .card:has(.mouse-position-tracker > div:nth-child(9):hover) {
+  --rotateX: calc(var(--angle) * -1);
+  --rotateY: var(--angle);
+}
+.gui__in-taverne[active=true] .gui__in-taverne-invoc .mouse-position-tracker > div:nth-of-type(3n - 2) {
+  left: 0;
+}
+.gui__in-taverne[active=true] .gui__in-taverne-invoc .mouse-position-tracker > div:nth-of-type(3n - 1) {
+  left: 33.3333333333%;
+}
+.gui__in-taverne[active=true] .gui__in-taverne-invoc .mouse-position-tracker > div:nth-of-type(3n) {
+  right: 0;
+}
+.gui__in-taverne[active=true] .gui__in-taverne-invoc .mouse-position-tracker > div:nth-child(n+1):nth-child(-n+3) {
+  top: 0;
+}
+.gui__in-taverne[active=true] .gui__in-taverne-invoc .mouse-position-tracker > div:nth-child(n+4):nth-child(-n+6) {
+  top: 33.3333333333%;
+}
+.gui__in-taverne[active=true] .gui__in-taverne-invoc .mouse-position-tracker > div:nth-child(n+7):nth-child(-n+9) {
+  bottom: 0;
+}
+.gui__in-taverne[active=true] .gui__in-taverne-invoc > div[rarity=rare] > div:nth-child(1) {
+  border-color: #a5c6f0;
+  box-shadow: 0 0 2rem #a5c6f0, inset 0 0 2rem #a5c6f0;
+}
+.gui__in-taverne[active=true] .gui__in-taverne-invoc > div[rarity=rare] p {
+  background-color: #a5c6f0;
+}
+.gui__in-taverne[active=true] .gui__in-taverne-invoc > div[rarity=epic] > div:nth-child(1) {
+  border-color: #df90e2;
+  box-shadow: 0 0 2rem #df90e2, inset 0 0 2rem #df90e2;
+}
+.gui__in-taverne[active=true] .gui__in-taverne-invoc > div[rarity=epic] p {
+  background-color: #df90e2;
+}
+.gui__in-taverne[active=true] .gui__in-taverne-invoc > div[rarity=legendary] > div:nth-child(1) {
+  border-color: #df8984;
+  box-shadow: 0 0 2rem #df8984, inset 0 0 2rem #df8984;
+}
+.gui__in-taverne[active=true] .gui__in-taverne-invoc > div[rarity=legendary] p {
+  background-color: #df8984;
+}
+.gui__in-taverne[active=true] .gui__in-taverne-invoc > div[rarity=mythic] {
+  padding: 0;
+}
+.gui__in-taverne[active=true] .gui__in-taverne-invoc > div[rarity=mythic] > div:nth-child(1) {
+  background-image: url("./assets/img/hero/type/borderM.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 0;
+}
+.gui__in-taverne[active=true] .gui__in-taverne-invoc > div[rarity=mythic] img {
+  margin-bottom: 0.75rem;
+}
+.gui__in-taverne[active=true] .gui__in-taverne-invoc > div[rarity=mythic] p {
+  width: calc(100% - 1.5rem);
+  margin: 0 auto 0.75rem auto;
+  background-image: linear-gradient(to right, #cc3333, #cccc33, #33cc33, #33cccc, #3333cc, #cc33cc, #cc3333);
+}
+.gui__in-taverne[active=true] .gui__in-taverne-btn-invoc {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  height: 10%;
+  margin: 2% 0;
+}
+.gui__in-taverne[active=true] .gui__in-taverne-btn-invoc button {
+  width: 15%;
+  height: 80%;
+  background-color: transparent;
+  font-size: 1.5rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 0;
+}
+.gui__in-taverne[active=true] .gui__in-taverne-btn-invoc button[clickable=true] {
+  cursor: pointer;
+  background-image: url("./assets/img/hero/type/button.webp");
+}
+.gui__in-taverne[active=true] .gui__in-taverne-btn-invoc button[clickable=true]:hover {
+  background-image: url("./assets/img/hero/type/invoc_possible_02.webp");
+}
+.gui__in-taverne[active=true] .gui__in-taverne-btn-invoc button[clickable=false] {
+  background-image: url("./assets/img/hero/type/invoc_non_01.webp");
+}
+
+.gui__in-taverne[active=false] {
+  display: none;
+}
+
+.gui__in-inventaire {
+  background-color: rgba(0, 255, 255, 0.089);
+  margin-top: 1%;
+  height: 78%;
+  margin-left: 1%;
+  width: 87.5%;
+}
+
+.gui__in-inventaire[active=true] {
+  display: flex;
+}
+
+.gui__in-inventaire[active=false] {
+  display: none;
 }
 
 .preload {

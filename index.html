@@ -32,18 +32,26 @@
 
                 <div class="gui__in-taverne" active="false">
                     <div class="gui__in-taverne-menu">
-                        <button active="true">Invocations</button>
-                        <button>Shop</button>
+                        <button class="gui__in-taverne-menu__invoc" active="true">Invocations</button>
+                        <button class="gui__in-taverne-menu__shop" active="false">Shop</button>
                     </div>
                     <hr>
-                    <div class="gui__in-taverne-invoc">
-                        <!-- Generated content in js -->
+
+                    <div class="gui__in-taverne__invoc" active="true">
+                        <div class="gui__in-taverne-invoc" type="single">
+                            <!-- Generated content in js -->
+                        </div>
+                        <hr>
+                        <div class="gui__in-taverne-btn-invoc">
+                            <button clickable="true" onclick="invocation(1)">Invoc x1</button>
+                            <button clickable="true" onclick="invocation(7)">Invoc x7</button>
+                        </div>
                     </div>
-                    <hr>
-                    <div class="gui__in-taverne-btn-invoc">
-                        <button onclick="invocation(1)">Invoc x1</button>
-                        <button onclick="invocation(7)">Invoc x7</button>
+
+                    <div class="gui__in-taverne__shop" active="false">
+
                     </div>
+
                 </div>
 
                 <div class="gui__in-forge" active="false"></div>
@@ -80,7 +88,9 @@
                 </div>
 
                 <div class="gui__in-inventaire" active="false">
-                    
+                    <div class="top">
+                        
+                    </div>
                 </div>
             </div>
             <div class="gui__puit" visible="false"></div>

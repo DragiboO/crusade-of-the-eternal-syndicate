@@ -96,11 +96,11 @@ let invocTableName = {
     "rare" : [
         {name: "Le tripoteur", type: "Sorcerer", url : " (3)"},
         {name: "Petitekip", type: "Brawler", url : " (7)"},
-        {name: "Demon D. Shiot", type: "Fiend", url : " (8)"},
-        {name: "Peskè", type: "CosmicThreat", url : " (9)"},
-        {name: "Tados", type: "Undead", url : " (10)"},
-        {name: "Mododiscorde", type: "Brawler", url : " (11)"},
-        {name: "Giga Pupu", type: "Sorcerer", url : " (12)"},
+        {name: "Fon Bou", type: "Fiend", url : "fon_bou"},
+        {name: "Toc Arr", type: "CosmicThreat", url : "toc_arr"},
+        {name: "Tad Merde", type: "Undead", url : "tad_merde"},
+        {name: "Pauv' Type", type: "Brawler", url : "pauv_type"},
+        {name: "Klo Charr", type: "Sorcerer", url : "klo_charr"},
         {name: "Raph G. J.", type: "Undead", url : " (15)"},
         {name: "Gro Baton", type: "Brawler", url : " (19)"},
     ],
@@ -118,12 +118,12 @@ let invocTableName = {
         {name: "Many Moutmout", type: "Brawler", url : " (6)"},
         {name: "Pouri D. Groll", type: "Undead", url : " (20)"},
         {name: "Pakt", type: "Fiend", url : " (22)"},
-        {name: "Lorem Ipsum", type: "Fiend", url : " (23)"},
+        {name: "Vadh L.B.", type: "Fiend", url : "vadh_l_b"},
     ],
     "mythic" : [
-        {name: "Necroloss", type: "Undead", url : " (13)"},
+        {name: "Necroloss", type: "Undead", url : "necroloss"},
         {name: "QuadSpace", type: "CosmicThreat", url : " (14)"},
-        {name: "Degeulassor", type: "Fiend", url : " (21)"},
+        {name: "Saka Vyand", type: "Fiend", url : "saka_vyand"},
     ],
 }
 
@@ -397,6 +397,10 @@ function renderChapterLevelMax() {
                 line[1].setAttribute('state', 'not-passed')
             }
         }
+
+        if (i == dataIdle.chapterLevelMax * 10) {
+            document.querySelector(`.line-${dataIdle.chapterMax * 10}-${dataIdle.chapterMax * 10 + 1}`).setAttribute('state', 'not-passed')
+        }
     }
     
     for (let i = 1; i <= dataIdle.chapterLevelMax; i++) {
@@ -419,6 +423,34 @@ function renderChapterLevelMax() {
             document.querySelectorAll(`.line-${dataIdle.chapterLevelMax}-${dataIdle.chapterLevelMax + 1}`)[1].setAttribute('state', 'to-pass')
         }
     }
+}
+
+// -----------------------------------------------
+
+// Menu Taverne
+
+let guiInTaverneMenuInvoc = document.querySelector('.gui__in-taverne-menu__invoc')
+let guIInTaverneMenuShop = document.querySelector('.gui__in-taverne-menu__shop')
+
+let guiInTaverneInvoc = document.querySelector('.gui__in-taverne__invoc')
+let guiInTaverneShop = document.querySelector('.gui__in-taverne__shop')
+
+let guiTaverneMenuBtnList = [guiInTaverneMenuInvoc, guIInTaverneMenuShop]
+let guiTaverneContentList = [guiInTaverneInvoc, guiInTaverneShop]
+
+function renderTaverneMenu() {
+    guiTaverneMenuBtnList.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            guiTaverneMenuBtnList.forEach((item) => {
+                item.setAttribute('active', 'false')
+            })
+            guiTaverneContentList.forEach((item) => {
+                item.setAttribute('active', 'false')
+            })
+            item.setAttribute('active', 'true')
+            guiTaverneContentList[index].setAttribute('active', 'true')
+        })
+    })
 }
 
 // -----------------------------------------------
@@ -481,19 +513,51 @@ function renderInvoc(rarity, hero) {
 }
 
 async function invocation(number) {
+    let guiInTavernBtnInvoc = document.querySelectorAll('.gui__in-taverne-btn-invoc button')
+
+    for (let i = 0; i < guiInTavernBtnInvoc.length; i++) {
+        if (guiInTavernBtnInvoc[i].getAttribute('clickable') == 'false') {
+            return
+        }
+
+        guiInTavernBtnInvoc[i].setAttribute('clickable', 'false')
+    }
+
+    let allCard = document.querySelectorAll('.card')
+
+    if (allCard.length != 0) {
+        if (allCard.length == 1) {
+            allCard[0].style = `transform: translate(50rem, 20rem) scale(0.2);`
+            allCard[0].addEventListener('transitionend', () => {
+                allCard[0].remove()
+            })
+            await sleep(75)
+        } else {
+            for (let i = allCard.length - 1; i >= 0; i--) {
+                allCard[i].style = `transform: translate(${-(i * 15) + 95}rem, 20rem) scale(0.2);`
+                allCard[i].addEventListener('transitionend', () => {
+                    allCard[i].remove()
+                })
+                await sleep(75)
+            }
+        }
+    }
+
+    await sleep(525)
+
     let guiInTavernInvoc = document.querySelector('.gui__in-taverne-invoc')
     guiInTavernInvoc.innerHTML = ''
 
-    await sleep(500)
-
     switch (number) {
         case 1:
+            guiInTavernInvoc.setAttribute('type', 'single')
             let loot = randomLoot(invocTableRate)
             let hero = randomLootByRarity(loot)
 
             renderInvoc(loot, hero)
             break
         case 7:
+            guiInTavernInvoc.setAttribute('type', 'multi')
             for (let i = 1; i < 8; i++) {
                 let loot = randomLoot(invocTableRate)
                 let hero = randomLootByRarity(loot)
@@ -504,6 +568,12 @@ async function invocation(number) {
             break
         default:
             break
+    }
+
+    await sleep(400)
+
+    for (let i = 0; i < guiInTavernBtnInvoc.length; i++) {
+        guiInTavernBtnInvoc[i].setAttribute('clickable', 'true')
     }
 }
 
@@ -524,5 +594,7 @@ renderGuildeMenu()
     renderChapter()
     swapChapter()
     renderChapterLevelMax()
+
+renderTaverneMenu()
 
 // -----------------------------------------------
