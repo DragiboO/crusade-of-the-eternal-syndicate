@@ -83,6 +83,50 @@ async function saveIdle() {
     }
 }
 
+// Game Data
+
+let invocTableRate = {
+    "rare" : 68,
+    "epic" : 24,
+    "legendary" : 7,
+    "mythic" : 1,
+}
+
+let invocTableName = {
+    "rare" : [
+        {name: "Le tripoteur", type: "Sorcerer", url : " (3)"},
+        {name: "Petitekip", type: "Brawler", url : " (7)"},
+        {name: "Demon D. Shiot", type: "Fiend", url : " (8)"},
+        {name: "Peskè", type: "CosmicThreat", url : " (9)"},
+        {name: "Tados", type: "Undead", url : " (10)"},
+        {name: "Mododiscorde", type: "Brawler", url : " (11)"},
+        {name: "Giga Pupu", type: "Sorcerer", url : " (12)"},
+        {name: "Raph G. J.", type: "Undead", url : " (15)"},
+        {name: "Gro Baton", type: "Brawler", url : " (19)"},
+    ],
+    "epic" : [  
+        {name: "Mad Chrees", type: "Sorcerer", url : " (2)"},
+        {name: "Filip", type: "Sorcerer", url : " (4)"},
+        {name: "MagicNilmar", type: "Fiend", url : " (5)"},
+        {name: "Le Vivi", type: "Brawler", url : " (16)"},
+        {name: "Ren'Par", type: "CosmicThreat", url : " (17)"},
+        {name: "Atchoom", type: "Brawler", url : " (18)"},
+        {name: "Fiddle Stock", type: "Undead", url : " (24)"},
+    ],
+    "legendary" : [
+        {name: "John Doe", type: "CosmicThreat", url : " (1)"},
+        {name: "Many Moutmout", type: "Brawler", url : " (6)"},
+        {name: "Pouri D. Groll", type: "Undead", url : " (20)"},
+        {name: "Pakt", type: "Fiend", url : " (22)"},
+        {name: "Lorem Ipsum", type: "Fiend", url : " (23)"},
+    ],
+    "mythic" : [
+        {name: "Necroloss", type: "Undead", url : " (13)"},
+        {name: "QuadSpace", type: "CosmicThreat", url : " (14)"},
+        {name: "Degeulassor", type: "Fiend", url : " (21)"},
+    ],
+}
+
 // ------------------------------
 
 // Set Element Size + Glow + Click
@@ -293,7 +337,7 @@ function renderChapter() {
         chapter.style.transform = `translateX(${(i - 1) * 100}%)`
         let chapterContainer = document.createElement('div')
         chapterContainer.classList.add('chapitre-container')
-        chapterContainer.classList.add(`chapter-template-${i}`)
+        chapterContainer.classList.add(`chapter-template-${Math.round(Math.random() * 9) + 1}`)
     
         for (let j = 1; j <= 10; j++) {
             let point = document.createElement('button')
@@ -304,9 +348,7 @@ function renderChapter() {
     
         for (let j = 0; j <= 10; j++) {
             let line = document.createElement('div')
-            
-                line.classList.add(`line-${j + (i - 1) * 10}-${j + (i - 1) * 10 + 1}`)
-            
+            line.classList.add(`line-${j + (i - 1) * 10}-${j + (i - 1) * 10 + 1}`)
             chapterContainer.appendChild(line)
         }
     
@@ -344,17 +386,125 @@ function swapChapter(orientation) {
 }
 
 function renderChapterLevelMax() {
-    for (let i = 1; i <= 500; i++) {
+    for (let i = 1; i <= dataIdle.chapterMax * 10; i++) {
         let point = document.querySelector(`.point-${i}`)
         point.setAttribute('state', 'not-passed')
+
+        let line = document.querySelectorAll(`.line-${i - 1}-${i}`)
+        line[0].setAttribute('state', 'not-passed')
+        if(i != 1) {
+            if (i % 10 == 1) {
+                line[1].setAttribute('state', 'not-passed')
+            }
+        }
     }
     
     for (let i = 1; i <= dataIdle.chapterLevelMax; i++) {
         let point = document.querySelector(`.point-${i}`)
         point.setAttribute('state', 'passed')
+
+        let line = document.querySelectorAll(`.line-${i - 1}-${i}`)
+        line[0].setAttribute('state', 'passed')
+        if (i != 1) {
+            if (i % 10 == 1) {
+                line[1].setAttribute('state', 'passed')
+            }
+        }
     }
 
     document.querySelector(`.point-${dataIdle.chapterLevelMax + 1}`).setAttribute('state', 'to-pass')
+    document.querySelectorAll(`.line-${dataIdle.chapterLevelMax}-${dataIdle.chapterLevelMax + 1}`)[0].setAttribute('state', 'to-pass')
+    if (dataIdle.chapterLevelMax != 1) {
+        if (dataIdle.chapterLevelMax % 10 == 1) {
+            document.querySelectorAll(`.line-${dataIdle.chapterLevelMax}-${dataIdle.chapterLevelMax + 1}`)[1].setAttribute('state', 'to-pass')
+        }
+    }
+}
+
+// -----------------------------------------------
+
+//Menu Taverne - Invoc
+
+function randomLoot(lootChances) {
+    // Calculer la somme des chances
+    const sum = Object.values(lootChances).reduce((acc, chance) => acc + chance, 0);
+
+    // Générer un nombre aléatoire entre 0 et la somme des chances
+    const randomNum = Math.random() * sum;
+
+    // Parcourir le tableau des chances et soustraire les valeurs jusqu'à ce que le nombre aléatoire soit inférieur à 0
+    let cumulativeChance = 0;
+    for (const [lootType, chance] of Object.entries(lootChances)) {
+        cumulativeChance += chance;
+        if (randomNum < cumulativeChance) {
+            return lootType; // Renvoyer le type de loot correspondant
+        }
+    }
+}
+
+function randomLootByRarity(rarity) {
+    const lootList = invocTableName[rarity]; // Récupérer le tableau de loot correspondant à la rareté
+
+    if (!lootList || lootList.length === 0) {
+        throw new Error(`Impossible de trouver des loots pour la rareté ${rarity}`);
+    }
+
+    const randomIndex = Math.floor(Math.random() * lootList.length); // Générer un index aléatoire dans le tableau de loot
+    return lootList[randomIndex]; // Renvoyer l'élément correspondant à l'index généré
+}
+
+function renderInvoc(rarity, hero) {
+    let guiInTavernInvoc = document.querySelector('.gui__in-taverne-invoc')
+
+    let card = document.createElement('div')
+    card.classList.add('card')
+    card.setAttribute('rarity', rarity)
+    card.style.backgroundImage = `url("./assets/img/hero/${hero.url}.webp")`
+    card.innerHTML = `
+        <div></div>
+        <img src="./assets/img/hero/type/${hero.type}.webp" alt="">
+        <p>${hero.name}</p>
+
+        <div class="mouse-position-tracker">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>`
+    
+    guiInTavernInvoc.appendChild(card)
+}
+
+async function invocation(number) {
+    let guiInTavernInvoc = document.querySelector('.gui__in-taverne-invoc')
+    guiInTavernInvoc.innerHTML = ''
+
+    await sleep(500)
+
+    switch (number) {
+        case 1:
+            let loot = randomLoot(invocTableRate)
+            let hero = randomLootByRarity(loot)
+
+            renderInvoc(loot, hero)
+            break
+        case 7:
+            for (let i = 1; i < 8; i++) {
+                let loot = randomLoot(invocTableRate)
+                let hero = randomLootByRarity(loot)
+
+                renderInvoc(loot, hero)
+                await sleep(1000 / (i + 1))
+            }
+            break
+        default:
+            break
+    }
 }
 
 // -----------------------------------------------
