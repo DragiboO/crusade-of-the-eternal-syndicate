@@ -85,47 +85,724 @@ async function saveIdle() {
 
 // Game Data
 
-let invocTableRate = {
+let rarityTable = {
     "rare" : 68,
     "epic" : 24,
     "legendary" : 7,
     "mythic" : 1,
 }
 
-let invocTableName = {
-    "rare" : [
-        {name: "Le tripoteur", type: "Sorcerer", url : " (3)"},
-        {name: "Petitekip", type: "Brawler", url : " (7)"},
-        {name: "Fon Bou", type: "Fiend", url : "fon_bou"},
-        {name: "Toc Arr", type: "CosmicThreat", url : "toc_arr"},
-        {name: "Tad Merde", type: "Undead", url : "tad_merde"},
-        {name: "Pauv' Type", type: "Brawler", url : "pauv_type"},
-        {name: "Klo Charr", type: "Sorcerer", url : "klo_charr"},
-        {name: "Raph G. J.", type: "Undead", url : " (15)"},
-        {name: "Gro Baton", type: "Brawler", url : " (19)"},
+// dmg - buff atk solo/team - debuff atk enemy - heal - stun - buff spd solo/team - buff crit solo/team - debuff speed enemy - dot - invulnerability
+
+let persoTableData = {
+    // HP 90 - 150  ATK 10 - 25  SPD 2 - 4  CRIT 1 - 2.5  CRIT_DMG 50  // Score 500 - 1500
+    "rare": [
+        {
+            name: "Le tripoteur",
+            type: "Sorcerer",
+            url: " (3)",
+            rarity: "rare",
+            stats: { HP: 120, DEF: 0, ATK: 18, SPD: 3, CRIT: 2.5, CRIT_DMG: 50, MAGIC: 22 },
+            spell: [
+                {
+                    type: "ACTIVE",
+                    name: "Colosse-copie colossale",
+                    description: "Le tripoteur utilise ses mains pour t'enculer",
+                    cooldown: 10,
+                    effect: [
+                        {
+                            type: "DAMAGE",
+                            ratio: [
+                                { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1.5 },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            name: "Petitekip",
+            type: "Brawler",
+            url: " (7)",
+            rarity: "rare",
+            stats: { HP: 150, DEF: 0, ATK: 23, SPD: 2.4, CRIT: 2.5, CRIT_DMG: 50, MAGIC: 1 },
+            spell: [
+                {
+                    type: "ACTIVE",
+                    name: "Les bro Leurs",
+                    description: "Petitekip te colmate",
+                    cooldown: 10,
+                    effect: [
+                        {
+                            type: "DAMAGE",
+                            ratio: [
+                                { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            name: "Fon Bou",
+            type: "Fiend",
+            url: "fon_bou",
+            rarity: "rare",
+            stats: { HP: 122, DEF: 0, ATK: 16, SPD: 3.9, CRIT: 1.6, CRIT_DMG: 50, MAGIC: 5 },
+            spell: [
+                {
+                    type: "ACTIVE",
+                    name: "Piklecu",
+                    description: "Fon Bou te pique",
+                    cooldown: 10,
+                    effect: [
+                        {
+                            type: "DAMAGE",
+                            ratio: [
+                                { HP: 0, DEF: 0, ATK: 0.5, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            name: "Toc Arr",
+            type: "CosmicThreat",
+            url: "toc_arr",
+            rarity: "rare",
+            stats: { HP: 120, DEF: 0, ATK: 15, SPD: 3.6, CRIT: 1.9, CRIT_DMG: 50, MAGIC: 12 },
+            spell: [
+                {
+                    type: "ACTIVE",
+                    name: "Petite comète",
+                    description: "Toc Arr t'applatit",
+                    cooldown: 10,
+                    effect: [
+                        {
+                            type: "DAMAGE",
+                            ratio: [
+                                { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1.7 },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            name: "Tad Merde",
+            type: "Undead",
+            url: "tad_merde",
+            rarity: "rare",
+            stats: { HP: 121, DEF: 0, ATK: 14, SPD: 3.4, CRIT: 2.4, CRIT_DMG: 50, MAGIC: 7 },
+            spell: [
+                {
+                    type: "ACTIVE",
+                    name: "Jeté de KK",
+                    description: "Tad Merde te tue",
+                    cooldown: 10,
+                    effect: [
+                        {
+                            type: "DAMAGE",
+                            ratio: [
+                                { HP: 0.08, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            name: "Pauv' Type",
+            type: "Brawler",
+            url: "pauv_type",
+            rarity: "rare",
+            stats: { HP: 121, DEF: 0, ATK: 12, SPD: 2.9, CRIT: 1, CRIT_DMG: 50, MAGIC: 0 },
+            spell: [
+                {
+                    type: "ACTIVE",
+                    name: "Surprise du chef",
+                    description: "Pauv' Type te fait déguster sa bite",
+                    cooldown: 10,
+                    effect: [
+                        {
+                            type: "DAMAGE",
+                            ratio: [
+                                { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            name: "Klo Charr",
+            type: "Sorcerer",
+            url: "klo_charr",
+            rarity: "rare",
+            stats: { HP: 118, DEF: 0, ATK: 17, SPD: 4, CRIT: 1, CRIT_DMG: 50, MAGIC: 19 },
+            spell: [
+                {
+                    type: "ACTIVE",
+                    name: "Armagedon",
+                    description: "Klo Charr pète sur un briquet",
+                    cooldown: 10,
+                    effect: [
+                        {
+                            type: "DAMAGE",
+                            ratio: [
+                                { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2 },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            name: "Raph G. J.",
+            type: "Undead",
+            url: "raph_g_j",
+            rarity: "rare",
+            stats: { HP: 140, DEF: 0, ATK: 19, SPD: 2.8, CRIT: 2.5, CRIT_DMG: 50, MAGIC: 0 },
+            spell: [
+                {
+                    type: "ACTIVE",
+                    name: "Travaux",
+                    description: "Raph G. J. te suce",
+                    cooldown: 10,
+                    effect: [
+                        {
+                            type: "DAMAGE",
+                            ratio: { HP: 0, DEF: 0, ATK: 2, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                            effect: [
+                                {
+                                    type: "DOT",
+                                    ratio: [
+                                        { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                        { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            name: "Gro Baton",
+            type: "Brawler",
+            url: " (19)",
+            rarity: "rare",
+            stats: { HP: 130, DEF: 0, ATK: 25, SPD: 3.1, CRIT: 2.5, CRIT_DMG: 50, MAGIC: 3 },
+            spell: [
+                {
+                    type: "ACTIVE",
+                    name: "Coup de bâton",
+                    description: "",
+                    cooldown: 10,
+                    effect: [
+                        {
+                            type: "DAMAGE",
+                            ratio: [
+                                { HP: 0, DEF: 0, ATK: 1.7, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                            ],
+                        }
+                    ],
+                },
+            ],
+        },
     ],
-    "epic" : [  
-        {name: "Mad Chrees", type: "Sorcerer", url : " (2)"},
-        {name: "Filip", type: "Sorcerer", url : " (4)"},
-        {name: "MagicNilmar", type: "Fiend", url : " (5)"},
-        {name: "Le Vivi", type: "Brawler", url : " (16)"},
-        {name: "Ren'Par", type: "CosmicThreat", url : " (17)"},
-        {name: "Atchoom", type: "Brawler", url : " (18)"},
-        {name: "Fiddle Stock", type: "Undead", url : " (24)"},
+    // HP 150 - 400  ATK 25 - 45  SPD 2 - 4  CRIT 2.5 - 5  CRIT_DMG 50 // Score 3000 - 6000
+    "epic": [
+        {
+            name: "Mad Chrees",
+            type: "Sorcerer",
+            url: " (2)",
+            rarity: "epic",
+            stats: { HP: 238, DEF: 0, ATK: 42, SPD: 3, CRIT: 5, CRIT_DMG: 50, MAGIC: 40 },
+            spell: [
+                {
+                    type: "ACTIVE",
+                    name: "Tempête de St-Môret",
+                    description: "Mad Chrees t'en met plein la vue",
+                    cooldown: 10,
+                    effect: [
+                        {
+                            type: "DEBUFF_SPEED",
+                            ration: [
+                                { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0.25 },
+                                { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 1, MAGIC: 0 },
+                            ]
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            name: "Filip",
+            type: "Sorcerer",
+            url: " (4)",
+            rarity: "epic",
+            stats: { HP: 400, DEF: 0, ATK: 26, SPD: 3, CRIT: 2.5, CRIT_DMG: 50, MAGIC: 25 },
+            spell: [
+                {
+                    type: "ACTIVE",
+                    name: "Profanation",
+                    description: "Filip réveil tes ancêtres",
+                    cooldown: 10,
+                    effect: [
+                        {
+                            type: "DOT",
+                            ratio: [
+                                { HP: 0, DEF: 0, ATK: 1.7, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2 },
+                                { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                { HP: 0.08, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            name: "MagicNilmar",
+            type: "Fiend",
+            url: " (5)",
+            rarity: "epic",
+            stats: { HP: 301, DEF: 0, ATK: 39, SPD: 2.5, CRIT: 3, CRIT_DMG: 50, MAGIC: 10 },
+            spell: [
+                {
+                    type: "ACTIVE",
+                    name: "Insulte déchirante",
+                    description: "MagicNilmar te dit que t'es nul",
+                    cooldown: 10,
+                    effect: [
+                        {
+                            type: "DAMAGE",
+                            ratio: [
+                                { HP: 0, DEF: 0, ATK: 2, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            name: "Le Vivi",
+            type: "Brawler",
+            url: " (16)",
+            rarity: "epic",
+            stats: { HP: 170, DEF: 0, ATK: 45, SPD: 2, CRIT: 5, CRIT_DMG: 50, MAGIC: 0 },
+            spell: [
+                {
+                    type: "ACTIVE",
+                    name: "Prise du lapin",
+                    description: "Le Vivi te fait un gros câlin",
+                    cooldown: 10,
+                    effect: [
+                        {
+                            type: "BUFF_SPEED_EQUIP",
+                            ratio: [
+                                { HP: 0.06, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            name: "Ren'Par",
+            type: "CosmicThreat",
+            url: " (17)",
+            rarity: "epic",
+            stats: { HP: 284, DEF: 0, ATK: 44, SPD: 3.7, CRIT: 4, CRIT_DMG: 50, MAGIC: 31 },
+            spell: [
+                {
+                    type: "ACTIVE",
+                    name: "Pompe",
+                    description: "Ren'Par te fait des trous",
+                    cooldown: 10,
+                    effect: [
+                        {
+                            type: "DAMAGE",
+                            ratio: [
+                                { HP: 0, DEF: 0, ATK: 0, SPD: 1, CRIT: 0, CRIT_DMG: 0, MAGIC: 1.5 },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            name: "Atchoom",
+            type: "Brawler",
+            url: " (18)",
+            rarity: "epic",
+            stats: { HP: 152, DEF: 0, ATK: 31, SPD: 4, CRIT: 5, CRIT_DMG: 50, MAGIC: 1 },
+            spell: [
+                {
+                    type: "ACTIVE",
+                    name: "Beauté",
+                    description: "Atchoom t'eblouis",
+                    cooldown: 10,
+                    effect: [
+                        {
+                            type: "STUN",
+                            ratio: [
+                                { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 50 },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            name: "Fiddle Stock",
+            type: "Undead",
+            url: " (24)",
+            rarity: "epic",
+            stats: { HP: 365, DEF: 0, ATK: 35, SPD: 2.5, CRIT: 5, CRIT_DMG: 50, MAGIC: 20 },
+            spell: [
+                {
+                    type: "ACTIVE",
+                    name: "Cauchemar",
+                    description: "Fiddle Stock te fait transpirer",
+                    cooldown: 10,
+                    effect: [
+                        {
+                            type: "DEBUFF_ATK",
+                            ratio: [
+                                { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 1, MAGIC: 0 },
+                            ],
+                        },
+                    ],
+                }
+            ],
+        },
     ],
-    "legendary" : [
-        {name: "John Doe", type: "CosmicThreat", url : " (1)"},
-        {name: "Many Moutmout", type: "Brawler", url : " (6)"},
-        {name: "Pouri D. Groll", type: "Undead", url : " (20)"},
-        {name: "Pakt", type: "Fiend", url : " (22)"},
-        {name: "Vadh L.B.", type: "Fiend", url : "vadh_l_b"},
+    // HP 400 - 850  ATK 45 - 85  SPD 1.5 - 2.5  CRIT 5 - 8  CRIT_DMG 50 // Score 10000 - 25000
+    "legendary": [
+        {
+            name: "John Doe",
+            type: "CosmicThreat",
+            url: " (1)",
+            rarity: "lendendary",
+            stats: { HP: 595, DEF: 0, ATK: 51, SPD: 2.2, CRIT: 8, CRIT_DMG: 50, MAGIC: 80 },
+            spell: [
+                {
+                    name: "",
+                    cooldown: 10,
+                    description: "",
+                    effect: [
+                        {
+                            type: "BUFF_ATK",
+                            ratio: [
+                                { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                            ],
+                        },
+                        {
+                            type: "DAMAGE",
+                            ratio: [
+                                { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                            ],
+                        },
+                    ],
+                }
+            ],
+        },
+        {
+            name: "Many Moutmout",
+            type: "Brawler",
+            url: " (6)",
+            rarity: "lendendary",
+            stats: { HP: 750, DEF: 0, ATK: 49, SPD: 2.4, CRIT: 5, CRIT_DMG: 50, MAGIC: 34 },
+            spell: [
+                {
+                    type: "ACTIVE",
+                    name: "Fontaine dans la bouche",
+                    description: "Many Moutmout te remet du Mi Amor",
+                    cooldown: 10,
+                    effect: [
+                        {
+                            type: "SHIELD",
+                            ratio: [
+                                { HP: 1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                            ],
+                            effect: [
+                                {
+                                    type: "DEBUFF_SPEED", ratio: [
+                                        { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                        { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                    ]
+                                },
+                            ]
+                        },
+                    ],
+                }
+            ],
+        },
+        {
+            name: "Pouri D. Groll",
+            type: "Undead",
+            url: " (20)",
+            rarity: "lendendary",
+            stats: { HP: 407, DEF: 0, ATK: 85, SPD: 2.3, CRIT: 5, CRIT_DMG: 50, MAGIC: 70 },
+            spell: [
+                {
+                    type: "PASSIVE",
+                    name: "Tenace",
+                    description: "",
+                    effect: [
+                        {
+                            type: "LIFESTEAL",
+                            ratio: [
+                                { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                            ],
+                        },
+                    ],
+                }
+            ],
+        },
+        {
+            name: "Pakt",
+            type: "Fiend",
+            url: " (22)",
+            rarity: "lendendary",
+            stats: { HP: 666, DEF: 0, ATK: 59, SPD: 2.1, CRIT: 7, CRIT_DMG: 50, MAGIC: 40 },
+            spell: [
+                {
+                    type: "ACTIVE",
+                    name: "Un mal pour un bien",
+                    description: "",
+                    cooldown: 10,
+                    effect: [
+                        {
+                            type: "SACRIFICE",
+                            ratio: [
+                                { HP: 50, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                            ],
+                            effect: [
+                                {
+                                    type: "BUFF_SPEED_EQUIP",
+                                    ratio: [
+                                        { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                        { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                    ]
+                                },
+                                {
+                                    type: "BUFF_CRIT_EQUIP",
+                                    ratio: [
+                                        { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                        { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                    ]
+                                }
+                            ],
+                        },
+                    ],
+                }
+            ],
+        },
+        {
+            name: "Vadh L.B.",
+            type: "Fiend",
+            url: "vadh_l_b",
+            rarity: "lendendary",
+            stats: { HP: 777, DEF: 0, ATK: 62, SPD: 2, CRIT: 5, CRIT_DMG: 50, MAGIC: 20 },
+            spell: [
+                {
+                    type: "PASSIVE",
+                    name: "",
+                    description: "",
+                    effect: [
+                        {
+                            type: "REVIVE",
+                            ratio: [
+                                { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                            ],
+                        },
+                    ],
+                }
+            ],
+        },
     ],
-    "mythic" : [
-        {name: "Necroloss", type: "Undead", url : "necroloss"},
-        {name: "QuadSpace", type: "CosmicThreat", url : " (14)"},
-        {name: "Saka Vyand", type: "Fiend", url : "saka_vyand"},
+    // HP 850 - 1000  ATK 85 - 100  SPD 1 - 1.5  CRIT 8 - 10  CRIT_DMG 50 // Score 35000 - 70000
+    "mythic": [
+        {
+            name: "Necroloss",
+            type: "Undead",
+            url: "necroloss",
+            rarity: "mythic",
+            stats: { HP: 911, DEF: 5, ATK: 95, SPD: 1.35, CRIT: 8, CRIT_DMG: 50, MAGIC: 110 },
+            spell: [
+                {
+                    type: "ACTIVE",
+                    name: "",
+                    description: "",
+                    cooldown: 10,
+                    effect: [
+                        {
+                            type: "BUFF_ATK",
+                            ratio: [
+                                { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                            ],
+                        },
+                        {
+                            type: "BUFF_CRIT",
+                            ratio: [
+                                { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                            ],
+                        },
+                        {
+                            type: "BUFF_SPEED_AFTER_TIME",
+                            time: 30,
+                            multiplier: 2,
+                            ratio: [
+                                { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                            ],
+                        }
+                    ],
+                }
+            ],
+        },
+        {
+            name: "QuadSpace",
+            type: "CosmicThreat",
+            url: "quad_space",
+            rarity: "mythic",
+            stats: { HP: 900, DEF: 6, ATK: 90, SPD: 1.5, CRIT: 20, CRIT_DMG: 50, MAGIC: 215 },
+            spell: [
+                {
+                    type: "PASSIVE",
+                    name: "",
+                    description: "",
+                    effect: [
+                        {
+                            type: "BUFF_SPEED_STACK",
+                            interval: 3,
+                            multiplier: 0.1,
+                            cap: 1,
+                        }
+                    ],
+                },
+                {
+                    type: "PASSIVE",
+                    name: "",
+                    description: "",
+                    effect: [
+                        {
+                            type: "RANDOM_IN_EFFECT",
+                            effect: [
+                                {
+                                    type: "DAMAGE",
+                                    ratio: [
+                                        { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    ],
+                                },
+                                {
+                                    type: "HEAL",
+                                    ratio: [
+                                        { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                    ],
+                                },
+                                {
+                                    type: "STUN",
+                                    time: 1,
+                                    ratio: [
+                                        { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                    ],
+                                },
+                                {
+                                    type: "BUFF_ATK_SOLO",
+                                    ratio: [
+                                        { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    ],
+                                }
+                            ],
+                        },
+                    ],
+                },
+            ]
+        },
+        {
+            name: "Saka Vyand",
+            type: "Fiend",
+            url: "saka_vyand",
+            rarity: "mythic",
+            stats: { HP: 1000, DEF: 20, ATK: 85, SPD: 1.5, CRIT: 8, CRIT_DMG: 50 },
+            spell: [
+                {
+                    type: "PASSIVE",
+                    name: "",
+                    description: "",
+                    effect: [
+                        {
+                            type: "BUFF_ATK_SOLO_PER_MISSING_HP",
+                            buff: 1.5,
+                        },
+                    ],
+                },
+                {
+                    type: "PASSIVE",
+                    name: "",
+                    description: "",
+                    effect: [
+                        {
+                            type: "BUFF_DEF_+50%_HP",
+                            value: 20,
+                        },
+                        {
+                            type: "BUFF_SPEED_-50%_HP",
+                            ratio: [
+                                { HP: 1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                            ]
+                        },
+                    ],
+                },
+            ],
+        },
     ],
 }
+
+function DPS() {
+    for (let i = 0; i < persoTableData.rare.length; i++) {
+        let invoc = persoTableData.rare[i]
+        let invocDPS = Math.round((invoc.stats.ATK / invoc.stats.SPD) * 100) / 100
+        let invocDPSCrit = invocDPS + invocDPS * ((invoc.stats.CRIT / 100) * 0.5)
+        let score = Math.round(invocDPSCrit * invoc.stats.HP)
+        console.log(`${invoc.name}: HP ${invoc.stats.HP} , DPS Crit ${invocDPSCrit}`, score)
+    }
+    console.log("")
+    for (let i = 0; i < persoTableData.epic.length; i++) {
+        let invoc = persoTableData.epic[i]
+        let invocDPS = Math.round((invoc.stats.ATK / invoc.stats.SPD) * 100) / 100
+        let invocDPSCrit = invocDPS + invocDPS * ((invoc.stats.CRIT / 100) * 0.5)
+        let score = Math.round(invocDPSCrit * invoc.stats.HP)
+        console.log(`${invoc.name}: HP ${invoc.stats.HP} , DPS Crit ${invocDPSCrit}`, score)
+    }
+    console.log("")
+    for (let i = 0; i < persoTableData.legendary.length; i++) {
+        let invoc = persoTableData.legendary[i]
+        let invocDPS = Math.round((invoc.stats.ATK / invoc.stats.SPD) * 100) / 100
+        let invocDPSCrit = invocDPS + invocDPS * ((invoc.stats.CRIT / 100) * 0.5)
+        let score = Math.round(invocDPSCrit * invoc.stats.HP)
+        console.log(`${invoc.name}: HP ${invoc.stats.HP} , DPS Crit ${invocDPSCrit}`, score)
+    }
+    console.log("")
+    for (let i = 0; i < persoTableData.mythic.length; i++) {
+        let invoc = persoTableData.mythic[i]
+        let invocDPS = Math.round((invoc.stats.ATK / invoc.stats.SPD) * 100) / 100
+        let invocDPSCrit = invocDPS + invocDPS * ((invoc.stats.CRIT / 100) * 0.5)
+        let score = Math.round(invocDPSCrit * invoc.stats.HP)
+        console.log(`${invoc.name}: HP ${invoc.stats.HP} , DPS Crit ${invocDPSCrit}`, score)
+    }
+}
+
+DPS()
 
 // ------------------------------
 
@@ -475,7 +1152,7 @@ function randomLoot(lootChances) {
 }
 
 function randomLootByRarity(rarity) {
-    const lootList = invocTableName[rarity]; // Récupérer le tableau de loot correspondant à la rareté
+    const lootList = persoTableData[rarity]; // Récupérer le tableau de loot correspondant à la rareté
 
     if (!lootList || lootList.length === 0) {
         throw new Error(`Impossible de trouver des loots pour la rareté ${rarity}`);
@@ -551,7 +1228,7 @@ async function invocation(number) {
     switch (number) {
         case 1:
             guiInTavernInvoc.setAttribute('type', 'single')
-            let loot = randomLoot(invocTableRate)
+            let loot = randomLoot(rarityTable)
             let hero = randomLootByRarity(loot)
 
             renderInvoc(loot, hero)
@@ -559,7 +1236,7 @@ async function invocation(number) {
         case 7:
             guiInTavernInvoc.setAttribute('type', 'multi')
             for (let i = 1; i < 8; i++) {
-                let loot = randomLoot(invocTableRate)
+                let loot = randomLoot(rarityTable)
                 let hero = randomLootByRarity(loot)
 
                 renderInvoc(loot, hero)
@@ -598,3 +1275,4 @@ renderGuildeMenu()
 renderTaverneMenu()
 
 // -----------------------------------------------
+

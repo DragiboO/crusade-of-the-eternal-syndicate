@@ -302,26 +302,69 @@
 
         button {
             width: 15%;
-            height: 80%;
+            height: 95%;
             background-color: transparent;
             font-size: 1.5rem;
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
             border: 0;
+            position: relative;
+
+            &[left]::after {
+                content: '10';
+                position: absolute;
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                top: 12.5%;
+                left: calc(-40% - 0.75rem);
+                width: 40%;
+                height: 75%;
+                background-color: rgb(158, 158, 158);
+                background-image: url('./assets/img/currency/diams.webp');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: 80%;
+                padding-left: 0.75rem;
+                border-top-left-radius: 0.5rem;
+                border-bottom-left-radius: 0.5rem;
+                border: 0.125rem solid black;
+            }
+
+            &[right]::after {
+                content: '60';
+                position: absolute;
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                top: 12.5%;
+                right: calc(-40% - 0.75rem);
+                width: 40%;
+                height: 75%;
+                background-color: rgb(158, 158, 158);
+                background-image: url('./assets/img/currency/diams.webp');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: 95%;
+                padding-left: 0.75rem;
+                border-top-right-radius: 0.5rem;
+                border-bottom-right-radius: 0.5rem;
+                border: 0.125rem solid black;
+            }
         }
 
         button[clickable="true"] {
             cursor: pointer;
-            background-image: url('./assets/img/hero/type/button.webp');
+            background-image: url('./assets/img/gui/taverne/invoc.webp');
             
             &:hover {
-                background-image: url('./assets/img/hero/type/invoc_possible_02.webp');
+                background-image: url('./assets/img/gui/taverne/invoc_hover.webp');
             }
         }
 
         button[clickable="false"] {
-            background-image: url('./assets/img/hero/type/invoc_non_01.webp');
+            background-image: url('./assets/img/gui/taverne/invoc_blocked.webp');
         }
     }
 }

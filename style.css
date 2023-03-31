@@ -1679,43 +1679,281 @@ body {
 }
 .gui__in-taverne[active=true] .gui__in-taverne-btn-invoc button {
   width: 15%;
-  height: 80%;
+  height: 95%;
   background-color: transparent;
   font-size: 1.5rem;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   border: 0;
+  position: relative;
+}
+.gui__in-taverne[active=true] .gui__in-taverne-btn-invoc button[left]::after {
+  content: "10";
+  position: absolute;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  top: 12.5%;
+  left: calc(-40% - 0.75rem);
+  width: 40%;
+  height: 75%;
+  background-color: #9e9e9e;
+  background-image: url("./assets/img/currency/diams.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 80%;
+  padding-left: 0.75rem;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border: 0.125rem solid black;
+}
+.gui__in-taverne[active=true] .gui__in-taverne-btn-invoc button[right]::after {
+  content: "60";
+  position: absolute;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  top: 12.5%;
+  right: calc(-40% - 0.75rem);
+  width: 40%;
+  height: 75%;
+  background-color: #9e9e9e;
+  background-image: url("./assets/img/currency/diams.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 95%;
+  padding-left: 0.75rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border: 0.125rem solid black;
 }
 .gui__in-taverne[active=true] .gui__in-taverne-btn-invoc button[clickable=true] {
   cursor: pointer;
-  background-image: url("./assets/img/hero/type/button.webp");
+  background-image: url("./assets/img/gui/taverne/invoc.webp");
 }
 .gui__in-taverne[active=true] .gui__in-taverne-btn-invoc button[clickable=true]:hover {
-  background-image: url("./assets/img/hero/type/invoc_possible_02.webp");
+  background-image: url("./assets/img/gui/taverne/invoc_hover.webp");
 }
 .gui__in-taverne[active=true] .gui__in-taverne-btn-invoc button[clickable=false] {
-  background-image: url("./assets/img/hero/type/invoc_non_01.webp");
+  background-image: url("./assets/img/gui/taverne/invoc_blocked.webp");
 }
 
 .gui__in-taverne[active=false] {
   display: none;
 }
 
+.gui__in-inventaire[active=true] {
+  display: block;
+}
+
+.gui__in-inventaire[active=false] {
+  display: none;
+}
+
 .gui__in-inventaire {
-  background-color: rgba(0, 255, 255, 0.089);
   margin-top: 1%;
   height: 78%;
   margin-left: 1%;
   width: 87.5%;
 }
-
-.gui__in-inventaire[active=true] {
-  display: flex;
+.gui__in-inventaire .top {
+  width: 100%;
+  height: 35%;
+  position: relative;
 }
-
-.gui__in-inventaire[active=false] {
-  display: none;
+.gui__in-inventaire .top .left {
+  width: 43%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.gui__in-inventaire .top .left .pseudo {
+  width: 90%;
+  height: 50%;
+  position: absolute;
+  left: 2%;
+  top: 5%;
+  background-image: url("./assets/img/gui/inventaire/pseudo.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.gui__in-inventaire .top .left .pseudo p {
+  font-size: 2rem;
+  margin-left: 1.5rem;
+}
+.gui__in-inventaire .top .left .level {
+  width: 94%;
+  height: 30%;
+  position: absolute;
+  left: 2%;
+  top: 47%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  overflow: hidden;
+}
+.gui__in-inventaire .top .left .level .border {
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/img/gui/inventaire/barre_xp_02.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 230;
+}
+.gui__in-inventaire .top .left .level .border .level-show {
+  font-size: 1.5rem;
+}
+.gui__in-inventaire .top .left .level .xp {
+  position: absolute;
+  top: 20%;
+  left: 0.1rem;
+  width: 10%;
+  height: 60%;
+  background-color: #8fdf8f;
+  border-radius: 2rem;
+  z-index: 229;
+}
+.gui__in-inventaire .top .right {
+  background-image: url("./assets/img/gui/inventaire/devises.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: 0;
+  top: 10%;
+  width: 63%;
+  height: 80%;
+}
+.gui__in-inventaire .top .right > p {
+  position: absolute;
+  font-size: 1.5rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+}
+.gui__in-inventaire .top .right > img {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+}
+.gui__in-inventaire .top .right p:nth-child(1) {
+  top: 16.5%;
+  right: 71.5%;
+}
+.gui__in-inventaire .top .right img:nth-child(2) {
+  top: 19.5%;
+  left: 29%;
+}
+.gui__in-inventaire .top .right p:nth-child(3) {
+  top: 16.5%;
+  right: 46%;
+}
+.gui__in-inventaire .top .right img:nth-child(4) {
+  top: 19.5%;
+  left: 55%;
+}
+.gui__in-inventaire .top .right p:nth-child(5) {
+  top: 48%;
+  right: 69.5%;
+}
+.gui__in-inventaire .top .right img:nth-child(6) {
+  top: 51%;
+  left: 32%;
+}
+.gui__in-inventaire .top .right p:nth-child(7) {
+  top: 48%;
+  right: 43%;
+}
+.gui__in-inventaire .top .right img:nth-child(8) {
+  top: 51%;
+  left: 58%;
+}
+.gui__in-inventaire .top .right .round-type {
+  position: absolute;
+  top: -12%;
+  right: 0;
+  height: 153%;
+  width: 35%;
+  background-image: url("./assets/img/gui/inventaire/roue_type_02.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.gui__in-inventaire .top .right .round-type img {
+  width: 80%;
+  height: 80%;
+  margin-bottom: 9%;
+  margin-right: -4%;
+  object-fit: contain;
+}
+.gui__in-inventaire .bottom {
+  width: 100%;
+  height: 65%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 3%;
+}
+.gui__in-inventaire .bottom .inventaire-player {
+  background-image: url("./assets/img/gui/inventaire/items.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 75%;
+  height: 100%;
+  padding: 2rem 1.4rem 1.8rem 2rem;
+  /* Chrome, Edge, and Safari */
+}
+.gui__in-inventaire .bottom .inventaire-player .inventaire-inset {
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2%;
+  padding-bottom: 0.5rem;
+}
+.gui__in-inventaire .bottom .inventaire-player .inventaire-inset > div {
+  aspect-ratio: 1;
+  background-color: #69b4be;
+}
+.gui__in-inventaire .bottom .inventaire-player * {
+  scrollbar-width: auto;
+  scrollbar-color: #8f54a0 #a82424;
+}
+.gui__in-inventaire .bottom .inventaire-player *::-webkit-scrollbar {
+  width: 2rem;
+}
+.gui__in-inventaire .bottom .inventaire-player *::-webkit-scrollbar-track {
+  background: #d6d6d6;
+}
+.gui__in-inventaire .bottom .inventaire-player *::-webkit-scrollbar-thumb {
+  background-color: #bababa;
+  border-radius: 2rem;
+  border: 0.5rem solid #d6d6d6;
+}
+.gui__in-inventaire .bottom .card-perso {
+  background-image: url("./assets/img/gui/inventaire/pp.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 17%;
+  height: 93%;
+  margin-bottom: 0.5%;
 }
 
 .preload {
