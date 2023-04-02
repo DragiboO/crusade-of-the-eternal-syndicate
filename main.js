@@ -92,8 +92,6 @@ let rarityTable = {
     "mythic" : 1,
 }
 
-// dmg - buff atk solo/team - debuff atk enemy - heal - stun - buff spd solo/team - buff crit solo/team - debuff speed enemy - dot - invulnerability
-
 let persoTableData = {
     // HP 90 - 150  ATK 10 - 25  SPD 2 - 4  CRIT 1 - 2.5  CRIT_DMG 50  // Score 500 - 1500
     "rare": [
@@ -108,14 +106,62 @@ let persoTableData = {
                     type: "ACTIVE",
                     name: "Colosse-copie colossale",
                     description: "Le tripoteur utilise ses mains pour t'enculer",
-                    cooldown: 10,
                     effect: [
-                        {
-                            type: "DAMAGE",
-                            ratio: [
-                                { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1.5 },
-                            ],
-                        },
+                        [
+                            {
+                                evolution: 0,
+                                type: "DAMAGE",
+                                cooldown: 10,
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1.5 },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 1,
+                                type: "DAMAGE",
+                                cooldown: 10,
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2.5 },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 2,
+                                type: "DAMAGE",
+                                cooldown: 10,
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 3.5 },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 3,
+                                type: "DAMAGE",
+                                cooldown: 10,
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 4.5 },
+                                ],
+                            }
+                        ],[
+                            {
+                                evolution: 4,
+                                type: "DAMAGE",
+                                cooldown: 10,
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 5.5 },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 5,
+                                type: "DAMAGE",
+                                cooldown: 10,
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 6.5 },
+                                ],
+                            },
+                        ],
                     ],
                 },
             ],
@@ -131,14 +177,62 @@ let persoTableData = {
                     type: "ACTIVE",
                     name: "Les bro Leurs",
                     description: "Petitekip te colmate",
-                    cooldown: 10,
                     effect: [
-                        {
-                            type: "DAMAGE",
-                            ratio: [
-                                { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
-                            ],
-                        },
+                        [
+                            {
+                                evolution: 0,
+                                type: "DAMAGE",
+                                cooldown: 10,
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 1,
+                                type: "DAMAGE",
+                                cooldown: 10,
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1.5, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 2,
+                                type: "DAMAGE",
+                                cooldown: 10,
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 2, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 3,
+                                type: "DAMAGE",
+                                cooldown: 10,
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 2.5, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 4,
+                                type: "DAMAGE",
+                                cooldown: 10,
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 3, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 5,
+                                type: "DAMAGE",
+                                cooldown: 10,
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 3.5, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                            },
+                        ],
                     ],
                 },
             ],
@@ -154,14 +248,62 @@ let persoTableData = {
                     type: "ACTIVE",
                     name: "Piklecu",
                     description: "Fon Bou te pique",
-                    cooldown: 10,
                     effect: [
-                        {
-                            type: "DAMAGE",
-                            ratio: [
-                                { HP: 0, DEF: 0, ATK: 0.5, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
-                            ],
-                        },
+                        [
+                            {
+                                evolution: 0,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0.5, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 1,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0.5, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1.5 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 2,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0.5, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 3,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0.5, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2.5 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 4,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0.5, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 3 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 5,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0.5, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 3.5 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],
                     ],
                 },
             ],
@@ -177,14 +319,62 @@ let persoTableData = {
                     type: "ACTIVE",
                     name: "Petite comète",
                     description: "Toc Arr t'applatit",
-                    cooldown: 10,
                     effect: [
-                        {
-                            type: "DAMAGE",
-                            ratio: [
-                                { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1.7 },
-                            ],
-                        },
+                        [
+                            {
+                                evolution: 0,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1.7 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 1,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2.1 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 2,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2.5 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 3,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2.9 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 4,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 3.3 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 5,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 3.7 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],
                     ],
                 },
             ],
@@ -200,14 +390,62 @@ let persoTableData = {
                     type: "ACTIVE",
                     name: "Jeté de KK",
                     description: "Tad Merde te tue",
-                    cooldown: 10,
                     effect: [
-                        {
-                            type: "DAMAGE",
-                            ratio: [
-                                { HP: 0.08, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
-                            ],
-                        },
+                        [
+                            {
+                                evolution: 0,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0.08, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 1,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0.08, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 2,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0.08, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 3,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0.08, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 4,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0.08, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 5,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0.08, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],
                     ],
                 },
             ],
@@ -223,14 +461,62 @@ let persoTableData = {
                     type: "ACTIVE",
                     name: "Surprise du chef",
                     description: "Pauv' Type te fait déguster sa bite",
-                    cooldown: 10,
                     effect: [
-                        {
-                            type: "DAMAGE",
-                            ratio: [
-                                { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
-                            ],
-                        },
+                        [
+                            {
+                                evolution: 0,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 1,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 2,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 3,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 4,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 5,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],
                     ],
                 },
             ],
@@ -248,12 +534,61 @@ let persoTableData = {
                     description: "Klo Charr pète sur un briquet",
                     cooldown: 10,
                     effect: [
-                        {
-                            type: "DAMAGE",
-                            ratio: [
-                                { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2 },
-                            ],
-                        },
+                        [
+                            {
+                                evolution: 0,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 1,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 2,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 3,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 4,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 5,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],
                     ],
                 },
             ],
@@ -269,22 +604,122 @@ let persoTableData = {
                     type: "ACTIVE",
                     name: "Travaux",
                     description: "Raph G. J. te suce",
-                    cooldown: 10,
                     effect: [
-                        {
-                            type: "DAMAGE",
-                            ratio: { HP: 0, DEF: 0, ATK: 2, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
-                            effect: [
-                                {
-                                    type: "DOT",
-                                    ratio: [
-                                        { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
-                                        { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
-                                        { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
-                                    ],
-                                },
-                            ],
-                        },
+                        [
+                            {
+                                evolution: 0,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 2, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                                effect: [
+                                    {
+                                        type: "DOT",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ],
+                                    },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 1,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 2, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                                effect: [
+                                    {
+                                        type: "DOT",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ],
+                                    },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 2,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 2, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                                effect: [
+                                    {
+                                        type: "DOT",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ],
+                                    },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 3,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 2, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                                effect: [
+                                    {
+                                        type: "DOT",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ],
+                                    },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 4,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 2, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                                effect: [
+                                    {
+                                        type: "DOT",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ],
+                                    },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 5,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 2, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                                effect: [
+                                    {
+                                        type: "DOT",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ],
+                                    },
+                                ],
+                            },
+                        ],
                     ],
                 },
             ],
@@ -299,15 +734,63 @@ let persoTableData = {
                 {
                     type: "ACTIVE",
                     name: "Coup de bâton",
-                    description: "",
-                    cooldown: 10,
+                    description: "Gro Baton te donne un gros coup de baton",
                     effect: [
-                        {
-                            type: "DAMAGE",
-                            ratio: [
-                                { HP: 0, DEF: 0, ATK: 1.7, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
-                            ],
-                        }
+                        [
+                            {
+                                evolution: 0,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1.7, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 1,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1.7, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 2,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1.7, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 3,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1.7, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 4,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1.7, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 5,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1.7, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],
                     ],
                 },
             ],
@@ -326,15 +809,68 @@ let persoTableData = {
                     type: "ACTIVE",
                     name: "Tempête de St-Môret",
                     description: "Mad Chrees t'en met plein la vue",
-                    cooldown: 10,
                     effect: [
-                        {
-                            type: "DEBUFF_SPEED",
-                            ration: [
-                                { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0.25 },
-                                { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 1, MAGIC: 0 },
-                            ]
-                        },
+                        [
+                            {
+                                evolution: 0,
+                                type: "DEBUFF_SPEED",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0.25 },
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 1, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 1,
+                                type: "DEBUFF_SPEED",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0.25 },
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 1, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 2,
+                                type: "DEBUFF_SPEED",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0.25 },
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 1, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 3,
+                                type: "DEBUFF_SPEED",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0.25 },
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 1, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 4,
+                                type: "DEBUFF_SPEED",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0.25 },
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 1, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 5,
+                                type: "DEBUFF_SPEED",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0.25 },
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 1, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],
                     ],
                 },
             ],
@@ -350,16 +886,74 @@ let persoTableData = {
                     type: "ACTIVE",
                     name: "Profanation",
                     description: "Filip réveil tes ancêtres",
-                    cooldown: 10,
                     effect: [
-                        {
-                            type: "DOT",
-                            ratio: [
-                                { HP: 0, DEF: 0, ATK: 1.7, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2 },
-                                { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
-                                { HP: 0.08, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
-                            ],
-                        },
+                        [
+                            {
+                                evolution: 0,
+                                type: "DOT",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1.7, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2 },
+                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0.08, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 1,
+                                type: "DOT",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1.7, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2 },
+                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0.08, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 2,
+                                type: "DOT",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1.7, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2 },
+                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0.08, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 3,
+                                type: "DOT",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1.7, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2 },
+                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0.08, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 4,
+                                type: "DOT",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1.7, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2 },
+                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0.08, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 5,
+                                type: "DOT",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1.7, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2 },
+                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0.08, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],
                     ],
                 },
             ],
@@ -375,14 +969,62 @@ let persoTableData = {
                     type: "ACTIVE",
                     name: "Insulte déchirante",
                     description: "MagicNilmar te dit que t'es nul",
-                    cooldown: 10,
                     effect: [
-                        {
-                            type: "DAMAGE",
-                            ratio: [
-                                { HP: 0, DEF: 0, ATK: 2, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
-                            ],
-                        },
+                        [
+                            {
+                                evolution: 0,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 2, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 1,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 2, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 2,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 2, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 3,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 2, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 4,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 2, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 5,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 2, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],
                     ],
                 },
             ],
@@ -398,15 +1040,68 @@ let persoTableData = {
                     type: "ACTIVE",
                     name: "Prise du lapin",
                     description: "Le Vivi te fait un gros câlin",
-                    cooldown: 10,
                     effect: [
-                        {
-                            type: "BUFF_SPEED_EQUIP",
-                            ratio: [
-                                { HP: 0.06, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
-                                { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
-                            ],
-                        },
+                        [
+                            {
+                                evolution: 0,
+                                type: "BUFF_SPEED_EQUIP",
+                                ratio: [
+                                    { HP: 0.06, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 1,
+                                type: "BUFF_SPEED_EQUIP",
+                                ratio: [
+                                    { HP: 0.06, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 2,
+                                type: "BUFF_SPEED_EQUIP",
+                                ratio: [
+                                    { HP: 0.06, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 3,
+                                type: "BUFF_SPEED_EQUIP",
+                                ratio: [
+                                    { HP: 0.06, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 4,
+                                type: "BUFF_SPEED_EQUIP",
+                                ratio: [
+                                    { HP: 0.06, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 5,
+                                type: "BUFF_SPEED_EQUIP",
+                                ratio: [
+                                    { HP: 0.06, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],
                     ],
                 },
             ],
@@ -414,7 +1109,7 @@ let persoTableData = {
         {
             name: "Ren'Par",
             type: "CosmicThreat",
-            url: " (17)",
+            url: "ren_par",
             rarity: "epic",
             stats: { HP: 284, DEF: 0, ATK: 44, SPD: 3.7, CRIT: 4, CRIT_DMG: 50, MAGIC: 31 },
             spell: [
@@ -422,14 +1117,62 @@ let persoTableData = {
                     type: "ACTIVE",
                     name: "Pompe",
                     description: "Ren'Par te fait des trous",
-                    cooldown: 10,
                     effect: [
-                        {
-                            type: "DAMAGE",
-                            ratio: [
-                                { HP: 0, DEF: 0, ATK: 0, SPD: 1, CRIT: 0, CRIT_DMG: 0, MAGIC: 1.5 },
-                            ],
-                        },
+                        [
+                            {
+                                evolution: 0,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 1, CRIT: 0, CRIT_DMG: 0, MAGIC: 1.5 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 1,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 1, CRIT: 0, CRIT_DMG: 0, MAGIC: 1.5 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 2,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 1, CRIT: 0, CRIT_DMG: 0, MAGIC: 1.5 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 3,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 1, CRIT: 0, CRIT_DMG: 0, MAGIC: 1.5 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 4,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 1, CRIT: 0, CRIT_DMG: 0, MAGIC: 1.5 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 5,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 1, CRIT: 0, CRIT_DMG: 0, MAGIC: 1.5 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],
                     ],
                 },
             ],
@@ -444,15 +1187,63 @@ let persoTableData = {
                 {
                     type: "ACTIVE",
                     name: "Beauté",
-                    description: "Atchoom t'eblouis",
-                    cooldown: 10,
+                    description: "Atchoom t'éblouis",
                     effect: [
-                        {
-                            type: "STUN",
-                            ratio: [
-                                { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 50 },
-                            ],
-                        },
+                        [
+                            {
+                                evolution: 0,
+                                type: "STUN",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 50 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 1,
+                                type: "STUN",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 50 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 2,
+                                type: "STUN",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 50 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 3,
+                                type: "STUN",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 50 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 4,
+                                type: "STUN",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 50 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 5,
+                                type: "STUN",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 50 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],
                     ],
                 },
             ],
@@ -468,17 +1259,70 @@ let persoTableData = {
                     type: "ACTIVE",
                     name: "Cauchemar",
                     description: "Fiddle Stock te fait transpirer",
-                    cooldown: 10,
                     effect: [
-                        {
-                            type: "DEBUFF_ATK",
-                            ratio: [
-                                { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
-                                { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 1, MAGIC: 0 },
-                            ],
-                        },
+                        [
+                            {
+                                evolution: 0,
+                                type: "DEBUFF_ATK",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 1, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 1,
+                                type: "DEBUFF_ATK",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 1, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 2,
+                                type: "DEBUFF_ATK",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 1, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 3,
+                                type: "DEBUFF_ATK",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 1, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 4,
+                                type: "DEBUFF_ATK",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 1, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 5,
+                                type: "DEBUFF_ATK",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 1, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],
                     ],
-                }
+                },
             ],
         },
     ],
@@ -492,25 +1336,121 @@ let persoTableData = {
             stats: { HP: 595, DEF: 0, ATK: 51, SPD: 2.2, CRIT: 8, CRIT_DMG: 50, MAGIC: 80 },
             spell: [
                 {
-                    name: "",
-                    cooldown: 10,
-                    description: "",
+                    type: "ACTIVE",
+                    name: "Propulsion Astrale",
+                    description: "John Doe te fait voyager",
                     effect: [
-                        {
-                            type: "BUFF_ATK",
-                            ratio: [
-                                { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
-                                { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
-                            ],
-                        },
-                        {
-                            type: "DAMAGE",
-                            ratio: [
-                                { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
-                            ],
-                        },
+                        [
+                            {
+                                evolution: 0,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                                effect: [
+                                    {
+                                        type: "BUFF_ATK",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ],
+                                    },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 1,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                                effect: [
+                                    {
+                                        type: "BUFF_ATK",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ],
+                                    },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 2,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                                effect: [
+                                    {
+                                        type: "BUFF_ATK",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ],
+                                    },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 3,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                                effect: [
+                                    {
+                                        type: "BUFF_ATK",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ],
+                                    },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 4,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                                effect: [
+                                    {
+                                        type: "BUFF_ATK",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ],
+                                    },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 5,
+                                type: "DAMAGE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                                effect: [
+                                    {
+                                        type: "BUFF_ATK",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ],
+                                    },
+                                ],
+                            },
+                        ],
                     ],
-                }
+                },
             ],
         },
         {
@@ -524,24 +1464,102 @@ let persoTableData = {
                     type: "ACTIVE",
                     name: "Fontaine dans la bouche",
                     description: "Many Moutmout te remet du Mi Amor",
-                    cooldown: 10,
                     effect: [
-                        {
+                        [
+                            {
+                                evolution: 0,
+                                type: "SHIELD",
+                                ratio: [
+                                    { HP: 1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                                effect: [
+                                    {
+                                        type: "DEBUFF_SPEED", ratio: [
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ],
+                                    },
+                                ],
+                            },
+                        ],{
+                            evolution: 1,
                             type: "SHIELD",
                             ratio: [
                                 { HP: 1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                             ],
+                            cooldown: 10,
                             effect: [
                                 {
                                     type: "DEBUFF_SPEED", ratio: [
                                         { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                         { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
-                                    ]
+                                    ],
                                 },
-                            ]
+                            ],
+                        },{
+                            evolution: 2,
+                            type: "SHIELD",
+                            ratio: [
+                                { HP: 1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                            ],
+                            cooldown: 10,
+                            effect: [
+                                {
+                                    type: "DEBUFF_SPEED", ratio: [
+                                        { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                        { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                    ],
+                                },
+                            ],
+                        },{
+                            evolution: 3,
+                            type: "SHIELD",
+                            ratio: [
+                                { HP: 1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                            ],
+                            cooldown: 10,
+                            effect: [
+                                {
+                                    type: "DEBUFF_SPEED", ratio: [
+                                        { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                        { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                    ],
+                                },
+                            ],
+                        },{
+                            evolution: 4,
+                            type: "SHIELD",
+                            ratio: [
+                                { HP: 1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                            ],
+                            cooldown: 10,
+                            effect: [
+                                {
+                                    type: "DEBUFF_SPEED", ratio: [
+                                        { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                        { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                    ],
+                                },
+                            ],
+                        },{
+                            evolution: 5,
+                            type: "SHIELD",
+                            ratio: [
+                                { HP: 1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                            ],
+                            cooldown: 10,
+                            effect: [
+                                {
+                                    type: "DEBUFF_SPEED", ratio: [
+                                        { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                        { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                    ],
+                                },
+                            ],
                         },
                     ],
-                }
+                },
             ],
         },
         {
@@ -553,56 +1571,227 @@ let persoTableData = {
             spell: [
                 {
                     type: "PASSIVE",
-                    name: "Tenace",
-                    description: "",
+                    name: "Pompeur",
+                    description: "Pouri D. Groll est infatigable !",
                     effect: [
-                        {
-                            type: "LIFESTEAL",
-                            ratio: [
-                                { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
-                            ],
-                        },
+                        [
+                            {
+                                evolution: 0,
+                                type: "LIFESTEAL",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 1,
+                                type: "LIFESTEAL",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 2,
+                                type: "LIFESTEAL",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 3,
+                                type: "LIFESTEAL",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 4,
+                                type: "LIFESTEAL",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 5,
+                                type: "LIFESTEAL",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                            },
+                        ],
                     ],
-                }
+                },
             ],
         },
         {
             name: "Pakt",
             type: "Fiend",
-            url: " (22)",
+            url: "pakt",
             rarity: "lendendary",
             stats: { HP: 666, DEF: 0, ATK: 59, SPD: 2.1, CRIT: 7, CRIT_DMG: 50, MAGIC: 40 },
             spell: [
                 {
                     type: "ACTIVE",
                     name: "Un mal pour un bien",
-                    description: "",
-                    cooldown: 10,
+                    description: "Pakt te met la misère",
                     effect: [
-                        {
-                            type: "SACRIFICE",
-                            ratio: [
-                                { HP: 50, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
-                            ],
-                            effect: [
-                                {
-                                    type: "BUFF_SPEED_EQUIP",
-                                    ratio: [
-                                        { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
-                                        { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
-                                    ]
-                                },
-                                {
-                                    type: "BUFF_CRIT_EQUIP",
-                                    ratio: [
-                                        { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
-                                        { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
-                                    ]
-                                }
-                            ],
-                        },
+                        [
+                            {
+                                evolution: 0,
+                                type: "SACRIFICE",
+                                ratio: [
+                                    { HP: 50, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                                effect: [
+                                    {
+                                        type: "BUFF_SPEED_EQUIP",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ]
+                                    },
+                                    {
+                                        type: "BUFF_CRIT_EQUIP",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ],
+                                    },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 1,
+                                type: "SACRIFICE",
+                                ratio: [
+                                    { HP: 50, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                                effect: [
+                                    {
+                                        type: "BUFF_SPEED_EQUIP",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ]
+                                    },
+                                    {
+                                        type: "BUFF_CRIT_EQUIP",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ],
+                                    },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 2,
+                                type: "SACRIFICE",
+                                ratio: [
+                                    { HP: 50, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                                effect: [
+                                    {
+                                        type: "BUFF_SPEED_EQUIP",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ]
+                                    },
+                                    {
+                                        type: "BUFF_CRIT_EQUIP",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ],
+                                    },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 3,
+                                type: "SACRIFICE",
+                                ratio: [
+                                    { HP: 50, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                                effect: [
+                                    {
+                                        type: "BUFF_SPEED_EQUIP",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ]
+                                    },
+                                    {
+                                        type: "BUFF_CRIT_EQUIP",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ],
+                                    },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 4,
+                                type: "SACRIFICE",
+                                ratio: [
+                                    { HP: 50, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                                effect: [
+                                    {
+                                        type: "BUFF_SPEED_EQUIP",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ]
+                                    },
+                                    {
+                                        type: "BUFF_CRIT_EQUIP",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ],
+                                    },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 5,
+                                type: "SACRIFICE",
+                                ratio: [
+                                    { HP: 50, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                                effect: [
+                                    {
+                                        type: "BUFF_SPEED_EQUIP",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ]
+                                    },
+                                    {
+                                        type: "BUFF_CRIT_EQUIP",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ],
+                                    },
+                                ],
+                            },
+                        ],
                     ],
-                }
+                },
             ],
         },
         {
@@ -614,17 +1803,60 @@ let persoTableData = {
             spell: [
                 {
                     type: "PASSIVE",
-                    name: "",
-                    description: "",
+                    name: "Retour du champion",
+                    description: "Vadh L.B. est trop dur",
                     effect: [
-                        {
-                            type: "REVIVE",
-                            ratio: [
-                                { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
-                            ],
-                        },
+                        [
+                            {
+                                evolution: 0,
+                                type: "REVIVE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 1,
+                                type: "REVIVE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 2,
+                                type: "REVIVE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 3,
+                                type: "REVIVE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 4,
+                                type: "REVIVE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 5,
+                                type: "REVIVE",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                            },
+                        ],
                     ],
-                }
+                },
             ],
         },
     ],
@@ -639,34 +1871,176 @@ let persoTableData = {
             spell: [
                 {
                     type: "ACTIVE",
+                    name: "Seigneur de la crypte",
+                    description: "Necroloss te dépose aux pompes funèbres",
+                    effect: [
+                        [
+                            {
+                                evolution: 0,
+                                type: "BUFF_ATK",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                            },
+                            {
+                                evolution: 0,
+                                type: "BUFF_CRIT",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 1,
+                                type: "BUFF_ATK",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                            },
+                            {
+                                evolution: 1,
+                                type: "BUFF_CRIT",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 2,
+                                type: "BUFF_ATK",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                            },
+                            {
+                                evolution: 2,
+                                type: "BUFF_CRIT",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 3,
+                                type: "BUFF_ATK",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                            },
+                            {
+                                evolution: 3,
+                                type: "BUFF_CRIT",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 4,
+                                type: "BUFF_ATK",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                            },
+                            {
+                                evolution: 4,
+                                type: "BUFF_CRIT",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],[
+                            {
+                                evolution: 5,
+                                type: "BUFF_ATK",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                            },
+                            {
+                                evolution: 5,
+                                type: "BUFF_CRIT",
+                                ratio: [
+                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                ],
+                                cooldown: 10,
+                            },
+                        ],
+                    ],
+                },
+                {
+                    type: "PASSIVE",
                     name: "",
                     description: "",
-                    cooldown: 10,
                     effect: [
-                        {
-                            type: "BUFF_ATK",
-                            ratio: [
-                                { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
-                                { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
-                            ],
-                        },
-                        {
-                            type: "BUFF_CRIT",
-                            ratio: [
-                                { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
-                                { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
-                            ],
-                        },
-                        {
-                            type: "BUFF_SPEED_AFTER_TIME",
-                            time: 30,
-                            multiplier: 2,
-                            ratio: [
-                                { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
-                            ],
-                        }
+                        [
+                            {
+                                evolution: 0,
+                                type: "BUFF_SPEED_AFTER_TIME",
+                                afterTime: 30,
+                                multiplier: 2,
+                            },
+                        ],[
+                            {
+                                evolution: 1,
+                                type: "BUFF_SPEED_AFTER_TIME",
+                                afterTime: 30,
+                                multiplier: 2,
+                            },
+                        ],[
+                            {
+                                evolution: 2,
+                                type: "BUFF_SPEED_AFTER_TIME",
+                                afterTime: 30,
+                                multiplier: 2,
+                            },
+                        ],[
+                            {
+                                evolution: 3,
+                                type: "BUFF_SPEED_AFTER_TIME",
+                                afterTime: 30,
+                                multiplier: 2,
+                            },
+                        ],[
+                            {
+                                evolution: 4,
+                                type: "BUFF_SPEED_AFTER_TIME",
+                                afterTime: 30,
+                                multiplier: 2,
+                            },
+                        ],[
+                            {
+                                evolution: 5,
+                                type: "BUFF_SPEED_AFTER_TIME",
+                                afterTime: 30,
+                                multiplier: 2,
+                            },
+                        ],
                     ],
-                }
+                },
             ],
         },
         {
@@ -678,55 +2052,267 @@ let persoTableData = {
             spell: [
                 {
                     type: "PASSIVE",
-                    name: "",
-                    description: "",
+                    name: "Apéritif corsé",
+                    description: "QuadSpace te fait une salade de phalanges",
                     effect: [
-                        {
-                            type: "BUFF_SPEED_STACK",
-                            interval: 3,
-                            multiplier: 0.1,
-                            cap: 1,
-                        }
+                        [
+                            {
+                                evolution: 0,
+                                type: "BUFF_SPEED_STACK",
+                                interval: 3,
+                                multiplier: 0.1,
+                                cap: 1,
+                            },
+                        ],[
+                            {
+                                evolution: 1,
+                                type: "BUFF_SPEED_STACK",
+                                interval: 3,
+                                multiplier: 0.1,
+                                cap: 1,
+                            },
+                        ],[
+                            {
+                                evolution: 2,
+                                type: "BUFF_SPEED_STACK",
+                                interval: 3,
+                                multiplier: 0.1,
+                                cap: 1,
+                            },
+                        ],[
+                            {
+                                evolution: 3,
+                                type: "BUFF_SPEED_STACK",
+                                interval: 3,
+                                multiplier: 0.1,
+                                cap: 1,
+                            },
+                        ],[
+                            {
+                                evolution: 4,
+                                type: "BUFF_SPEED_STACK",
+                                interval: 3,
+                                multiplier: 0.1,
+                                cap: 1,
+                            },
+                        ],[
+                            {
+                                evolution: 5,
+                                type: "BUFF_SPEED_STACK",
+                                interval: 3,
+                                multiplier: 0.1,
+                                cap: 1,
+                            },
+                        ],
                     ],
                 },
                 {
                     type: "PASSIVE",
-                    name: "",
-                    description: "",
+                    name: "Cocktail mystère",
+                    description: "QuadSpace te fait déguster",
                     effect: [
-                        {
-                            type: "RANDOM_IN_EFFECT",
-                            effect: [
-                                {
-                                    type: "DAMAGE",
-                                    ratio: [
-                                        { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
-                                    ],
-                                },
-                                {
-                                    type: "HEAL",
-                                    ratio: [
-                                        { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
-                                    ],
-                                },
-                                {
-                                    type: "STUN",
-                                    time: 1,
-                                    ratio: [
-                                        { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
-                                    ],
-                                },
-                                {
-                                    type: "BUFF_ATK_SOLO",
-                                    ratio: [
-                                        { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
-                                    ],
-                                }
-                            ],
-                        },
+                        [
+                            {
+                                evolution: 0,
+                                attackInterval: 10,
+                                type: "ATTACK_INTERVAL_CHOOSE_RANDOM_IN_EFFECT",
+                                effect: [
+                                    {
+                                        type: "DAMAGE",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                        ],
+                                    },
+                                    {
+                                        type: "HEAL",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ],
+                                    },
+                                    {
+                                        type: "STUN",
+                                        time: 1,
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ],
+                                    },
+                                    {
+                                        type: "BUFF_ATK_SOLO",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                        ],
+                                    },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 1,
+                                attackInterval: 10,
+                                type: "ATTACK_INTERVAL_CHOOSE_RANDOM_IN_EFFECT",
+                                effect: [
+                                    {
+                                        type: "DAMAGE",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                        ],
+                                    },
+                                    {
+                                        type: "HEAL",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ],
+                                    },
+                                    {
+                                        type: "STUN",
+                                        time: 1,
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ],
+                                    },
+                                    {
+                                        type: "BUFF_ATK_SOLO",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                        ],
+                                    },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 2,
+                                attackInterval: 10,
+                                type: "ATTACK_INTERVAL_CHOOSE_RANDOM_IN_EFFECT",
+                                effect: [
+                                    {
+                                        type: "DAMAGE",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                        ],
+                                    },
+                                    {
+                                        type: "HEAL",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ],
+                                    },
+                                    {
+                                        type: "STUN",
+                                        time: 1,
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ],
+                                    },
+                                    {
+                                        type: "BUFF_ATK_SOLO",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                        ],
+                                    },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 3,
+                                attackInterval: 10,
+                                type: "ATTACK_INTERVAL_CHOOSE_RANDOM_IN_EFFECT",
+                                effect: [
+                                    {
+                                        type: "DAMAGE",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                        ],
+                                    },
+                                    {
+                                        type: "HEAL",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ],
+                                    },
+                                    {
+                                        type: "STUN",
+                                        time: 1,
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ],
+                                    },
+                                    {
+                                        type: "BUFF_ATK_SOLO",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                        ],
+                                    },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 4,
+                                attackInterval: 10,
+                                type: "ATTACK_INTERVAL_CHOOSE_RANDOM_IN_EFFECT",
+                                effect: [
+                                    {
+                                        type: "DAMAGE",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                        ],
+                                    },
+                                    {
+                                        type: "HEAL",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ],
+                                    },
+                                    {
+                                        type: "STUN",
+                                        time: 1,
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ],
+                                    },
+                                    {
+                                        type: "BUFF_ATK_SOLO",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                        ],
+                                    },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 5,
+                                attackInterval: 10,
+                                type: "ATTACK_INTERVAL_CHOOSE_RANDOM_IN_EFFECT",
+                                effect: [
+                                    {
+                                        type: "DAMAGE",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                        ],
+                                    },
+                                    {
+                                        type: "HEAL",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ],
+                                    },
+                                    {
+                                        type: "STUN",
+                                        time: 1,
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ],
+                                    },
+                                    {
+                                        type: "BUFF_ATK_SOLO",
+                                        ratio: [
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                        ],
+                                    },
+                                ],
+                            },
+                        ],
                     ],
                 },
-            ]
+            ],
         },
         {
             name: "Saka Vyand",
@@ -737,30 +2323,132 @@ let persoTableData = {
             spell: [
                 {
                     type: "PASSIVE",
-                    name: "",
-                    description: "",
+                    name: "Tailler dans la viande",
+                    description: "Saka Vyand t'enlève le gras que t'as sur le cul",
                     effect: [
-                        {
-                            type: "BUFF_ATK_SOLO_PER_MISSING_HP",
-                            buff: 1.5,
-                        },
+                        [
+                            {
+                                evolution: 0,
+                                type: "BUFF_ATK_SOLO_PER_MISSING_HP",
+                                buff: 1.5,
+                            },
+                        ],[
+                            {
+                                evolution: 1,
+                                type: "BUFF_ATK_SOLO_PER_MISSING_HP",
+                                buff: 1.5,
+                            },
+                        ],[
+                            {
+                                evolution: 2,
+                                type: "BUFF_ATK_SOLO_PER_MISSING_HP",
+                                buff: 1.5,
+                            },
+                        ],[
+                            {
+                                evolution: 3,
+                                type: "BUFF_ATK_SOLO_PER_MISSING_HP",
+                                buff: 1.5,
+                            },
+                        ],[
+                            {
+                                evolution: 4,
+                                type: "BUFF_ATK_SOLO_PER_MISSING_HP",
+                                buff: 1.5,
+                            },
+                        ],[
+                            {
+                                evolution: 5,
+                                type: "BUFF_ATK_SOLO_PER_MISSING_HP",
+                                buff: 1.5,
+                            },
+                        ],
                     ],
                 },
                 {
                     type: "PASSIVE",
-                    name: "",
-                    description: "",
+                    name: "Armoire à glace",
+                    description: "Saka Vyand se met à la diète",
                     effect: [
-                        {
-                            type: "BUFF_DEF_+50%_HP",
-                            value: 20,
-                        },
-                        {
-                            type: "BUFF_SPEED_-50%_HP",
-                            ratio: [
-                                { HP: 1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
-                            ]
-                        },
+                        [
+                            {
+                                evolution: 0,
+                                type: "BUFF_DEF_@_+50%_HP",
+                                value: 20,
+                            },
+                            {
+                                evolution: 0,
+                                type: "BUFF_SPEED_@_-50%_HP",
+                                ratio: [
+                                    { HP: 1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 1,
+                                type: "BUFF_DEF_@_+50%_HP",
+                                value: 20,
+                            },
+                            {
+                                evolution: 1,
+                                type: "BUFF_SPEED_@_-50%_HP",
+                                ratio: [
+                                    { HP: 1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 2,
+                                type: "BUFF_DEF_@_+50%_HP",
+                                value: 20,
+                            },
+                            {
+                                evolution: 2,
+                                type: "BUFF_SPEED_@_-50%_HP",
+                                ratio: [
+                                    { HP: 1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 3,
+                                type: "BUFF_DEF_@_+50%_HP",
+                                value: 20,
+                            },
+                            {
+                                evolution: 3,
+                                type: "BUFF_SPEED_@_-50%_HP",
+                                ratio: [
+                                    { HP: 1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 4,
+                                type: "BUFF_DEF_@_+50%_HP",
+                                value: 20,
+                            },
+                            {
+                                evolution: 4,
+                                type: "BUFF_SPEED_@_-50%_HP",
+                                ratio: [
+                                    { HP: 1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 5,
+                                type: "BUFF_DEF_@_+50%_HP",
+                                value: 20,
+                            },
+                            {
+                                evolution: 5,
+                                type: "BUFF_SPEED_@_-50%_HP",
+                                ratio: [
+                                    { HP: 1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                            },
+                        ],
                     ],
                 },
             ],
