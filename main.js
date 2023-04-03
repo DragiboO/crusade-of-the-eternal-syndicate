@@ -1482,82 +1482,92 @@ let persoTableData = {
                                     },
                                 ],
                             },
-                        ],{
-                            evolution: 1,
-                            type: "SHIELD",
-                            ratio: [
-                                { HP: 1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
-                            ],
-                            cooldown: 10,
-                            effect: [
-                                {
-                                    type: "DEBUFF_SPEED", ratio: [
-                                        { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
-                                        { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
-                                    ],
-                                },
-                            ],
-                        },{
-                            evolution: 2,
-                            type: "SHIELD",
-                            ratio: [
-                                { HP: 1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
-                            ],
-                            cooldown: 10,
-                            effect: [
-                                {
-                                    type: "DEBUFF_SPEED", ratio: [
-                                        { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
-                                        { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
-                                    ],
-                                },
-                            ],
-                        },{
-                            evolution: 3,
-                            type: "SHIELD",
-                            ratio: [
-                                { HP: 1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
-                            ],
-                            cooldown: 10,
-                            effect: [
-                                {
-                                    type: "DEBUFF_SPEED", ratio: [
-                                        { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
-                                        { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
-                                    ],
-                                },
-                            ],
-                        },{
-                            evolution: 4,
-                            type: "SHIELD",
-                            ratio: [
-                                { HP: 1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
-                            ],
-                            cooldown: 10,
-                            effect: [
-                                {
-                                    type: "DEBUFF_SPEED", ratio: [
-                                        { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
-                                        { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
-                                    ],
-                                },
-                            ],
-                        },{
-                            evolution: 5,
-                            type: "SHIELD",
-                            ratio: [
-                                { HP: 1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
-                            ],
-                            cooldown: 10,
-                            effect: [
-                                {
-                                    type: "DEBUFF_SPEED", ratio: [
-                                        { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
-                                        { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
-                                    ],
-                                },
-                            ],
-                        },
+                        ],[
+                            {
+                                evolution: 1,
+                                type: "SHIELD",
+                                ratio: [
+                                    { HP: 1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                                effect: [
+                                    {
+                                        type: "DEBUFF_SPEED", ratio: [
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ],
+                                    },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 2,
+                                type: "SHIELD",
+                                ratio: [
+                                    { HP: 1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                                effect: [
+                                    {
+                                        type: "DEBUFF_SPEED", ratio: [
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ],
+                                    },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 3,
+                                type: "SHIELD",
+                                ratio: [
+                                    { HP: 1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                                effect: [
+                                    {
+                                        type: "DEBUFF_SPEED", ratio: [
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ],
+                                    },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 4,
+                                type: "SHIELD",
+                                ratio: [
+                                    { HP: 1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                                effect: [
+                                    {
+                                        type: "DEBUFF_SPEED", ratio: [
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ],
+                                    },
+                                ],
+                            },
+                        ],[
+                            {
+                                evolution: 5,
+                                type: "SHIELD",
+                                ratio: [
+                                    { HP: 1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                ],
+                                cooldown: 10,
+                                effect: [
+                                    {
+                                        type: "DEBUFF_SPEED", ratio: [
+                                            { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                        ],
+                                    },
+                                ],
+                            },
+                        ]
                     ],
                 },
             ],
@@ -2319,7 +2329,7 @@ let persoTableData = {
             type: "Fiend",
             url: "saka_vyand",
             rarity: "mythic",
-            stats: { HP: 1000, DEF: 20, ATK: 85, SPD: 1.5, CRIT: 8, CRIT_DMG: 50 },
+            stats: { HP: 1000, DEF: 20, ATK: 85, SPD: 1.5, CRIT: 8, CRIT_DMG: 50, MAGIC: 50 },
             spell: [
                 {
                     type: "PASSIVE",
@@ -2457,37 +2467,55 @@ let persoTableData = {
 }
 
 function DPS() {
-    for (let i = 0; i < persoTableData.rare.length; i++) {
-        let invoc = persoTableData.rare[i]
-        let invocDPS = Math.round((invoc.stats.ATK / invoc.stats.SPD) * 100) / 100
-        let invocDPSCrit = invocDPS + invocDPS * ((invoc.stats.CRIT / 100) * 0.5)
-        let score = Math.round(invocDPSCrit * invoc.stats.HP)
-        console.log(`${invoc.name}: HP ${invoc.stats.HP} , DPS Crit ${invocDPSCrit}`, score)
-    }
-    console.log("")
-    for (let i = 0; i < persoTableData.epic.length; i++) {
-        let invoc = persoTableData.epic[i]
-        let invocDPS = Math.round((invoc.stats.ATK / invoc.stats.SPD) * 100) / 100
-        let invocDPSCrit = invocDPS + invocDPS * ((invoc.stats.CRIT / 100) * 0.5)
-        let score = Math.round(invocDPSCrit * invoc.stats.HP)
-        console.log(`${invoc.name}: HP ${invoc.stats.HP} , DPS Crit ${invocDPSCrit}`, score)
-    }
-    console.log("")
-    for (let i = 0; i < persoTableData.legendary.length; i++) {
-        let invoc = persoTableData.legendary[i]
-        let invocDPS = Math.round((invoc.stats.ATK / invoc.stats.SPD) * 100) / 100
-        let invocDPSCrit = invocDPS + invocDPS * ((invoc.stats.CRIT / 100) * 0.5)
-        let score = Math.round(invocDPSCrit * invoc.stats.HP)
-        console.log(`${invoc.name}: HP ${invoc.stats.HP} , DPS Crit ${invocDPSCrit}`, score)
-    }
-    console.log("")
-    for (let i = 0; i < persoTableData.mythic.length; i++) {
-        let invoc = persoTableData.mythic[i]
-        let invocDPS = Math.round((invoc.stats.ATK / invoc.stats.SPD) * 100) / 100
-        let invocDPSCrit = invocDPS + invocDPS * ((invoc.stats.CRIT / 100) * 0.5)
-        let score = Math.round(invocDPSCrit * invoc.stats.HP)
-        console.log(`${invoc.name}: HP ${invoc.stats.HP} , DPS Crit ${invocDPSCrit}`, score)
-    }
+    let rarity = [persoTableData.rare, persoTableData.rare, persoTableData.legendary, persoTableData.mythic]
+    rarity.forEach((rarity) => {
+        for (let i = 0; i < rarity.length; i++) {
+            let invoc = rarity[i]
+
+            let hit = invoc.stats.ATK
+            let hitCrit = hit * (invoc.stats.CRIT_DMG / 100)
+
+            let dmg1000hit = (hit * (1000 - invoc.stats.CRIT * 10)) + (hitCrit * invoc.stats.CRIT * 10)
+            let time1000hit = 1000 * invoc.stats.SPD
+
+            let dps = Math.round((dmg1000hit / time1000hit) * 100) / 100
+
+            let score = Math.round(dps * invoc.stats.HP)
+
+            console.log(`${invoc.name} - HP: ${invoc.stats.HP}, AvgDPS: ${dps}/s , SCORE: ${score}`)
+            
+            let baseStat = invoc.stats
+            console.log(baseStat)
+
+            invoc.spell.forEach((spell) => {
+                spell.effect.forEach((effectList) => {
+                    effectList.forEach((effect) => {
+                        if (effect.type === 'DAMAGE') {
+                            let ratioDMG = effect.ratio[0]
+                            //console.log(ratioDMG)
+
+                            dmgATK = Math.round(ratioDMG.ATK * baseStat.ATK * 100) / 100
+                            dmgDEF = Math.round(ratioDMG.DEF * baseStat.DEF * 100) / 100
+                            dmgSPD = Math.round(ratioDMG.SPD * baseStat.SPD * 100) / 100
+                            dmgCRIT = Math.round(ratioDMG.CRIT * baseStat.CRIT * 100) / 100
+                            dmgCRIT_DMG = Math.round(ratioDMG.CRIT_DMG * baseStat.CRIT_DMG * 100) / 100
+                            dmgMAGIC = Math.round(ratioDMG.MAGIC * baseStat.MAGIC * 100) / 100
+
+                            let dmgPerHit = dmgATK + dmgDEF + dmgSPD + dmgCRIT + dmgCRIT_DMG + dmgMAGIC
+                            let SpellDPS = Math.round(dmgPerHit / effect.cooldown * 1000) / 1000
+
+                            let cumulDPS = Math.round((SpellDPS + dps) * 100) / 100
+
+                            console.log(`${spell.name} LVL ${effect.evolution} : SpellDPS: ${SpellDPS} | ${dmgPerHit} = ${dmgATK} + ${dmgDEF} + ${dmgSPD} + ${dmgCRIT} + ${dmgCRIT_DMG} + ${dmgMAGIC}`)
+                            //console.log(`SpellDPS: ${SpellDPS}, DPH: ${dmgPerHit}`)
+                            console.log(`Culmul DPS: ${cumulDPS}, SCORE: ${Math.round(cumulDPS * invoc.stats.HP)}`)
+                        }
+                    })
+                })
+            })
+            console.log('-----------------')
+        }
+    })
 }
 
 DPS()
@@ -2963,4 +2991,3 @@ renderGuildeMenu()
 renderTaverneMenu()
 
 // -----------------------------------------------
-
