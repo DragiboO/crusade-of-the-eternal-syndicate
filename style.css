@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Anime Ace", sans-serif;
+  font-family: "Retro Gaming", sans-serif;
 }
 
 html,
@@ -10,6 +10,18 @@ body {
   height: 100%;
 }
 
+@font-face {
+  font-family: "Retro Gaming";
+  src: url("./assets/font/retro-gaming.ttf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Village";
+  src: url("./assets/font/village.ttf");
+  font-style: normal;
+  font-weight: 400;
+}
 body {
   display: flex;
   flex-direction: column;
@@ -1676,6 +1688,13 @@ body {
   gap: 5%;
   height: 10%;
   margin: 2% 0;
+  position: relative;
+}
+.gui__in-taverne[active=true] .gui__in-taverne-btn-invoc p {
+  position: absolute;
+  top: 30%;
+  font-size: 1.4rem;
+  left: 6.7%;
 }
 .gui__in-taverne[active=true] .gui__in-taverne-btn-invoc button {
   width: 15%;

@@ -299,6 +299,14 @@
         gap: 5%;
         height: 10%;
         margin: 2% 0;
+        position: relative;
+
+        p {
+            position: absolute;
+            top: 30%;
+            font-size: 1.4rem;
+            left: 6.7%;
+        }
 
         button {
             width: 15%;

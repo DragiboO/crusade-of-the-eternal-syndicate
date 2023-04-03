@@ -111,55 +111,61 @@ let persoTableData = {
                             {
                                 evolution: 0,
                                 type: "DAMAGE",
-                                cooldown: 10,
+                                base: 30,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1.5 },
                                 ],
+                                cooldown: 10,
                             },
                         ],[
                             {
                                 evolution: 1,
                                 type: "DAMAGE",
-                                cooldown: 10,
+                                base: 45,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2.5 },
                                 ],
+                                cooldown: 10,
                             },
                         ],[
                             {
                                 evolution: 2,
                                 type: "DAMAGE",
-                                cooldown: 10,
+                                base: 60,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 3.5 },
                                 ],
+                                cooldown: 9,
                             },
                         ],[
                             {
                                 evolution: 3,
                                 type: "DAMAGE",
-                                cooldown: 10,
+                                base: 75,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 4.5 },
                                 ],
+                                cooldown: 9,
                             }
                         ],[
                             {
                                 evolution: 4,
                                 type: "DAMAGE",
-                                cooldown: 10,
+                                base: 90,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 5.5 },
                                 ],
+                                cooldown: 8,
                             },
                         ],[
                             {
                                 evolution: 5,
                                 type: "DAMAGE",
-                                cooldown: 10,
+                                base: 105,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 6.5 },
                                 ],
+                                cooldown: 7,
                             },
                         ],
                     ],
@@ -182,55 +188,61 @@ let persoTableData = {
                             {
                                 evolution: 0,
                                 type: "DAMAGE",
-                                cooldown: 10,
+                                base: 30,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
+                                cooldown: 10,
                             },
                         ],[
                             {
                                 evolution: 1,
                                 type: "DAMAGE",
-                                cooldown: 10,
+                                base: 45,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 1.5, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
+                                cooldown: 10,
                             },
                         ],[
                             {
                                 evolution: 2,
                                 type: "DAMAGE",
-                                cooldown: 10,
+                                base: 60,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 2, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
+                                cooldown: 9,
                             },
                         ],[
                             {
                                 evolution: 3,
                                 type: "DAMAGE",
-                                cooldown: 10,
+                                base: 75,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 2.5, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
+                                cooldown: 9,
                             },
                         ],[
                             {
                                 evolution: 4,
                                 type: "DAMAGE",
-                                cooldown: 10,
+                                base: 90,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 3, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
+                                cooldown: 8,
                             },
                         ],[
                             {
                                 evolution: 5,
                                 type: "DAMAGE",
-                                cooldown: 10,
+                                base: 105,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 3.5, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
+                                cooldown: 7,
                             },
                         ],
                     ],
@@ -253,6 +265,7 @@ let persoTableData = {
                             {
                                 evolution: 0,
                                 type: "DAMAGE",
+                                base: 30,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0.5, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                 ],
@@ -262,6 +275,7 @@ let persoTableData = {
                             {
                                 evolution: 1,
                                 type: "DAMAGE",
+                                base: 45,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0.5, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1.5 },
                                 ],
@@ -271,6 +285,7 @@ let persoTableData = {
                             {
                                 evolution: 2,
                                 type: "DAMAGE",
+                                base: 60,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0.5, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2 },
                                 ],
@@ -280,6 +295,7 @@ let persoTableData = {
                             {
                                 evolution: 3,
                                 type: "DAMAGE",
+                                base: 75,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0.5, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2.5 },
                                 ],
@@ -289,6 +305,7 @@ let persoTableData = {
                             {
                                 evolution: 4,
                                 type: "DAMAGE",
+                                base: 90,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0.5, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 3 },
                                 ],
@@ -298,6 +315,7 @@ let persoTableData = {
                             {
                                 evolution: 5,
                                 type: "DAMAGE",
+                                base: 105,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0.5, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 3.5 },
                                 ],
@@ -324,6 +342,7 @@ let persoTableData = {
                             {
                                 evolution: 0,
                                 type: "DAMAGE",
+                                base: 30,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1.7 },
                                 ],
@@ -333,6 +352,7 @@ let persoTableData = {
                             {
                                 evolution: 1,
                                 type: "DAMAGE",
+                                base: 45,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2.1 },
                                 ],
@@ -342,6 +362,7 @@ let persoTableData = {
                             {
                                 evolution: 2,
                                 type: "DAMAGE",
+                                base: 60,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2.5 },
                                 ],
@@ -351,6 +372,7 @@ let persoTableData = {
                             {
                                 evolution: 3,
                                 type: "DAMAGE",
+                                base: 75,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2.9 },
                                 ],
@@ -360,6 +382,7 @@ let persoTableData = {
                             {
                                 evolution: 4,
                                 type: "DAMAGE",
+                                base: 90,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 3.3 },
                                 ],
@@ -369,6 +392,7 @@ let persoTableData = {
                             {
                                 evolution: 5,
                                 type: "DAMAGE",
+                                base: 105,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 3.7 },
                                 ],
@@ -395,6 +419,7 @@ let persoTableData = {
                             {
                                 evolution: 0,
                                 type: "DAMAGE",
+                                base: 30,
                                 ratio: [
                                     { HP: 0.08, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                 ],
@@ -404,6 +429,7 @@ let persoTableData = {
                             {
                                 evolution: 1,
                                 type: "DAMAGE",
+                                base: 45,
                                 ratio: [
                                     { HP: 0.08, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                 ],
@@ -413,6 +439,7 @@ let persoTableData = {
                             {
                                 evolution: 2,
                                 type: "DAMAGE",
+                                base: 60,
                                 ratio: [
                                     { HP: 0.08, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                 ],
@@ -422,6 +449,7 @@ let persoTableData = {
                             {
                                 evolution: 3,
                                 type: "DAMAGE",
+                                base: 75,
                                 ratio: [
                                     { HP: 0.08, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                 ],
@@ -431,6 +459,7 @@ let persoTableData = {
                             {
                                 evolution: 4,
                                 type: "DAMAGE",
+                                base: 90,
                                 ratio: [
                                     { HP: 0.08, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                 ],
@@ -440,6 +469,7 @@ let persoTableData = {
                             {
                                 evolution: 5,
                                 type: "DAMAGE",
+                                base: 105,
                                 ratio: [
                                     { HP: 0.08, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                 ],
@@ -466,8 +496,9 @@ let persoTableData = {
                             {
                                 evolution: 0,
                                 type: "DAMAGE",
+                                base: 30,
                                 ratio: [
-                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                    { HP: 0.05, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
                                 cooldown: 10,
                             },
@@ -475,8 +506,9 @@ let persoTableData = {
                             {
                                 evolution: 1,
                                 type: "DAMAGE",
+                                base: 45,
                                 ratio: [
-                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                    { HP: 0.07, DEF: 0, ATK: 1.2, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
                                 cooldown: 10,
                             },
@@ -484,8 +516,9 @@ let persoTableData = {
                             {
                                 evolution: 2,
                                 type: "DAMAGE",
+                                base: 60,
                                 ratio: [
-                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                    { HP: 0.1, DEF: 0, ATK: 1.5, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
                                 cooldown: 10,
                             },
@@ -493,8 +526,9 @@ let persoTableData = {
                             {
                                 evolution: 3,
                                 type: "DAMAGE",
+                                base: 75,
                                 ratio: [
-                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                    { HP: 0.15, DEF: 0, ATK: 2, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
                                 cooldown: 10,
                             },
@@ -502,8 +536,9 @@ let persoTableData = {
                             {
                                 evolution: 4,
                                 type: "DAMAGE",
+                                base: 90,
                                 ratio: [
-                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                    { HP: 0.2, DEF: 0, ATK: 2.5, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
                                 cooldown: 10,
                             },
@@ -511,8 +546,9 @@ let persoTableData = {
                             {
                                 evolution: 5,
                                 type: "DAMAGE",
+                                base: 105,
                                 ratio: [
-                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
+                                    { HP: 0.3, DEF: 0, ATK: 3, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
                                 cooldown: 10,
                             },
@@ -538,6 +574,7 @@ let persoTableData = {
                             {
                                 evolution: 0,
                                 type: "DAMAGE",
+                                base: 30,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2 },
                                 ],
@@ -547,6 +584,7 @@ let persoTableData = {
                             {
                                 evolution: 1,
                                 type: "DAMAGE",
+                                base: 45,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2 },
                                 ],
@@ -556,6 +594,7 @@ let persoTableData = {
                             {
                                 evolution: 2,
                                 type: "DAMAGE",
+                                base: 60,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2 },
                                 ],
@@ -565,6 +604,7 @@ let persoTableData = {
                             {
                                 evolution: 3,
                                 type: "DAMAGE",
+                                base: 75,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2 },
                                 ],
@@ -574,6 +614,7 @@ let persoTableData = {
                             {
                                 evolution: 4,
                                 type: "DAMAGE",
+                                base: 90,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2 },
                                 ],
@@ -583,6 +624,7 @@ let persoTableData = {
                             {
                                 evolution: 5,
                                 type: "DAMAGE",
+                                base: 105,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2 },
                                 ],
@@ -609,6 +651,7 @@ let persoTableData = {
                             {
                                 evolution: 0,
                                 type: "DAMAGE",
+                                base: 10,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 2, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
@@ -616,6 +659,9 @@ let persoTableData = {
                                 effect: [
                                     {
                                         type: "DOT",
+                                        base: 10,
+                                        tick: 1,
+                                        length: 3,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
@@ -628,6 +674,7 @@ let persoTableData = {
                             {
                                 evolution: 1,
                                 type: "DAMAGE",
+                                base: 20,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 2, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
@@ -635,6 +682,9 @@ let persoTableData = {
                                 effect: [
                                     {
                                         type: "DOT",
+                                        base: 20,
+                                        tick: 1,
+                                        length: 3.2,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
@@ -647,6 +697,7 @@ let persoTableData = {
                             {
                                 evolution: 2,
                                 type: "DAMAGE",
+                                base: 30,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 2, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
@@ -654,6 +705,9 @@ let persoTableData = {
                                 effect: [
                                     {
                                         type: "DOT",
+                                        base: 30,
+                                        tick: 1,
+                                        length: 3.4,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
@@ -666,6 +720,7 @@ let persoTableData = {
                             {
                                 evolution: 3,
                                 type: "DAMAGE",
+                                base: 40,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 2, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
@@ -673,6 +728,9 @@ let persoTableData = {
                                 effect: [
                                     {
                                         type: "DOT",
+                                        base: 40,
+                                        tick: 1,
+                                        length: 3.6,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
@@ -685,6 +743,7 @@ let persoTableData = {
                             {
                                 evolution: 4,
                                 type: "DAMAGE",
+                                base: 50,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 2, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
@@ -692,6 +751,9 @@ let persoTableData = {
                                 effect: [
                                     {
                                         type: "DOT",
+                                        base: 50,
+                                        tick: 1,
+                                        length: 3.8,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
@@ -704,6 +766,7 @@ let persoTableData = {
                             {
                                 evolution: 5,
                                 type: "DAMAGE",
+                                base: 60,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 2, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
@@ -711,6 +774,9 @@ let persoTableData = {
                                 effect: [
                                     {
                                         type: "DOT",
+                                        base: 60,
+                                        tick: 1,
+                                        length: 4,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
@@ -740,6 +806,7 @@ let persoTableData = {
                             {
                                 evolution: 0,
                                 type: "DAMAGE",
+                                base: 10,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 1.7, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
@@ -749,46 +816,51 @@ let persoTableData = {
                             {
                                 evolution: 1,
                                 type: "DAMAGE",
+                                base: 20,
                                 ratio: [
-                                    { HP: 0, DEF: 0, ATK: 1.7, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0, DEF: 0, ATK: 2, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
-                                cooldown: 10,
+                                cooldown: 9,
                             },
                         ],[
                             {
                                 evolution: 2,
                                 type: "DAMAGE",
+                                base: 30,
                                 ratio: [
-                                    { HP: 0, DEF: 0, ATK: 1.7, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0, DEF: 0, ATK: 2.3, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
-                                cooldown: 10,
+                                cooldown: 9,
                             },
                         ],[
                             {
                                 evolution: 3,
                                 type: "DAMAGE",
+                                base: 40,
                                 ratio: [
-                                    { HP: 0, DEF: 0, ATK: 1.7, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0, DEF: 0, ATK: 2.6, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
-                                cooldown: 10,
+                                cooldown: 8,
                             },
                         ],[
                             {
                                 evolution: 4,
                                 type: "DAMAGE",
+                                base: 50,
                                 ratio: [
-                                    { HP: 0, DEF: 0, ATK: 1.7, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0, DEF: 0, ATK: 2.9, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
-                                cooldown: 10,
+                                cooldown: 8,
                             },
                         ],[
                             {
                                 evolution: 5,
                                 type: "DAMAGE",
+                                base: 60,
                                 ratio: [
-                                    { HP: 0, DEF: 0, ATK: 1.7, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0, DEF: 0, ATK: 3.2, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
-                                cooldown: 10,
+                                cooldown: 7,
                             },
                         ],
                     ],
@@ -814,6 +886,8 @@ let persoTableData = {
                             {
                                 evolution: 0,
                                 type: "DEBUFF_SPEED",
+                                power: 0.1,
+                                length: 3,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0.25 },
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 1, MAGIC: 0 },
@@ -824,6 +898,8 @@ let persoTableData = {
                             {
                                 evolution: 1,
                                 type: "DEBUFF_SPEED",
+                                power: 0.15,
+                                length: 3.5,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0.25 },
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 1, MAGIC: 0 },
@@ -834,6 +910,8 @@ let persoTableData = {
                             {
                                 evolution: 2,
                                 type: "DEBUFF_SPEED",
+                                power: 0.2,
+                                length: 4,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0.25 },
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 1, MAGIC: 0 },
@@ -844,6 +922,8 @@ let persoTableData = {
                             {
                                 evolution: 3,
                                 type: "DEBUFF_SPEED",
+                                power: 0.25,
+                                length: 4.5,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0.25 },
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 1, MAGIC: 0 },
@@ -854,6 +934,8 @@ let persoTableData = {
                             {
                                 evolution: 4,
                                 type: "DEBUFF_SPEED",
+                                power: 0.3,
+                                length: 5,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0.25 },
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 1, MAGIC: 0 },
@@ -864,6 +946,8 @@ let persoTableData = {
                             {
                                 evolution: 5,
                                 type: "DEBUFF_SPEED",
+                                power: 0.35,
+                                length: 5.5,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0.25 },
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 1, MAGIC: 0 },
@@ -891,6 +975,9 @@ let persoTableData = {
                             {
                                 evolution: 0,
                                 type: "DOT",
+                                base: 20,
+                                tick: 1,
+                                length: 5,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 1.7, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2 },
                                     { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
@@ -902,6 +989,9 @@ let persoTableData = {
                             {
                                 evolution: 1,
                                 type: "DOT",
+                                base: 35,
+                                tick: 0.9,
+                                length: 5,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 1.7, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2 },
                                     { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
@@ -913,6 +1003,9 @@ let persoTableData = {
                             {
                                 evolution: 2,
                                 type: "DOT",
+                                base: 50,
+                                tick: 0.8,
+                                length: 5,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 1.7, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2 },
                                     { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
@@ -924,6 +1017,9 @@ let persoTableData = {
                             {
                                 evolution: 3,
                                 type: "DOT",
+                                base: 65,
+                                tick: 0.7,
+                                length: 5,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 1.7, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2 },
                                     { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
@@ -935,6 +1031,9 @@ let persoTableData = {
                             {
                                 evolution: 4,
                                 type: "DOT",
+                                base: 80,
+                                tick: 0.6,
+                                length: 5,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 1.7, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2 },
                                     { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
@@ -946,6 +1045,9 @@ let persoTableData = {
                             {
                                 evolution: 5,
                                 type: "DOT",
+                                base: 100,
+                                tick: 0.5,
+                                length: 5,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 1.7, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 2 },
                                     { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
@@ -974,6 +1076,7 @@ let persoTableData = {
                             {
                                 evolution: 0,
                                 type: "DAMAGE",
+                                base: 50,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 2, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
@@ -983,6 +1086,7 @@ let persoTableData = {
                             {
                                 evolution: 1,
                                 type: "DAMAGE",
+                                base: 75,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 2, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
@@ -992,6 +1096,7 @@ let persoTableData = {
                             {
                                 evolution: 2,
                                 type: "DAMAGE",
+                                base: 100,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 2, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
@@ -1001,6 +1106,7 @@ let persoTableData = {
                             {
                                 evolution: 3,
                                 type: "DAMAGE",
+                                base: 125,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 2, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
@@ -1010,6 +1116,7 @@ let persoTableData = {
                             {
                                 evolution: 4,
                                 type: "DAMAGE",
+                                base: 150,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 2, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
@@ -1019,6 +1126,7 @@ let persoTableData = {
                             {
                                 evolution: 5,
                                 type: "DAMAGE",
+                                base: 175,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 2, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
@@ -1045,6 +1153,8 @@ let persoTableData = {
                             {
                                 evolution: 0,
                                 type: "BUFF_SPEED_EQUIP",
+                                power: 0.1,
+                                length: 5,
                                 ratio: [
                                     { HP: 0.06, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
@@ -1055,6 +1165,8 @@ let persoTableData = {
                             {
                                 evolution: 1,
                                 type: "BUFF_SPEED_EQUIP",
+                                power: 0.2,
+                                length: 5,
                                 ratio: [
                                     { HP: 0.06, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
@@ -1065,6 +1177,8 @@ let persoTableData = {
                             {
                                 evolution: 2,
                                 type: "BUFF_SPEED_EQUIP",
+                                power: 0.3,
+                                length: 5,
                                 ratio: [
                                     { HP: 0.06, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
@@ -1075,6 +1189,8 @@ let persoTableData = {
                             {
                                 evolution: 3,
                                 type: "BUFF_SPEED_EQUIP",
+                                power: 0.4,
+                                length: 5,
                                 ratio: [
                                     { HP: 0.06, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
@@ -1085,6 +1201,8 @@ let persoTableData = {
                             {
                                 evolution: 4,
                                 type: "BUFF_SPEED_EQUIP",
+                                power: 0.5,
+                                length: 5,
                                 ratio: [
                                     { HP: 0.06, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
@@ -1095,6 +1213,8 @@ let persoTableData = {
                             {
                                 evolution: 5,
                                 type: "BUFF_SPEED_EQUIP",
+                                power: 0.75,
+                                length: 5,
                                 ratio: [
                                     { HP: 0.06, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
@@ -1122,6 +1242,7 @@ let persoTableData = {
                             {
                                 evolution: 0,
                                 type: "DAMAGE",
+                                base: 100,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 1, CRIT: 0, CRIT_DMG: 0, MAGIC: 1.5 },
                                 ],
@@ -1131,6 +1252,7 @@ let persoTableData = {
                             {
                                 evolution: 1,
                                 type: "DAMAGE",
+                                base: 120,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 1, CRIT: 0, CRIT_DMG: 0, MAGIC: 1.5 },
                                 ],
@@ -1140,6 +1262,7 @@ let persoTableData = {
                             {
                                 evolution: 2,
                                 type: "DAMAGE",
+                                base: 140,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 1, CRIT: 0, CRIT_DMG: 0, MAGIC: 1.5 },
                                 ],
@@ -1149,6 +1272,7 @@ let persoTableData = {
                             {
                                 evolution: 3,
                                 type: "DAMAGE",
+                                base: 160,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 1, CRIT: 0, CRIT_DMG: 0, MAGIC: 1.5 },
                                 ],
@@ -1158,6 +1282,7 @@ let persoTableData = {
                             {
                                 evolution: 4,
                                 type: "DAMAGE",
+                                base: 180,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 1, CRIT: 0, CRIT_DMG: 0, MAGIC: 1.5 },
                                 ],
@@ -1167,6 +1292,7 @@ let persoTableData = {
                             {
                                 evolution: 5,
                                 type: "DAMAGE",
+                                base: 250,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 1, CRIT: 0, CRIT_DMG: 0, MAGIC: 1.5 },
                                 ],
@@ -1193,8 +1319,9 @@ let persoTableData = {
                             {
                                 evolution: 0,
                                 type: "STUN",
+                                length: 0.5,
                                 ratio: [
-                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 50 },
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0.05 },
                                 ],
                                 cooldown: 10,
                             },
@@ -1202,8 +1329,9 @@ let persoTableData = {
                             {
                                 evolution: 1,
                                 type: "STUN",
+                                length: 0.75,
                                 ratio: [
-                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 50 },
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0.05 },
                                 ],
                                 cooldown: 10,
                             },
@@ -1211,8 +1339,9 @@ let persoTableData = {
                             {
                                 evolution: 2,
                                 type: "STUN",
+                                length: 1,
                                 ratio: [
-                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 50 },
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0.05 },
                                 ],
                                 cooldown: 10,
                             },
@@ -1220,8 +1349,9 @@ let persoTableData = {
                             {
                                 evolution: 3,
                                 type: "STUN",
+                                length: 1.25,
                                 ratio: [
-                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 50 },
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0.05 },
                                 ],
                                 cooldown: 10,
                             },
@@ -1229,8 +1359,9 @@ let persoTableData = {
                             {
                                 evolution: 4,
                                 type: "STUN",
+                                length: 1.5,
                                 ratio: [
-                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 50 },
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0.05 },
                                 ],
                                 cooldown: 10,
                             },
@@ -1238,8 +1369,9 @@ let persoTableData = {
                             {
                                 evolution: 5,
                                 type: "STUN",
+                                length: 2,
                                 ratio: [
-                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 50 },
+                                    { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0.05 },
                                 ],
                                 cooldown: 10,
                             },
@@ -1264,6 +1396,8 @@ let persoTableData = {
                             {
                                 evolution: 0,
                                 type: "DEBUFF_ATK",
+                                base: 5,
+                                length: 3,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 1, MAGIC: 0 },
@@ -1274,6 +1408,8 @@ let persoTableData = {
                             {
                                 evolution: 1,
                                 type: "DEBUFF_ATK",
+                                base: 10,
+                                length: 3,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 1, MAGIC: 0 },
@@ -1284,6 +1420,8 @@ let persoTableData = {
                             {
                                 evolution: 2,
                                 type: "DEBUFF_ATK",
+                                base: 15,
+                                length: 3,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 1, MAGIC: 0 },
@@ -1294,6 +1432,8 @@ let persoTableData = {
                             {
                                 evolution: 3,
                                 type: "DEBUFF_ATK",
+                                base: 20,
+                                length: 3,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 1, MAGIC: 0 },
@@ -1304,6 +1444,8 @@ let persoTableData = {
                             {
                                 evolution: 4,
                                 type: "DEBUFF_ATK",
+                                base: 25,
+                                length: 3,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 1, MAGIC: 0 },
@@ -1314,6 +1456,8 @@ let persoTableData = {
                             {
                                 evolution: 5,
                                 type: "DEBUFF_ATK",
+                                base: 30,
+                                length: 3,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 1, MAGIC: 0 },
@@ -1344,6 +1488,7 @@ let persoTableData = {
                             {
                                 evolution: 0,
                                 type: "DAMAGE",
+                                base: 111,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
@@ -1351,6 +1496,8 @@ let persoTableData = {
                                 effect: [
                                     {
                                         type: "BUFF_ATK",
+                                        power: 10,
+                                        length: 3,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
@@ -1362,6 +1509,7 @@ let persoTableData = {
                             {
                                 evolution: 1,
                                 type: "DAMAGE",
+                                base: 222,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
@@ -1369,6 +1517,8 @@ let persoTableData = {
                                 effect: [
                                     {
                                         type: "BUFF_ATK",
+                                        power: 20,
+                                        length: 3,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
@@ -1380,6 +1530,7 @@ let persoTableData = {
                             {
                                 evolution: 2,
                                 type: "DAMAGE",
+                                base: 333,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
@@ -1387,6 +1538,8 @@ let persoTableData = {
                                 effect: [
                                     {
                                         type: "BUFF_ATK",
+                                        power: 30,
+                                        length: 4,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
@@ -1398,6 +1551,7 @@ let persoTableData = {
                             {
                                 evolution: 3,
                                 type: "DAMAGE",
+                                base: 444,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
@@ -1405,6 +1559,8 @@ let persoTableData = {
                                 effect: [
                                     {
                                         type: "BUFF_ATK",
+                                        power: 40,
+                                        length: 4,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
@@ -1416,6 +1572,7 @@ let persoTableData = {
                             {
                                 evolution: 4,
                                 type: "DAMAGE",
+                                base: 555,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
@@ -1423,6 +1580,8 @@ let persoTableData = {
                                 effect: [
                                     {
                                         type: "BUFF_ATK",
+                                        power: 50,
+                                        length: 5,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
@@ -1434,6 +1593,7 @@ let persoTableData = {
                             {
                                 evolution: 5,
                                 type: "DAMAGE",
+                                base: 666,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
@@ -1441,6 +1601,8 @@ let persoTableData = {
                                 effect: [
                                     {
                                         type: "BUFF_ATK",
+                                        power: 66,
+                                        length: 6,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
@@ -1468,14 +1630,18 @@ let persoTableData = {
                         [
                             {
                                 evolution: 0,
-                                type: "SHIELD",
+                                type: "SHIELD_WITH_EFFECT_ON_BREAK",
+                                base: 300,
                                 ratio: [
-                                    { HP: 1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0.1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
                                 cooldown: 10,
                                 effect: [
                                     {
-                                        type: "DEBUFF_SPEED", ratio: [
+                                        type: "DEBUFF_SPEED",
+                                        power: 0.2,
+                                        length: 3,
+                                        ratio: [
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                         ],
@@ -1485,14 +1651,18 @@ let persoTableData = {
                         ],[
                             {
                                 evolution: 1,
-                                type: "SHIELD",
+                                type: "SHIELD_WITH_EFFECT_ON_BREAK",
+                                base: 450,
                                 ratio: [
                                     { HP: 1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
                                 cooldown: 10,
                                 effect: [
                                     {
-                                        type: "DEBUFF_SPEED", ratio: [
+                                        type: "DEBUFF_SPEED",
+                                        power: 0.3,
+                                        length: 3,
+                                        ratio: [
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                         ],
@@ -1502,14 +1672,18 @@ let persoTableData = {
                         ],[
                             {
                                 evolution: 2,
-                                type: "SHIELD",
+                                type: "SHIELD_WITH_EFFECT_ON_BREAK",
+                                base: 600,
                                 ratio: [
                                     { HP: 1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
                                 cooldown: 10,
                                 effect: [
                                     {
-                                        type: "DEBUFF_SPEED", ratio: [
+                                        type: "DEBUFF_SPEED",
+                                        power: 0.4,
+                                        length: 3,
+                                        ratio: [
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                         ],
@@ -1519,14 +1693,18 @@ let persoTableData = {
                         ],[
                             {
                                 evolution: 3,
-                                type: "SHIELD",
+                                type: "SHIELD_WITH_EFFECT_ON_BREAK",
+                                base: 750,
                                 ratio: [
                                     { HP: 1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
                                 cooldown: 10,
                                 effect: [
                                     {
-                                        type: "DEBUFF_SPEED", ratio: [
+                                        type: "DEBUFF_SPEED",
+                                        power: 0.5,
+                                        length: 3,
+                                        ratio: [
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                         ],
@@ -1536,14 +1714,18 @@ let persoTableData = {
                         ],[
                             {
                                 evolution: 4,
-                                type: "SHIELD",
+                                type: "SHIELD_WITH_EFFECT_ON_BREAK",
+                                base: 1000,
                                 ratio: [
                                     { HP: 1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
                                 cooldown: 10,
                                 effect: [
                                     {
-                                        type: "DEBUFF_SPEED", ratio: [
+                                        type: "DEBUFF_SPEED",
+                                        power: 0.6,
+                                        length: 3,
+                                        ratio: [
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                         ],
@@ -1554,13 +1736,17 @@ let persoTableData = {
                             {
                                 evolution: 5,
                                 type: "SHIELD",
+                                base: 1250,
                                 ratio: [
                                     { HP: 1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
                                 cooldown: 10,
                                 effect: [
                                     {
-                                        type: "DEBUFF_SPEED", ratio: [
+                                        type: "DEBUFF_SPEED",
+                                        power: 0.7,
+                                        length: 3,
+                                        ratio: [
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                         ],
@@ -1589,7 +1775,7 @@ let persoTableData = {
                                 evolution: 0,
                                 type: "LIFESTEAL",
                                 ratio: [
-                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0, DEF: 0, ATK: 0.25, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
                             },
                         ],[
@@ -1597,7 +1783,7 @@ let persoTableData = {
                                 evolution: 1,
                                 type: "LIFESTEAL",
                                 ratio: [
-                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0, DEF: 0, ATK: 0.3, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
                             },
                         ],[
@@ -1605,7 +1791,7 @@ let persoTableData = {
                                 evolution: 2,
                                 type: "LIFESTEAL",
                                 ratio: [
-                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0, DEF: 0, ATK: 0.35, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
                             },
                         ],[
@@ -1613,7 +1799,7 @@ let persoTableData = {
                                 evolution: 3,
                                 type: "LIFESTEAL",
                                 ratio: [
-                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0, DEF: 0, ATK: 0.4, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
                             },
                         ],[
@@ -1621,7 +1807,7 @@ let persoTableData = {
                                 evolution: 4,
                                 type: "LIFESTEAL",
                                 ratio: [
-                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0, DEF: 0, ATK: 0.45, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
                             },
                         ],[
@@ -1629,7 +1815,7 @@ let persoTableData = {
                                 evolution: 5,
                                 type: "LIFESTEAL",
                                 ratio: [
-                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0, DEF: 0, ATK: 0.5, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
                             },
                         ],
@@ -1654,12 +1840,14 @@ let persoTableData = {
                                 evolution: 0,
                                 type: "SACRIFICE",
                                 ratio: [
-                                    { HP: 50, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0.5, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
                                 cooldown: 10,
                                 effect: [
                                     {
                                         type: "BUFF_SPEED_EQUIP",
+                                        power: 0.2,
+                                        length: 3,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
@@ -1667,6 +1855,8 @@ let persoTableData = {
                                     },
                                     {
                                         type: "BUFF_CRIT_EQUIP",
+                                        power: 0.2,
+                                        length: 3,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
@@ -1679,12 +1869,14 @@ let persoTableData = {
                                 evolution: 1,
                                 type: "SACRIFICE",
                                 ratio: [
-                                    { HP: 50, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0.45, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
                                 cooldown: 10,
                                 effect: [
                                     {
                                         type: "BUFF_SPEED_EQUIP",
+                                        power: 0.2,
+                                        length: 3,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
@@ -1692,6 +1884,8 @@ let persoTableData = {
                                     },
                                     {
                                         type: "BUFF_CRIT_EQUIP",
+                                        power: 0.2,
+                                        length: 3,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
@@ -1704,12 +1898,14 @@ let persoTableData = {
                                 evolution: 2,
                                 type: "SACRIFICE",
                                 ratio: [
-                                    { HP: 50, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0.4, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
                                 cooldown: 10,
                                 effect: [
                                     {
                                         type: "BUFF_SPEED_EQUIP",
+                                        power: 0.2,
+                                        length: 3,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
@@ -1717,6 +1913,8 @@ let persoTableData = {
                                     },
                                     {
                                         type: "BUFF_CRIT_EQUIP",
+                                        power: 0.2,
+                                        length: 3,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
@@ -1729,12 +1927,14 @@ let persoTableData = {
                                 evolution: 3,
                                 type: "SACRIFICE",
                                 ratio: [
-                                    { HP: 50, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0.35, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
                                 cooldown: 10,
                                 effect: [
                                     {
                                         type: "BUFF_SPEED_EQUIP",
+                                        power: 0.2,
+                                        length: 3,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
@@ -1742,6 +1942,8 @@ let persoTableData = {
                                     },
                                     {
                                         type: "BUFF_CRIT_EQUIP",
+                                        power: 0.2,
+                                        length: 3,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
@@ -1754,12 +1956,14 @@ let persoTableData = {
                                 evolution: 4,
                                 type: "SACRIFICE",
                                 ratio: [
-                                    { HP: 50, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0.3, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
                                 cooldown: 10,
                                 effect: [
                                     {
                                         type: "BUFF_SPEED_EQUIP",
+                                        power: 0.2,
+                                        length: 3,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
@@ -1767,6 +1971,8 @@ let persoTableData = {
                                     },
                                     {
                                         type: "BUFF_CRIT_EQUIP",
+                                        power: 0.2,
+                                        length: 3,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
@@ -1779,12 +1985,14 @@ let persoTableData = {
                                 evolution: 5,
                                 type: "SACRIFICE",
                                 ratio: [
-                                    { HP: 50, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0.25, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
                                 cooldown: 10,
                                 effect: [
                                     {
                                         type: "BUFF_SPEED_EQUIP",
+                                        power: 0.2,
+                                        length: 3,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
@@ -1792,6 +2000,8 @@ let persoTableData = {
                                     },
                                     {
                                         type: "BUFF_CRIT_EQUIP",
+                                        power: 0.2,
+                                        length: 3,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
@@ -1820,48 +2030,54 @@ let persoTableData = {
                             {
                                 evolution: 0,
                                 type: "REVIVE",
+                                base: 0.2,
                                 ratio: [
-                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0, DEF: 0, ATK: 0.0005, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
                             },
                         ],[
                             {
                                 evolution: 1,
                                 type: "REVIVE",
+                                base: 0.22,
                                 ratio: [
-                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0, DEF: 0, ATK: 0.0006, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
                             },
                         ],[
                             {
                                 evolution: 2,
                                 type: "REVIVE",
+                                base: 0.24,
                                 ratio: [
-                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0, DEF: 0, ATK: 0.0007, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
                             },
                         ],[
                             {
                                 evolution: 3,
                                 type: "REVIVE",
+                                base: 0.26,
                                 ratio: [
-                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0, DEF: 0, ATK: 0.0008, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
                             },
                         ],[
                             {
                                 evolution: 4,
                                 type: "REVIVE",
+                                base: 0.28,
                                 ratio: [
-                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0, DEF: 0, ATK: 0.0009, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
                             },
                         ],[
                             {
                                 evolution: 5,
                                 type: "REVIVE",
+                                base: 0.3,
                                 ratio: [
-                                    { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                    { HP: 0, DEF: 0, ATK: 0.001, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
                             },
                         ],
@@ -1888,6 +2104,8 @@ let persoTableData = {
                             {
                                 evolution: 0,
                                 type: "BUFF_ATK",
+                                base: 100,
+                                length: 3,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                     { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
@@ -1897,6 +2115,8 @@ let persoTableData = {
                             {
                                 evolution: 0,
                                 type: "BUFF_CRIT",
+                                base: 0.05,
+                                length: 3,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
@@ -1907,6 +2127,8 @@ let persoTableData = {
                             {
                                 evolution: 1,
                                 type: "BUFF_ATK",
+                                base: 110,
+                                length: 3,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                     { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
@@ -1916,6 +2138,8 @@ let persoTableData = {
                             {
                                 evolution: 1,
                                 type: "BUFF_CRIT",
+                                base: 0.06,
+                                length: 3,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
@@ -1926,6 +2150,8 @@ let persoTableData = {
                             {
                                 evolution: 2,
                                 type: "BUFF_ATK",
+                                base: 120,
+                                length: 3,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                     { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
@@ -1935,6 +2161,8 @@ let persoTableData = {
                             {
                                 evolution: 2,
                                 type: "BUFF_CRIT",
+                                base: 0.07,
+                                length: 3,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
@@ -1945,6 +2173,8 @@ let persoTableData = {
                             {
                                 evolution: 3,
                                 type: "BUFF_ATK",
+                                base: 130,
+                                length: 3,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                     { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
@@ -1954,6 +2184,8 @@ let persoTableData = {
                             {
                                 evolution: 3,
                                 type: "BUFF_CRIT",
+                                base: 0.08,
+                                length: 3,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
@@ -1964,6 +2196,8 @@ let persoTableData = {
                             {
                                 evolution: 4,
                                 type: "BUFF_ATK",
+                                base: 140,
+                                length: 3,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                     { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
@@ -1973,6 +2207,8 @@ let persoTableData = {
                             {
                                 evolution: 4,
                                 type: "BUFF_CRIT",
+                                base: 0.09,
+                                length: 3,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
@@ -1983,6 +2219,8 @@ let persoTableData = {
                             {
                                 evolution: 5,
                                 type: "BUFF_ATK",
+                                base: 150,
+                                length: 3,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                     { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
@@ -1992,6 +2230,8 @@ let persoTableData = {
                             {
                                 evolution: 5,
                                 type: "BUFF_CRIT",
+                                base: 0.1,
+                                length: 3,
                                 ratio: [
                                     { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                     { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
@@ -2003,8 +2243,8 @@ let persoTableData = {
                 },
                 {
                     type: "PASSIVE",
-                    name: "",
-                    description: "",
+                    name: "Echauffement",
+                    description: "C'est la fin de la course, mais pas pour moi !",
                     effect: [
                         [
                             {
@@ -2069,7 +2309,7 @@ let persoTableData = {
                             {
                                 evolution: 0,
                                 type: "BUFF_SPEED_STACK",
-                                interval: 3,
+                                attackInterval: 3,
                                 multiplier: 0.1,
                                 cap: 1,
                             },
@@ -2077,7 +2317,7 @@ let persoTableData = {
                             {
                                 evolution: 1,
                                 type: "BUFF_SPEED_STACK",
-                                interval: 3,
+                                attackInterval: 3,
                                 multiplier: 0.1,
                                 cap: 1,
                             },
@@ -2085,7 +2325,7 @@ let persoTableData = {
                             {
                                 evolution: 2,
                                 type: "BUFF_SPEED_STACK",
-                                interval: 3,
+                                attackInterval: 3,
                                 multiplier: 0.1,
                                 cap: 1,
                             },
@@ -2093,7 +2333,7 @@ let persoTableData = {
                             {
                                 evolution: 3,
                                 type: "BUFF_SPEED_STACK",
-                                interval: 3,
+                                attackInterval: 3,
                                 multiplier: 0.1,
                                 cap: 1,
                             },
@@ -2101,7 +2341,7 @@ let persoTableData = {
                             {
                                 evolution: 4,
                                 type: "BUFF_SPEED_STACK",
-                                interval: 3,
+                                attackInterval: 3,
                                 multiplier: 0.1,
                                 cap: 1,
                             },
@@ -2109,7 +2349,7 @@ let persoTableData = {
                             {
                                 evolution: 5,
                                 type: "BUFF_SPEED_STACK",
-                                interval: 3,
+                                attackInterval: 3,
                                 multiplier: 0.1,
                                 cap: 1,
                             },
@@ -2129,27 +2369,32 @@ let persoTableData = {
                                 effect: [
                                     {
                                         type: "DAMAGE",
+                                        base: 300,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                         ],
                                     },
                                     {
                                         type: "HEAL",
+                                        base: 300,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                         ],
                                     },
                                     {
                                         type: "STUN",
-                                        time: 1,
+                                        length: 1,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                         ],
                                     },
                                     {
                                         type: "BUFF_ATK_SOLO",
+                                        base: 100,
+                                        length: 3,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                         ],
                                     },
                                 ],
@@ -2162,27 +2407,32 @@ let persoTableData = {
                                 effect: [
                                     {
                                         type: "DAMAGE",
+                                        base: 400,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                         ],
                                     },
                                     {
                                         type: "HEAL",
+                                        base: 400,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                         ],
                                     },
                                     {
                                         type: "STUN",
-                                        time: 1,
+                                        length: 1,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                         ],
                                     },
                                     {
                                         type: "BUFF_ATK_SOLO",
+                                        base: 100,
+                                        length: 3,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                         ],
                                     },
                                 ],
@@ -2195,27 +2445,32 @@ let persoTableData = {
                                 effect: [
                                     {
                                         type: "DAMAGE",
+                                        base: 500,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                         ],
                                     },
                                     {
                                         type: "HEAL",
+                                        base: 500,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                         ],
                                     },
                                     {
                                         type: "STUN",
-                                        time: 1,
+                                        length: 1,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                         ],
                                     },
                                     {
                                         type: "BUFF_ATK_SOLO",
+                                        base: 100,
+                                        length: 3,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                         ],
                                     },
                                 ],
@@ -2228,27 +2483,32 @@ let persoTableData = {
                                 effect: [
                                     {
                                         type: "DAMAGE",
+                                        base: 600,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                         ],
                                     },
                                     {
                                         type: "HEAL",
+                                        base: 600,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                         ],
                                     },
                                     {
                                         type: "STUN",
-                                        time: 1,
+                                        length: 1,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                         ],
                                     },
                                     {
                                         type: "BUFF_ATK_SOLO",
+                                        base: 100,
+                                        length: 3,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                         ],
                                     },
                                 ],
@@ -2261,27 +2521,32 @@ let persoTableData = {
                                 effect: [
                                     {
                                         type: "DAMAGE",
+                                        base: 700,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                         ],
                                     },
                                     {
                                         type: "HEAL",
+                                        base: 700,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                         ],
                                     },
                                     {
                                         type: "STUN",
-                                        time: 1,
+                                        length: 1,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                         ],
                                     },
                                     {
                                         type: "BUFF_ATK_SOLO",
+                                        base: 100,
+                                        length: 3,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                         ],
                                     },
                                 ],
@@ -2294,27 +2559,32 @@ let persoTableData = {
                                 effect: [
                                     {
                                         type: "DAMAGE",
+                                        base: 800,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                         ],
                                     },
                                     {
                                         type: "HEAL",
+                                        base: 800,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                         ],
                                     },
                                     {
                                         type: "STUN",
-                                        time: 1,
+                                        length: 1,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                         ],
                                     },
                                     {
                                         type: "BUFF_ATK_SOLO",
+                                        base: 100,
+                                        length: 3,
                                         ratio: [
                                             { HP: 0, DEF: 0, ATK: 1, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
+                                            { HP: 0, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 1 },
                                         ],
                                     },
                                 ],
@@ -2340,37 +2610,37 @@ let persoTableData = {
                             {
                                 evolution: 0,
                                 type: "BUFF_ATK_SOLO_PER_MISSING_HP",
-                                buff: 1.5,
+                                base: 1.5,
                             },
                         ],[
                             {
                                 evolution: 1,
                                 type: "BUFF_ATK_SOLO_PER_MISSING_HP",
-                                buff: 1.5,
+                                base: 1.75,
                             },
                         ],[
                             {
                                 evolution: 2,
                                 type: "BUFF_ATK_SOLO_PER_MISSING_HP",
-                                buff: 1.5,
+                                base: 2,
                             },
                         ],[
                             {
                                 evolution: 3,
                                 type: "BUFF_ATK_SOLO_PER_MISSING_HP",
-                                buff: 1.5,
+                                base: 2.25,
                             },
                         ],[
                             {
                                 evolution: 4,
                                 type: "BUFF_ATK_SOLO_PER_MISSING_HP",
-                                buff: 1.5,
+                                base: 2.5,
                             },
                         ],[
                             {
                                 evolution: 5,
                                 type: "BUFF_ATK_SOLO_PER_MISSING_HP",
-                                buff: 1.5,
+                                base: 3,
                             },
                         ],
                     ],
@@ -2384,11 +2654,12 @@ let persoTableData = {
                             {
                                 evolution: 0,
                                 type: "BUFF_DEF_@_+50%_HP",
-                                value: 20,
+                                base: 20,
                             },
                             {
                                 evolution: 0,
                                 type: "BUFF_SPEED_@_-50%_HP",
+                                power: 0.1,
                                 ratio: [
                                     { HP: 1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
@@ -2397,11 +2668,12 @@ let persoTableData = {
                             {
                                 evolution: 1,
                                 type: "BUFF_DEF_@_+50%_HP",
-                                value: 20,
+                                base: 20,
                             },
                             {
                                 evolution: 1,
                                 type: "BUFF_SPEED_@_-50%_HP",
+                                power: 0.1,
                                 ratio: [
                                     { HP: 1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
@@ -2410,11 +2682,12 @@ let persoTableData = {
                             {
                                 evolution: 2,
                                 type: "BUFF_DEF_@_+50%_HP",
-                                value: 20,
+                                base: 20,
                             },
                             {
                                 evolution: 2,
                                 type: "BUFF_SPEED_@_-50%_HP",
+                                power: 0.1,
                                 ratio: [
                                     { HP: 1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
@@ -2423,11 +2696,12 @@ let persoTableData = {
                             {
                                 evolution: 3,
                                 type: "BUFF_DEF_@_+50%_HP",
-                                value: 20,
+                                base: 20,
                             },
                             {
                                 evolution: 3,
                                 type: "BUFF_SPEED_@_-50%_HP",
+                                power: 0.1,
                                 ratio: [
                                     { HP: 1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
@@ -2436,11 +2710,12 @@ let persoTableData = {
                             {
                                 evolution: 4,
                                 type: "BUFF_DEF_@_+50%_HP",
-                                value: 20,
+                                base: 20,
                             },
                             {
                                 evolution: 4,
                                 type: "BUFF_SPEED_@_-50%_HP",
+                                power: 0.1,
                                 ratio: [
                                     { HP: 1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
@@ -2449,11 +2724,12 @@ let persoTableData = {
                             {
                                 evolution: 5,
                                 type: "BUFF_DEF_@_+50%_HP",
-                                value: 20,
+                                base: 20,
                             },
                             {
                                 evolution: 5,
                                 type: "BUFF_SPEED_@_-50%_HP",
+                                power: 0.1,
                                 ratio: [
                                     { HP: 1, DEF: 0, ATK: 0, SPD: 0, CRIT: 0, CRIT_DMG: 0, MAGIC: 0 },
                                 ],
@@ -2467,7 +2743,7 @@ let persoTableData = {
 }
 
 function DPS() {
-    let rarity = [persoTableData.rare, persoTableData.rare, persoTableData.legendary, persoTableData.mythic]
+    let rarity = [persoTableData.rare, persoTableData.epic, persoTableData.legendary, persoTableData.mythic]
     rarity.forEach((rarity) => {
         for (let i = 0; i < rarity.length; i++) {
             let invoc = rarity[i]
@@ -2494,6 +2770,9 @@ function DPS() {
                             let ratioDMG = effect.ratio[0]
                             //console.log(ratioDMG)
 
+                            let dmgBase = effect.base
+
+                            dmgHP = Math.round(ratioDMG.HP * baseStat.HP * 100) / 100
                             dmgATK = Math.round(ratioDMG.ATK * baseStat.ATK * 100) / 100
                             dmgDEF = Math.round(ratioDMG.DEF * baseStat.DEF * 100) / 100
                             dmgSPD = Math.round(ratioDMG.SPD * baseStat.SPD * 100) / 100
@@ -2501,12 +2780,12 @@ function DPS() {
                             dmgCRIT_DMG = Math.round(ratioDMG.CRIT_DMG * baseStat.CRIT_DMG * 100) / 100
                             dmgMAGIC = Math.round(ratioDMG.MAGIC * baseStat.MAGIC * 100) / 100
 
-                            let dmgPerHit = dmgATK + dmgDEF + dmgSPD + dmgCRIT + dmgCRIT_DMG + dmgMAGIC
+                            let dmgPerHit = dmgBase + dmgHP + dmgATK + dmgDEF + dmgSPD + dmgCRIT + dmgCRIT_DMG + dmgMAGIC
                             let SpellDPS = Math.round(dmgPerHit / effect.cooldown * 1000) / 1000
 
                             let cumulDPS = Math.round((SpellDPS + dps) * 100) / 100
 
-                            console.log(`${spell.name} LVL ${effect.evolution} : SpellDPS: ${SpellDPS} | ${dmgPerHit} = ${dmgATK} + ${dmgDEF} + ${dmgSPD} + ${dmgCRIT} + ${dmgCRIT_DMG} + ${dmgMAGIC}`)
+                            console.log(`${spell.name} LVL ${effect.evolution} : SpellDPS: ${SpellDPS} | ${dmgPerHit} = ${dmgBase} + ${dmgHP} + ${dmgATK} + ${dmgDEF} + ${dmgSPD} + ${dmgCRIT} + ${dmgCRIT_DMG} + ${dmgMAGIC}`)
                             //console.log(`SpellDPS: ${SpellDPS}, DPH: ${dmgPerHit}`)
                             console.log(`Culmul DPS: ${cumulDPS}, SCORE: ${Math.round(cumulDPS * invoc.stats.HP)}`)
                         }
@@ -2878,6 +3157,13 @@ function randomLootByRarity(rarity) {
     return lootList[randomIndex]; // Renvoyer l'élément correspondant à l'index généré
 }
 
+function calculLootProbability(value, rarity) {
+    let proba = Math.round(value * rarity * 100) / 10000
+    let writeProba = document.querySelector(`.gui__in-taverne-percent-loot`)
+    writeProba.innerHTML = `${proba}%`
+    return proba
+}
+
 function renderInvoc(rarity, hero) {
     let guiInTavernInvoc = document.querySelector('.gui__in-taverne-invoc')
 
@@ -2940,12 +3226,17 @@ async function invocation(number) {
 
     let guiInTavernInvoc = document.querySelector('.gui__in-taverne-invoc')
     guiInTavernInvoc.innerHTML = ''
+    let writeProba = document.querySelector(`.gui__in-taverne-percent-loot`)
+    writeProba.innerHTML = ''
+    let proba = 100
 
     switch (number) {
         case 1:
             guiInTavernInvoc.setAttribute('type', 'single')
             let loot = randomLoot(rarityTable)
             let hero = randomLootByRarity(loot)
+
+            calculLootProbability(proba, rarityTable[loot])
 
             renderInvoc(loot, hero)
             break
@@ -2954,6 +3245,9 @@ async function invocation(number) {
             for (let i = 1; i < 8; i++) {
                 let loot = randomLoot(rarityTable)
                 let hero = randomLootByRarity(loot)
+
+                let newProba = calculLootProbability(proba, rarityTable[loot])
+                proba = newProba
 
                 renderInvoc(loot, hero)
                 await sleep(1000 / (i + 1))
