@@ -10,10 +10,8 @@
 
 .gui__in-inventaire {
     //background-color: rgba(0, 255, 255, 0.089);
-    margin-top: 1%;
-    height: 78%;
-    margin-left: 1%;
-    width: 87.5%;
+    height: 82%;
+    width: 90.5%;
 
     .top {
         width: 100%;
@@ -163,11 +161,11 @@
 
             .round-type {
                 position: absolute;
-                top: -12%;
-                right: 0;
+                top: -12.3%;
+                right: -2.9%;
                 height: 153%;
                 width: 35%;
-                background-image: url('./assets/img/gui/inventaire/roue_type_02.webp');
+                background-image: url('./assets/img/gui/inventaire/rond.webp');
                 background-repeat: no-repeat;
                 background-size: contain;
                 display: flex;
@@ -205,7 +203,7 @@
             padding: 2rem 1.4rem 1.8rem 2rem;
 
             .inventaire-inset {
-                height: 100%;
+                height: 96%;
                 width: 100%;
                 overflow-y: scroll;
                 display: grid;

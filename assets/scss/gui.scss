@@ -34,7 +34,7 @@
 .gui__forge[visible="true"],
 .gui__inventaire[visible="true"] {
     z-index: 210;
-    background-image: url('./assets/img/gui/auberge_taverne_forge_guilde.webp');
+    background-image: url('./assets/img/gui/interface.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -87,7 +87,7 @@
     //background-color: rgba(43, 255, 0, 0.452);
     top: 0;
     left: 0;
-    width: 5%;
+    width: 4%;
     height: 100%;
 }
 
@@ -96,7 +96,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 7%;
+    height: 10%;
 }
 
 .gui__border-right[type="auberge"] {

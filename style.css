@@ -158,7 +158,7 @@ body {
 .gui__forge[visible=true],
 .gui__inventaire[visible=true] {
   z-index: 210;
-  background-image: url("./assets/img/gui/auberge_taverne_forge_guilde.webp");
+  background-image: url("./assets/img/gui/interface.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -209,7 +209,7 @@ body {
 .gui__border-left[type=auberge] {
   top: 0;
   left: 0;
-  width: 5%;
+  width: 4%;
   height: 100%;
 }
 
@@ -217,7 +217,7 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 7%;
+  height: 10%;
 }
 
 .gui__border-right[type=auberge] {
@@ -256,10 +256,12 @@ body {
 }
 
 .gui__in-guilde {
-  margin-top: 1%;
-  height: 78%;
-  margin-left: 1%;
-  width: 87.5%;
+  height: 81.7%;
+  width: 92.3%;
+}
+.gui__in-guilde hr {
+  width: 90%;
+  margin-left: 5%;
 }
 
 .gui__in-guilde[active=true] {
@@ -271,7 +273,7 @@ body {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  margin: 3% 0 2% 0;
+  margin: 2% 0;
 }
 .gui__in-guilde[active=true] .gui__in-guilde-menu > button {
   text-align: center;
@@ -1464,10 +1466,12 @@ body {
 }
 
 .gui__in-taverne {
-  margin-top: 1%;
-  height: 78%;
-  margin-left: 1%;
-  width: 87.5%;
+  height: 81.7%;
+  width: 92.3%;
+}
+.gui__in-taverne hr {
+  width: 90%;
+  margin-left: 5%;
 }
 
 .gui__in-taverne[active=true] {
@@ -1479,7 +1483,7 @@ body {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  margin: 3% 0 2% 0;
+  margin: 2% 0;
 }
 .gui__in-taverne[active=true] .gui__in-taverne-menu > button {
   text-align: center;
@@ -1771,10 +1775,8 @@ body {
 }
 
 .gui__in-inventaire {
-  margin-top: 1%;
-  height: 78%;
-  margin-left: 1%;
-  width: 87.5%;
+  height: 82%;
+  width: 90.5%;
 }
 .gui__in-inventaire .top {
   width: 100%;
@@ -1901,11 +1903,11 @@ body {
 }
 .gui__in-inventaire .top .right .round-type {
   position: absolute;
-  top: -12%;
-  right: 0;
+  top: -12.3%;
+  right: -2.9%;
   height: 153%;
   width: 35%;
-  background-image: url("./assets/img/gui/inventaire/roue_type_02.webp");
+  background-image: url("./assets/img/gui/inventaire/rond.webp");
   background-repeat: no-repeat;
   background-size: contain;
   display: flex;
@@ -1939,7 +1941,7 @@ body {
   /* Chrome, Edge, and Safari */
 }
 .gui__in-inventaire .bottom .inventaire-player .inventaire-inset {
-  height: 100%;
+  height: 96%;
   width: 100%;
   overflow-y: scroll;
   display: grid;
