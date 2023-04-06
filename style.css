@@ -1955,7 +1955,7 @@ body {
 }
 .gui__in-inventaire .bottom .inventaire-player * {
   scrollbar-width: auto;
-  scrollbar-color: #8f54a0 #a82424;
+  scrollbar-color: #bababa #d6d6d6;
 }
 .gui__in-inventaire .bottom .inventaire-player *::-webkit-scrollbar {
   width: 2rem;
@@ -1975,6 +1975,77 @@ body {
   width: 17%;
   height: 93%;
   margin-bottom: 0.5%;
+}
+
+.gui__in-auberge {
+  height: 81.7%;
+  width: 92.3%;
+}
+.gui__in-auberge hr {
+  width: 90%;
+  margin-left: 5%;
+}
+
+.gui__in-auberge[active=true] {
+  display: flex;
+  flex-direction: column;
+  /* Chrome, Edge, and Safari */
+}
+.gui__in-auberge[active=true] .gui__in-auberge-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 2% 0;
+}
+.gui__in-auberge[active=true] .gui__in-auberge-menu > button {
+  text-align: center;
+  font-size: 2rem;
+  width: 23%;
+  padding: 1.5% 0;
+  cursor: pointer;
+}
+.gui__in-auberge[active=true] .gui__in-auberge-menu > button[active=true] {
+  color: #c919ab;
+}
+.gui__in-auberge[active=true] > div[active=false] {
+  display: none;
+}
+.gui__in-auberge[active=true] .gui__in-auberge__perso[active=true],
+.gui__in-auberge[active=true] .gui__in-auberge__team[active=true] {
+  flex-grow: 1;
+}
+.gui__in-auberge[active=true] .gui__in-auberge__perso {
+  display: grid;
+  overflow-y: scroll;
+  width: 100%;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6% 2%;
+  padding: 5% 4%;
+}
+.gui__in-auberge[active=true] .gui__in-auberge__perso > div {
+  aspect-ratio: 2/3;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+.gui__in-auberge[active=true] * {
+  scrollbar-width: auto;
+  scrollbar-color: #bababa #f0f0f0;
+}
+.gui__in-auberge[active=true] *::-webkit-scrollbar {
+  width: 2rem;
+}
+.gui__in-auberge[active=true] *::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+.gui__in-auberge[active=true] *::-webkit-scrollbar-thumb {
+  background-color: #bababa;
+  border-radius: 2rem;
+  border: 0.5rem solid #f0f0f0;
+}
+
+.gui__in-auberge[active=false] {
+  display: none;
 }
 
 .preload {

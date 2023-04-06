@@ -1530,7 +1530,7 @@ const persoTableData = {
         {
             name: "Many Moutmout",
             type: "Brawler",
-            url: " (6)",
+            url: "many",
             rarity: "lendendary",
             stats: { HP: 750, DEF: 0, ATK: 49, SPD: 2400, CRIT: 5, CRIT_DMG: 50, MAGIC: 34 },
             spell: [

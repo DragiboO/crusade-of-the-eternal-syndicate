@@ -1,0 +1,84 @@
+.gui__in-auberge {
+    //background-color: rgba(0, 255, 255, 0.089);
+    height: 81.7%;
+    width: 92.3%;
+
+    hr {
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+
+.gui__in-auberge[active="true"] {
+    display: flex;
+    flex-direction: column;
+
+    .gui__in-auberge-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 2% 0;
+
+        >button {
+            text-align: center;
+            font-size: 2rem;
+            width: 23%;
+            padding: 1.5% 0;
+            cursor: pointer;
+        }
+
+        >button[active="true"] {
+            color: rgb(201, 25, 171);
+        }
+    }
+
+    >div[active="false"] {
+        display: none;
+    }
+
+    .gui__in-auberge__perso[active="true"],
+    .gui__in-auberge__team[active="true"] {
+        flex-grow: 1;
+        //background-color: rgba(221, 174, 99, 0.363);
+    }
+
+    .gui__in-auberge__perso {
+        display: grid;
+        overflow-y: scroll;
+        width: 100%;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 6% 2% ;
+        padding: 5% 4%;
+
+        >div {
+            aspect-ratio: 2/3;
+            background-color: #fff;
+            border-radius: 0.5rem;
+        }
+    }
+
+    * {
+        scrollbar-width: auto;
+        scrollbar-color: rgb(186, 186, 186) #f0f0f0;
+    }
+
+    /* Chrome, Edge, and Safari */
+    *::-webkit-scrollbar {
+        width: 2rem;
+    }
+
+    *::-webkit-scrollbar-track {
+        background: #f0f0f0;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: rgb(186, 186, 186);
+        border-radius: 2rem;
+        border: 0.5rem solid #f0f0f0;
+    }
+}
+
+.gui__in-auberge[active="false"] {
+    display: none;
+}

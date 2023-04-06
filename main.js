@@ -45,6 +45,8 @@ function randomName(length) {
 
 //removeLocalStorage('dataIdle')
 
+dataIdle = ''
+
 function createGameData() {
     if (getLocalStorage('dataIdle') === null) {
         setLocalStorage('dataIdle', {
@@ -53,6 +55,9 @@ function createGameData() {
                 "playerLevel": 1,
                 "playerExp": 0,
                 "lastConnection": Date.now(),
+                "firstLogin": `${new Date().getDate()}/${new Date().getMonth() + 1}/${new Date().getFullYear()} ${new Date().getHours()}:${new Date().getMinutes()}`,
+                "playtime": 0,
+                "lastClaim": null,
             },
             "chapterProgression": {
                 "chapterLevelMax": 51,
@@ -73,10 +78,11 @@ function createGameData() {
 
         window.location.reload()
     }
+    
+    dataIdle = getLocalStorage('dataIdle')
+    console.log(dataIdle)
+    persoInventoryCheck()
 }
-
-let dataIdle = getLocalStorage('dataIdle')
-console.log(dataIdle)
 
 function persoInventoryCheck() {
     let persoInventory = dataIdle.persoInventory
@@ -86,31 +92,38 @@ function persoInventoryCheck() {
         let rarity = rarityList[index]
         persoTableData[rarity].forEach((perso) => {
 
-            let inInv = 0
+            let inInv = false
             
             for (let i = 0; i <= arrayRarity.length; i++) {
 
                 if (arrayRarity[i]?.name === perso.name) {
-                    inInv = 1
+                    inInv = true
                     break
                 }
             }
 
-            if (inInv === 0) {
+            if (inInv === false) {
                 let persoToAdd = {
                     "name": perso.name,
                     "owned": 0,
                     "level": 1,
                     "prestige": 0,
                     "exp": 0,
-                    "stuff": []
+                    "stuff": [],
+                    "spell": [],
                 }
                 persoInventory[index].push(persoToAdd)
+            }
+
+            while (persoInventory[index][persoInventory[index].length - 1].spell.length !== perso.spell.length) {
+                persoInventory[index][persoInventory[index].length - 1].spell.push(0)
             }
         })
     })
 
     setLocalStorage('dataIdle', dataIdle)
+    dataIdle = getLocalStorage('dataIdle')
+    console.log(dataIdle)
 }
 
 function sleep(ms) {
@@ -118,12 +131,19 @@ function sleep(ms) {
 }
 
 async function saveIdle() {
+    let saveN = 0
     while (true) {
         await sleep(5000)
+        //console.log(Date.now() - dataIdle.playerData.lastConnection)
+        if (saveN !== 0) {
+            dataIdle.playerData.playtime += Date.now() - dataIdle.playerData.lastConnection
+        }
         dataIdle.playerData.lastConnection = Date.now()
         setLocalStorage('dataIdle', dataIdle)
         dataIdle = getLocalStorage('dataIdle')
         console.log('saved')
+        console.log(dataIdle)
+        saveN++
     }
 }
 
@@ -521,31 +541,28 @@ function renderTaverneMenu() {
 //Menu Taverne - Invoc
 
 function randomLoot(lootChances) {
-    // Calculer la somme des chances
-    const sum = Object.values(lootChances).reduce((acc, chance) => acc + chance, 0);
+    const sum = Object.values(lootChances).reduce((acc, chance) => acc + chance, 0)
 
-    // Générer un nombre aléatoire entre 0 et la somme des chances
-    const randomNum = Math.random() * sum;
+    const randomNum = Math.random() * sum
 
-    // Parcourir le tableau des chances et soustraire les valeurs jusqu'à ce que le nombre aléatoire soit inférieur à 0
-    let cumulativeChance = 0;
+    let cumulativeChance = 0
     for (const [lootType, chance] of Object.entries(lootChances)) {
-        cumulativeChance += chance;
+        cumulativeChance += chance
         if (randomNum < cumulativeChance) {
-            return lootType; // Renvoyer le type de loot correspondant
+            return lootType
         }
     }
 }
 
 function randomLootByRarity(rarity) {
-    const lootList = persoTableData[rarity]; // Récupérer le tableau de loot correspondant à la rareté
+    const lootList = persoTableData[rarity]
 
     if (!lootList || lootList.length === 0) {
-        throw new Error(`Impossible de trouver des loots pour la rareté ${rarity}`);
+        throw new Error(`Impossible de trouver des loots pour la rareté ${rarity}`)
     }
 
-    const randomIndex = Math.floor(Math.random() * lootList.length); // Générer un index aléatoire dans le tableau de loot
-    return lootList[randomIndex]; // Renvoyer l'élément correspondant à l'index généré
+    const randomIndex = Math.floor(Math.random() * lootList.length)
+    return lootList[randomIndex]
 }
 
 function calculLootProbability(value, rarity) {
@@ -657,10 +674,43 @@ async function invocation(number) {
 
 // -----------------------------------------------
 
+// Menu Auberge
+
+let guiInAubergeMenuPerso = document.querySelector('.gui__in-auberge-menu__perso')
+let guiInAubergeMenuTeam = document.querySelector('.gui__in-auberge-menu__team')
+
+let guiInAubergePerso = document.querySelector('.gui__in-auberge__perso')
+let guiInAubergeTeam = document.querySelector('.gui__in-auberge__team')
+
+let guiAubergeMenuBtnList = [guiInAubergeMenuPerso, guiInAubergeMenuTeam]
+let guiAubergeContentList = [guiInAubergePerso, guiInAubergeTeam]
+
+function renderAubergeMenu() {
+    guiAubergeMenuBtnList.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            guiAubergeMenuBtnList.forEach((item) => {
+                item.setAttribute('active', 'false')
+            })
+            guiAubergeContentList.forEach((item) => {
+                item.setAttribute('active', 'false')
+            })
+            item.setAttribute('active', 'true')
+            guiAubergeContentList[index].setAttribute('active', 'true')
+        })
+    })
+}
+
+// -----------------------------------------------
+
+// Menu Auberge - Perso
+
+
+
+// -----------------------------------------------
+
 // Game Initialization
 
 createGameData()
-persoInventoryCheck()
 saveIdle()
 
 setElementSize()
@@ -675,5 +725,7 @@ renderGuildeMenu()
     renderChapterLevelMax()
 
 renderTaverneMenu()
+
+renderAubergeMenu()
 
 // -----------------------------------------------
