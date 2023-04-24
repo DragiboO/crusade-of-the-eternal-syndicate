@@ -11,7 +11,7 @@ const persoTableData = {
         {
             name: "Le tripoteur",
             type: "Sorcerer",
-            url: " (3)",
+            url: "tripoteur",
             rarity: "rare",
             stats: { HP: 120, DEF: 0, ATK: 18, SPD: 3000, CRIT: 2.5, CRIT_DMG: 50, MAGIC: 22 },
             spell: [
@@ -88,7 +88,7 @@ const persoTableData = {
         {
             name: "Petitekip",
             type: "Brawler",
-            url: " (7)",
+            url: "petitekip",
             rarity: "rare",
             stats: { HP: 150, DEF: 0, ATK: 23, SPD: 2400, CRIT: 2.5, CRIT_DMG: 50, MAGIC: 1 },
             spell: [
@@ -785,7 +785,7 @@ const persoTableData = {
         {
             name: "Mad Chrees",
             type: "Sorcerer",
-            url: " (2)",
+            url: "mads_chrees",
             rarity: "epic",
             stats: { HP: 238, DEF: 0, ATK: 42, SPD: 3000, CRIT: 5, CRIT_DMG: 50, MAGIC: 40 },
             spell: [
@@ -874,7 +874,7 @@ const persoTableData = {
         {
             name: "Filip",
             type: "Sorcerer",
-            url: " (4)",
+            url: "filip",
             rarity: "epic",
             stats: { HP: 400, DEF: 0, ATK: 26, SPD: 3000, CRIT: 2.5, CRIT_DMG: 50, MAGIC: 25 },
             spell: [
@@ -975,7 +975,7 @@ const persoTableData = {
         {
             name: "MagicNilmar",
             type: "Fiend",
-            url: " (5)",
+            url: "magic_nilmar",
             rarity: "epic",
             stats: { HP: 301, DEF: 0, ATK: 39, SPD: 2500, CRIT: 3, CRIT_DMG: 50, MAGIC: 10 },
             spell: [
@@ -1052,7 +1052,7 @@ const persoTableData = {
         {
             name: "Le Vivi",
             type: "Brawler",
-            url: " (16)",
+            url: "vivi",
             rarity: "epic",
             stats: { HP: 170, DEF: 0, ATK: 45, SPD: 2000, CRIT: 5, CRIT_DMG: 50, MAGIC: 0 },
             spell: [
@@ -1387,7 +1387,7 @@ const persoTableData = {
         {
             name: "John Doe",
             type: "CosmicThreat",
-            url: " (1)",
+            url: "john_doe",
             rarity: "lendendary",
             stats: { HP: 595, DEF: 0, ATK: 51, SPD: 2200, CRIT: 8, CRIT_DMG: 50, MAGIC: 80 },
             spell: [
