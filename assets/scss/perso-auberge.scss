@@ -1,0 +1,99 @@
+.auberge-perso-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url('./assets/img/hero/necroloss.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 0.75rem solid #30ce45;
+    overflow: hidden;
+
+    .name {
+        font-size: 1.5rem;
+        background-color: #2ef548;
+        width: 90%;
+        text-align: center;
+        margin: 5% auto;
+        border: 0.125rem solid #000;
+    }
+
+    .bottom {
+        display: flex;
+        flex-direction: column;
+        height: 27%;
+
+        .star {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2%;
+            width: 100%;
+
+            img {
+                width: 16%;
+                aspect-ratio: 1/1;
+            }
+        }
+
+        .info {
+            display: flex;
+            flex-grow: 1;
+            color: #fff;
+            align-items: center;
+            justify-content: center;
+            gap: 2%;
+            width: 100%;
+
+            .spell {
+                width: 35%;
+            }
+
+            .race {
+                width: 30%;
+                height: 100%;
+                position: relative;
+
+                img {
+                    position: absolute;
+                    z-index: 250;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 80%;
+                    aspect-ratio: 1/1;
+                }
+            }
+
+            .level {
+                text-align: center;
+                width: 35%;
+            }
+        }
+
+        .decoration {
+            position: relative;
+            height: 1.25rem;
+            background-color: #2ef548;
+            width: 100%;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 75%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 30%;
+                aspect-ratio: 1;
+                border-radius: 9999px;
+                background-color: #2ef548;
+            }
+        }
+    }
+}
+
+
+
+.auberge-perso-card[owned="false"] {
+    filter: grayscale(1);
+}

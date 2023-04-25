@@ -704,6 +704,9 @@ function renderAubergeMenu() {
 
 // Menu Auberge - Perso
 
+function renderAubergePerso() {
+    
+}
 
 
 // -----------------------------------------------

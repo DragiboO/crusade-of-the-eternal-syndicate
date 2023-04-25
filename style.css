@@ -2048,6 +2048,93 @@ body {
   display: none;
 }
 
+.auberge-perso-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url("./assets/img/hero/necroloss.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: 0.75rem solid #30ce45;
+  overflow: hidden;
+}
+.auberge-perso-card .name {
+  font-size: 1.5rem;
+  background-color: #2ef548;
+  width: 90%;
+  text-align: center;
+  margin: 5% auto;
+  border: 0.125rem solid #000;
+}
+.auberge-perso-card .bottom {
+  display: flex;
+  flex-direction: column;
+  height: 27%;
+}
+.auberge-perso-card .bottom .star {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2%;
+  width: 100%;
+}
+.auberge-perso-card .bottom .star img {
+  width: 16%;
+  aspect-ratio: 1/1;
+}
+.auberge-perso-card .bottom .info {
+  display: flex;
+  flex-grow: 1;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  gap: 2%;
+  width: 100%;
+}
+.auberge-perso-card .bottom .info .spell {
+  width: 35%;
+}
+.auberge-perso-card .bottom .info .race {
+  width: 30%;
+  height: 100%;
+  position: relative;
+}
+.auberge-perso-card .bottom .info .race img {
+  position: absolute;
+  z-index: 250;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  aspect-ratio: 1/1;
+}
+.auberge-perso-card .bottom .info .level {
+  text-align: center;
+  width: 35%;
+}
+.auberge-perso-card .bottom .decoration {
+  position: relative;
+  height: 1.25rem;
+  background-color: #2ef548;
+  width: 100%;
+}
+.auberge-perso-card .bottom .decoration::before {
+  content: "";
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  aspect-ratio: 1;
+  border-radius: 9999px;
+  background-color: #2ef548;
+}
+
+.auberge-perso-card[owned=false] {
+  filter: grayscale(1);
+}
+
 .preload {
   background: url("./assets/img/main-screen/auberge_glow_02.webp") no-repeat -9999px -9999px, url("./assets/img/main-screen/forge_glow_02.webp") no-repeat -9999px -9999px, url("./assets/img/main-screen/guilde_glow_02.webp") no-repeat -9999px -9999px, url("./assets/img/main-screen/puit_plein_glow_02.webp") no-repeat -9999px -9999px, url("./assets/img/main-screen/taverne_glow_02.webp") no-repeat -9999px -9999px, url("./assets/img/main-screen/inventaire_glow_02.webp") no-repeat -9999px -9999px, url("./assets/img/gui/auberge_taverne_forge_guilde.webp") no-repeat -9999px -9999px;
 }
