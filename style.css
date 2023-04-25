@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -2024,9 +2025,8 @@ body {
   padding: 5% 4%;
 }
 .gui__in-auberge[active=true] .gui__in-auberge__perso > div {
-  aspect-ratio: 2/3;
-  background-color: #fff;
-  border-radius: 0.5rem;
+  display: flex;
+  aspect-ratio: 29/49;
 }
 .gui__in-auberge[active=true] * {
   scrollbar-width: auto;
@@ -2048,95 +2048,84 @@ body {
   display: none;
 }
 
-.auberge-perso-card {
+.perso-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-image: url("./assets/img/hero/necroloss.webp");
+  align-items: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  border: 0.75rem solid #30ce45;
-  overflow: hidden;
 }
-.auberge-perso-card .name {
+.perso-card > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 222;
+}
+.perso-card .rarity {
+  top: 14.5%;
+  left: 50%;
+  width: 8%;
+  height: 4%;
+  transform: translate(-50%, -50%);
+  z-index: 221;
+}
+.perso-card .name {
+  margin-top: 1.6rem;
   font-size: 1.5rem;
-  background-color: #2ef548;
-  width: 90%;
-  text-align: center;
-  margin: 5% auto;
-  border: 0.125rem solid #000;
+  z-index: 230;
 }
-.auberge-perso-card .bottom {
-  display: flex;
-  flex-direction: column;
-  height: 27%;
+.perso-card .bottom {
+  z-index: 230;
+  margin-bottom: 1.9rem;
 }
-.auberge-perso-card .bottom .star {
+.perso-card .bottom .star {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2%;
   width: 100%;
 }
-.auberge-perso-card .bottom .star img {
+.perso-card .bottom .star img {
   width: 16%;
   aspect-ratio: 1/1;
 }
-.auberge-perso-card .bottom .info {
+.perso-card .bottom .info {
   display: flex;
-  flex-grow: 1;
-  color: #fff;
+  justify-content: space-between;
   align-items: center;
+}
+.perso-card .bottom .info .spell {
+  width: 39%;
+  height: 3rem;
+}
+.perso-card .bottom .info .level {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 2%;
-  width: 100%;
-}
-.auberge-perso-card .bottom .info .spell {
-  width: 35%;
-}
-.auberge-perso-card .bottom .info .race {
-  width: 30%;
-  height: 100%;
-  position: relative;
-}
-.auberge-perso-card .bottom .info .race img {
-  position: absolute;
-  z-index: 250;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-  aspect-ratio: 1/1;
-}
-.auberge-perso-card .bottom .info .level {
+  height: 3rem;
+  width: 36%;
+  margin-right: 4.2%;
+  font-size: 1.125rem;
+  color: #fff;
   text-align: center;
-  width: 35%;
-}
-.auberge-perso-card .bottom .decoration {
-  position: relative;
-  height: 1.25rem;
-  background-color: #2ef548;
-  width: 100%;
-}
-.auberge-perso-card .bottom .decoration::before {
-  content: "";
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 30%;
-  aspect-ratio: 1;
-  border-radius: 9999px;
-  background-color: #2ef548;
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 0.3px;
+  /* Autres préfixes de navigateurs */
+  text-stroke-color: black;
+  text-stroke-width: 0.3px;
 }
 
-.auberge-perso-card[owned=false] {
+.perso-card[owned=false] {
   filter: grayscale(1);
 }
 
 .preload {
-  background: url("./assets/img/main-screen/auberge_glow_02.webp") no-repeat -9999px -9999px, url("./assets/img/main-screen/forge_glow_02.webp") no-repeat -9999px -9999px, url("./assets/img/main-screen/guilde_glow_02.webp") no-repeat -9999px -9999px, url("./assets/img/main-screen/puit_plein_glow_02.webp") no-repeat -9999px -9999px, url("./assets/img/main-screen/taverne_glow_02.webp") no-repeat -9999px -9999px, url("./assets/img/main-screen/inventaire_glow_02.webp") no-repeat -9999px -9999px, url("./assets/img/gui/auberge_taverne_forge_guilde.webp") no-repeat -9999px -9999px;
+  background: url("./assets/img/main-screen/auberge_glow_02.webp") no-repeat -9999px -9999px, url("./assets/img/main-screen/forge_glow_02.webp") no-repeat -9999px -9999px, url("./assets/img/main-screen/guilde_glow_02.webp") no-repeat -9999px -9999px, url("./assets/img/main-screen/puit_plein_glow_02.webp") no-repeat -9999px -9999px, url("./assets/img/main-screen/taverne_glow_02.webp") no-repeat -9999px -9999px, url("./assets/img/main-screen/inventaire_glow_02.webp") no-repeat -9999px -9999px, url("./assets/img/gui/auberge_taverne_forge_guilde.webp") no-repeat -9999px -9999px, url("./assets/img/hero/fiddle_stock.webp") no-repeat -9999px -9999px, url("./assets/img/hero/filip.webp") no-repeat -9999px -9999px, url("./assets/img/hero/fon_bou.webp") no-repeat -9999px -9999px, url("./assets/img/hero/gro_pilon.webp") no-repeat -9999px -9999px, url("./assets/img/hero/john_doe.webp") no-repeat -9999px -9999px, url("./assets/img/hero/klo_charr.webp") no-repeat -9999px -9999px, url("./assets/img/hero/mads_chrees.webp") no-repeat -9999px -9999px, url("./assets/img/hero/magic_nilmar.webp") no-repeat -9999px -9999px, url("./assets/img/hero/many.webp") no-repeat -9999px -9999px, url("./assets/img/hero/mommy_milkers.webp") no-repeat -9999px -9999px, url("./assets/img/hero/necroloss.webp") no-repeat -9999px -9999px, url("./assets/img/hero/pakt.webp") no-repeat -9999px -9999px, url("./assets/img/hero/pauv_type.webp") no-repeat -9999px -9999px, url("./assets/img/hero/petitekip.webp") no-repeat -9999px -9999px, url("./assets/img/hero/pouri_d_groll.webp") no-repeat -9999px -9999px, url("./assets/img/hero/quad_space.webp") no-repeat -9999px -9999px, url("./assets/img/hero/raph_g_j.webp") no-repeat -9999px -9999px, url("./assets/img/hero/ren_par.webp") no-repeat -9999px -9999px, url("./assets/img/hero/saka_vyand.webp") no-repeat -9999px -9999px, url("./assets/img/hero/tad_merde.webp") no-repeat -9999px -9999px, url("./assets/img/hero/toc_arr.webp") no-repeat -9999px -9999px, url("./assets/img/hero/tripoteur.webp") no-repeat -9999px -9999px, url("./assets/img/hero/vadh_l_b.webp") no-repeat -9999px -9999px, url("./assets/img/hero/vivi.webp") no-repeat -9999px -9999px;
 }
 
 /*# sourceMappingURL=style.css.map */

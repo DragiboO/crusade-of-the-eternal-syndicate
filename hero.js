@@ -703,16 +703,16 @@ const persoTableData = {
             ],
         },
         {
-            name: "Gro Baton",
+            name: "Gro Pilon",
             type: "Brawler",
-            url: " (19)",
+            url: "gro_pilon",
             rarity: "rare",
             stats: { HP: 130, DEF: 0, ATK: 25, SPD: 3100, CRIT: 2.5, CRIT_DMG: 50, MAGIC: 3 },
             spell: [
                 {
                     type: "ACTIVE",
-                    name: "Coup de bâton",
-                    description: "Gro Baton te donne un gros coup de baton",
+                    name: "Pilonnage",
+                    description: "Gro Pilon te pilonne avec son pilon.",
                     effect: [
                         [
                             {
@@ -1388,7 +1388,7 @@ const persoTableData = {
             name: "John Doe",
             type: "CosmicThreat",
             url: "john_doe",
-            rarity: "lendendary",
+            rarity: "legendary",
             stats: { HP: 595, DEF: 0, ATK: 51, SPD: 2200, CRIT: 8, CRIT_DMG: 50, MAGIC: 80 },
             spell: [
                 {
@@ -1531,7 +1531,7 @@ const persoTableData = {
             name: "Many Moutmout",
             type: "Brawler",
             url: "many",
-            rarity: "lendendary",
+            rarity: "legendary",
             stats: { HP: 750, DEF: 0, ATK: 49, SPD: 2400, CRIT: 5, CRIT_DMG: 50, MAGIC: 34 },
             spell: [
                 {
@@ -1673,8 +1673,8 @@ const persoTableData = {
         {
             name: "Pouri D. Groll",
             type: "Undead",
-            url: " (20)",
-            rarity: "lendendary",
+            url: "pouri_d_groll",
+            rarity: "legendary",
             stats: { HP: 407, DEF: 0, ATK: 85, SPD: 2300, CRIT: 5, CRIT_DMG: 50, MAGIC: 70 },
             spell: [
                 {
@@ -1739,7 +1739,7 @@ const persoTableData = {
             name: "Pakt",
             type: "Fiend",
             url: "pakt",
-            rarity: "lendendary",
+            rarity: "legendary",
             stats: { HP: 666, DEF: 0, ATK: 59, SPD: 2100, CRIT: 7, CRIT_DMG: 50, MAGIC: 40 },
             spell: [
                 {
@@ -1930,7 +1930,7 @@ const persoTableData = {
             name: "Vadh L.B.",
             type: "Fiend",
             url: "vadh_l_b",
-            rarity: "lendendary",
+            rarity: "legendary",
             stats: { HP: 777, DEF: 0, ATK: 62, SPD: 2000, CRIT: 5, CRIT_DMG: 50, MAGIC: 20 },
             spell: [
                 {

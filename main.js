@@ -204,7 +204,7 @@ function DPS() {
     })
 }
 
-DPS()
+//DPS()
 
 // ------------------------------
 
@@ -704,8 +704,91 @@ function renderAubergeMenu() {
 
 // Menu Auberge - Perso
 
+aubergeOver.addEventListener('click', () => {
+    renderAubergePerso()
+})
+
 function renderAubergePerso() {
-    
+    console.log('renderAubergePerso')
+    guiInAubergePerso.innerHTML = ''
+
+    rarityList = [persoTableData.mythic, persoTableData.legendary, persoTableData.epic, persoTableData.rare]
+
+    dataIdle.persoInventory.forEach((rarity, index) => {
+        let listRarityData = rarityList[index]
+
+        rarity.forEach((hero) => {
+            let heroData = listRarityData.find(data => data.name === hero.name)
+            // console.log(hero)
+            // console.log(heroData)
+
+            if (hero.owned > 0) {
+                let card = document.createElement('div')
+                card.classList.add('perso-card')
+                card.setAttribute('owned', 'true')
+                card.style.backgroundImage = `url('./assets/img/hero/${heroData.url}.webp')`
+                card.innerHTML = `
+                    <img src="./assets/img/hero-card/cadre_${heroData.type}.webp" alt="">
+                    <img class="rarity" src="./assets/img/hero-card/gemme_${heroData.rarity}.webp" alt="">    
+                    <p class="name">${heroData.name}</p>
+                    <div class="bottom">
+                        <div class="star">
+                            <img src="./assets/img/hero-card/star.webp" alt="">
+                            <img src="./assets/img/hero-card/star.webp" alt="">
+                            <img src="./assets/img/hero-card/star.webp" alt="">
+                            <img src="./assets/img/hero-card/star.webp" alt="">
+                            <img src="./assets/img/hero-card/star.webp" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="spell"></div>
+                            <div class="level">
+                                <p>Niv ${hero.level}</p>
+                            </div>
+                        </div>
+                    </div>
+                    `
+                guiInAubergePerso.appendChild(card)
+            }
+        })
+    })
+
+    dataIdle.persoInventory.forEach((rarity, index) => {
+        let listRarityData = rarityList[index]
+
+        rarity.forEach((hero) => {
+            let heroData = listRarityData.find(data => data.name === hero.name)
+            // console.log(hero)
+            // console.log(heroData)
+
+            if (hero.owned == 0) {
+                let card = document.createElement('div')
+                card.classList.add('perso-card')
+                card.setAttribute('owned', 'false')
+                card.style.backgroundImage = `url('./assets/img/hero/${heroData.url}.webp')`
+                card.innerHTML = `
+                    <img src="./assets/img/hero-card/cadre_${heroData.type}.webp" alt="">
+                    <img class="rarity" src="./assets/img/hero-card/gemme_${heroData.rarity}.webp" alt="">    
+                    <p class="name">${heroData.name}</p>
+                    <div class="bottom">
+                        <div class="star">
+                            <img src="./assets/img/hero-card/star.webp" alt="">
+                            <img src="./assets/img/hero-card/star.webp" alt="">
+                            <img src="./assets/img/hero-card/star.webp" alt="">
+                            <img src="./assets/img/hero-card/star.webp" alt="">
+                            <img src="./assets/img/hero-card/star.webp" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="spell"></div>
+                            <div class="level">
+                                <p>Niv ${hero.level}</p>
+                            </div>
+                        </div>
+                    </div>
+                    `
+                guiInAubergePerso.appendChild(card)
+            }
+        })
+    })
 }
 
 
