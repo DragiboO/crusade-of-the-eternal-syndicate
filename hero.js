@@ -11,7 +11,7 @@ const persoTableData = {
         {
             name: "Le tripoteur",
             type: "Sorcerer",
-            url: "tripoteur",
+            url: "le_tripoteur",
             rarity: "rare",
             stats: { HP: 120, DEF: 0, ATK: 18, SPD: 3000, CRIT: 2.5, CRIT_DMG: 50, MAGIC: 22 },
             spell: [
@@ -317,16 +317,16 @@ const persoTableData = {
             ],
         },
         {
-            name: "Tad Merde",
+            name: "Tad Merdh",
             type: "Undead",
-            url: "tad_merde",
+            url: "tad_merdh",
             rarity: "rare",
             stats: { HP: 121, DEF: 0, ATK: 14, SPD: 3400, CRIT: 2.4, CRIT_DMG: 50, MAGIC: 7 },
             spell: [
                 {
                     type: "ACTIVE",
                     name: "Jeté de KK",
-                    description: "Tad Merde te tue",
+                    description: "Tad Merdh te tue",
                     effect: [
                         [
                             {
@@ -783,7 +783,7 @@ const persoTableData = {
     // HP 150 - 400  ATK 25 - 45  SPD 2 - 4  CRIT 2.5 - 5  CRIT_DMG 50 // Score 3000 - 6000
     "epic": [
         {
-            name: "Mad Chrees",
+            name: "Mads Chrees",
             type: "Sorcerer",
             url: "mads_chrees",
             rarity: "epic",
@@ -792,7 +792,7 @@ const persoTableData = {
                 {
                     type: "ACTIVE",
                     name: "Tempête de St-Môret",
-                    description: "Mad Chrees t'en met plein la vue",
+                    description: "Mads Chrees t'en met plein la vue",
                     effect: [
                         [
                             {
@@ -973,7 +973,7 @@ const persoTableData = {
             ],
         },
         {
-            name: "MagicNilmar",
+            name: "Magic Nilmar",
             type: "Fiend",
             url: "magic_nilmar",
             rarity: "epic",
@@ -1218,7 +1218,7 @@ const persoTableData = {
         {
             name: "Atchoom",
             type: "Brawler",
-            url: " (18)",
+            url: "(18)",
             rarity: "epic",
             stats: { HP: 152, DEF: 0, ATK: 31, SPD: 4000, CRIT: 5, CRIT_DMG: 50, MAGIC: 1 },
             spell: [
@@ -1530,7 +1530,7 @@ const persoTableData = {
         {
             name: "Many Moutmout",
             type: "Brawler",
-            url: "many",
+            url: "many_moutmout",
             rarity: "legendary",
             stats: { HP: 750, DEF: 0, ATK: 49, SPD: 2400, CRIT: 5, CRIT_DMG: 50, MAGIC: 34 },
             spell: [
@@ -1671,16 +1671,16 @@ const persoTableData = {
             ],
         },
         {
-            name: "Pouri D. Groll",
+            name: "Poury D. Groll",
             type: "Undead",
-            url: "pouri_d_groll",
+            url: "poury_d_groll",
             rarity: "legendary",
             stats: { HP: 407, DEF: 0, ATK: 85, SPD: 2300, CRIT: 5, CRIT_DMG: 50, MAGIC: 70 },
             spell: [
                 {
                     type: "PASSIVE",
                     name: "Pompeur",
-                    description: "Pouri D. Groll est infatigable !",
+                    description: "Poury D. Groll est infatigable !",
                     effect: [
                         [
                             {
@@ -2208,7 +2208,7 @@ const persoTableData = {
         {
             name: "QuadSpace",
             type: "CosmicThreat",
-            url: "quad_space",
+            url: "quadspace",
             rarity: "mythic",
             stats: { HP: 900, DEF: 6, ATK: 90, SPD: 1500, CRIT: 20, CRIT_DMG: 50, MAGIC: 215 },
             spell: [
