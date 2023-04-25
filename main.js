@@ -726,7 +726,7 @@ function renderAubergePerso() {
                 let card = document.createElement('div')
                 card.classList.add('perso-card')
                 card.setAttribute('owned', 'true')
-                card.style.backgroundImage = `url('./assets/img/hero/${heroData.url}.webp')`
+                //card.style.backgroundImage = `url('./assets/img/hero/${heroData.url}.webp')`
                 card.innerHTML = `
                     <img src="./assets/img/hero-card/cadre_${heroData.type}.webp" alt="">
                     <img class="rarity" src="./assets/img/hero-card/gemme_${heroData.rarity}.webp" alt="">    
@@ -764,7 +764,8 @@ function renderAubergePerso() {
                 let card = document.createElement('div')
                 card.classList.add('perso-card')
                 card.setAttribute('owned', 'false')
-                card.style.backgroundImage = `url('./assets/img/hero/${heroData.url}.webp')`
+                card.setAttribute('who', heroData.url)
+                //card.style.backgroundImage = `url('./assets/img/hero/${heroData.url}.webp')`
                 card.innerHTML = `
                     <img src="./assets/img/hero-card/cadre_${heroData.type}.webp" alt="">
                     <img class="rarity" src="./assets/img/hero-card/gemme_${heroData.rarity}.webp" alt="">    
