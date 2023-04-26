@@ -597,6 +597,31 @@ function renderInvoc(rarity, hero) {
         </div>`
     
     guiInTavernInvoc.appendChild(card)
+
+    console.log(hero)
+    addInvocToInventory(hero)
+}
+
+function addInvocToInventory(hero) {
+    let rarityPosition = 0
+    switch (hero.rarity) {
+        case "rare":
+            rarityPosition = 3
+            break
+        case "epic":
+            rarityPosition = 2
+            break
+        case "legendary":
+            rarityPosition = 1
+            break
+        default:
+            rarityPosition = 0
+            break
+    }
+
+    let heroName = hero.name
+
+    dataIdle.persoInventory[rarityPosition].find((item) => item.name == heroName).owned += 1
 }
 
 async function invocation(number) {
@@ -672,6 +697,15 @@ async function invocation(number) {
     }
 }
 
+function taverneInvocCleanOpen() {
+    taverneOver.addEventListener('click', () => {
+        let guiInTavernInvoc = document.querySelector('.gui__in-taverne-invoc')
+        guiInTavernInvoc.innerHTML = ''
+        let writeProba = document.querySelector(`.gui__in-taverne-percent-loot`)
+        writeProba.innerHTML = ''
+    })
+}
+
 // -----------------------------------------------
 
 // Menu Auberge
@@ -704,9 +738,11 @@ function renderAubergeMenu() {
 
 // Menu Auberge - Perso
 
-aubergeOver.addEventListener('click', () => {
-    renderAubergePerso()
-})
+function updateRenderAubergePerso() {
+    aubergeOver.addEventListener('click', () => {
+        renderAubergePerso()
+    })
+}
 
 function renderAubergePerso() {
     console.log('renderAubergePerso')
@@ -726,7 +762,7 @@ function renderAubergePerso() {
                 let card = document.createElement('div')
                 card.classList.add('perso-card')
                 card.setAttribute('owned', 'true')
-                //card.style.backgroundImage = `url('./assets/img/hero/${heroData.url}.webp')`
+                card.setAttribute('who', heroData.url)
                 card.innerHTML = `
                     <img src="./assets/img/hero-card/cadre_${heroData.type}.webp" alt="">
                     <img class="rarity" src="./assets/img/hero-card/gemme_${heroData.rarity}.webp" alt="">    
@@ -736,7 +772,9 @@ function renderAubergePerso() {
                             ${heroEvolution(hero.evolution)}
                         </div>
                         <div class="info">
-                            <div class="spell"></div>
+                            <div class="spell">
+                                ${heroSpell(hero.spell)}
+                            </div>
                             <div class="level">
                                 <p>Niv ${hero.level}</p>
                             </div>
@@ -761,7 +799,6 @@ function renderAubergePerso() {
                 card.classList.add('perso-card')
                 card.setAttribute('owned', 'false')
                 card.setAttribute('who', heroData.url)
-                //card.style.backgroundImage = `url('./assets/img/hero/${heroData.url}.webp')`
                 card.innerHTML = `
                     <img src="./assets/img/hero-card/cadre_${heroData.type}.webp" alt="">
                     <img class="rarity" src="./assets/img/hero-card/gemme_${heroData.rarity}.webp" alt="">    
@@ -816,13 +853,15 @@ addMainScreenMenuBtn()
 closeAllMainScreenMenu()
 
 renderGuildeMenu()
-
     renderChapter()
     swapChapter()
     renderChapterLevelMax()
 
 renderTaverneMenu()
+    taverneInvocCleanOpen()
 
 renderAubergeMenu()
+    updateRenderAubergePerso()
+
 
 // -----------------------------------------------
