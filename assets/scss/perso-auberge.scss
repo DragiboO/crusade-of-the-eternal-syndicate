@@ -35,6 +35,7 @@
     .bottom {
         z-index: 230;
         margin-bottom: 1.9rem;
+        width: 100%;
 
         .star {
             display: flex;
@@ -55,15 +56,26 @@
             align-items: center;
 
             .spell {
-                width: 39%;
-                height: 3rem;
+                width: 34%;
+                height: 3.5rem;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-end;
+                gap: 5%;
+                margin-left: 5%;
+
+                >img {
+                    height: 1rem;
+                    max-width: 90%;
+                }
             }
 
             .level {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                height: 3rem;
+                height: 3.5rem;
                 width: 36%;
                 margin-right: 4.2%;
                 font-size: 1.125rem;

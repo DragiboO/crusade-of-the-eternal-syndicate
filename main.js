@@ -733,11 +733,7 @@ function renderAubergePerso() {
                     <p class="name">${heroData.name}</p>
                     <div class="bottom">
                         <div class="star">
-                            <img src="./assets/img/hero-card/star.webp" alt="">
-                            <img src="./assets/img/hero-card/star.webp" alt="">
-                            <img src="./assets/img/hero-card/star.webp" alt="">
-                            <img src="./assets/img/hero-card/star.webp" alt="">
-                            <img src="./assets/img/hero-card/star.webp" alt="">
+                            ${heroEvolution(hero.evolution)}
                         </div>
                         <div class="info">
                             <div class="spell"></div>
@@ -757,7 +753,7 @@ function renderAubergePerso() {
 
         rarity.forEach((hero) => {
             let heroData = listRarityData.find(data => data.name === hero.name)
-            // console.log(hero)
+            console.log(hero)
             // console.log(heroData)
 
             if (hero.owned == 0) {
@@ -772,14 +768,12 @@ function renderAubergePerso() {
                     <p class="name">${heroData.name}</p>
                     <div class="bottom">
                         <div class="star">
-                            <img src="./assets/img/hero-card/star.webp" alt="">
-                            <img src="./assets/img/hero-card/star.webp" alt="">
-                            <img src="./assets/img/hero-card/star.webp" alt="">
-                            <img src="./assets/img/hero-card/star.webp" alt="">
-                            <img src="./assets/img/hero-card/star.webp" alt="">
+                            ${heroEvolution(hero.evolution)}
                         </div>
                         <div class="info">
-                            <div class="spell"></div>
+                            <div class="spell">
+                                ${heroSpell(hero.spell)}
+                            </div>
                             <div class="level">
                                 <p>Niv ${hero.level}</p>
                             </div>
@@ -790,6 +784,22 @@ function renderAubergePerso() {
             }
         })
     })
+}
+
+function heroEvolution(number) {
+    let star = ''
+    for (let i = 0; i < number; i++) {
+        star += '<img src="./assets/img/hero-card/star.webp" alt="">'
+    }
+    return star
+}
+
+function heroSpell(spellArrayLevel) {
+    let spell = ''
+    spellArrayLevel.forEach((level) => {
+        spell += `<img src="./assets/img/hero-card/spell_lvl_${level}.webp" alt="">`
+    })
+    return spell
 }
 
 
