@@ -755,14 +755,13 @@ function renderAubergePerso() {
 
         rarity.forEach((hero) => {
             let heroData = listRarityData.find(data => data.name === hero.name)
-            // console.log(hero)
-            // console.log(heroData)
 
             if (hero.owned > 0) {
                 let card = document.createElement('div')
                 card.classList.add('perso-card')
                 card.setAttribute('owned', 'true')
                 card.setAttribute('who', heroData.url)
+                card.setAttribute('onclick', `renderPersoDetail('${heroData.url}')`)
                 card.innerHTML = `
                     <img src="./assets/img/hero-card/cadre_${heroData.type}.webp" alt="">
                     <img class="rarity" src="./assets/img/hero-card/gemme_${heroData.rarity}.webp" alt="">    
@@ -791,14 +790,13 @@ function renderAubergePerso() {
 
         rarity.forEach((hero) => {
             let heroData = listRarityData.find(data => data.name === hero.name)
-            console.log(hero)
-            // console.log(heroData)
 
             if (hero.owned == 0) {
                 let card = document.createElement('div')
                 card.classList.add('perso-card')
                 card.setAttribute('owned', 'false')
                 card.setAttribute('who', heroData.url)
+                card.setAttribute('onclick', `renderPersoDetail('${heroData.url}')`)
                 card.innerHTML = `
                     <img src="./assets/img/hero-card/cadre_${heroData.type}.webp" alt="">
                     <img class="rarity" src="./assets/img/hero-card/gemme_${heroData.rarity}.webp" alt="">    
@@ -837,6 +835,10 @@ function heroSpell(spellArrayLevel) {
         spell += `<img src="./assets/img/hero-card/spell_lvl_${level}.webp" alt="">`
     })
     return spell
+}
+
+function renderPersoDetail(hero) {
+    console.log(hero)
 }
 
 

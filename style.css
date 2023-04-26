@@ -2057,6 +2057,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  cursor: pointer;
 }
 .perso-card > img {
   position: absolute;
