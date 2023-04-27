@@ -350,6 +350,10 @@ let classListBorder = [guiBorderTop, guiBorderLeft, guiBorderBottom, guiBorderRi
 function closeAllMainScreenMenu() {
     classListBorder.forEach((item) => {
         item.addEventListener('click', () => {
+            if (item.getAttribute('visible') == 'false') {
+                return
+            }
+            
             guiLayer0.setAttribute('visible', 'false')
             guiAuberge.setAttribute('visible', 'false')
             guiPuit.setAttribute('visible', 'false')
@@ -598,7 +602,6 @@ function renderInvoc(rarity, hero) {
     
     guiInTavernInvoc.appendChild(card)
 
-    console.log(hero)
     addInvocToInventory(hero)
 }
 
@@ -626,6 +629,10 @@ function addInvocToInventory(hero) {
 
 async function invocation(number) {
     let guiInTavernBtnInvoc = document.querySelectorAll('.gui__in-taverne-btn-invoc button')
+
+    classListBorder.forEach((item) => {
+        item.setAttribute('visible', 'false')
+    })
 
     for (let i = 0; i < guiInTavernBtnInvoc.length; i++) {
         if (guiInTavernBtnInvoc[i].getAttribute('clickable') == 'false') {
@@ -695,6 +702,10 @@ async function invocation(number) {
     for (let i = 0; i < guiInTavernBtnInvoc.length; i++) {
         guiInTavernBtnInvoc[i].setAttribute('clickable', 'true')
     }
+
+    classListBorder.forEach((item) => {
+        item.setAttribute('visible', 'true')
+    })
 }
 
 function taverneInvocCleanOpen() {
@@ -766,6 +777,7 @@ function renderAubergePerso() {
                     <img src="./assets/img/hero-card/cadre_${heroData.type}.webp" alt="">
                     <img class="rarity" src="./assets/img/hero-card/gemme_${heroData.rarity}.webp" alt="">    
                     <p class="name">${heroData.name}</p>
+                    ${heroOwned(hero.owned)}
                     <div class="bottom">
                         <div class="star">
                             ${heroEvolution(hero.evolution)}
@@ -801,6 +813,7 @@ function renderAubergePerso() {
                     <img src="./assets/img/hero-card/cadre_${heroData.type}.webp" alt="">
                     <img class="rarity" src="./assets/img/hero-card/gemme_${heroData.rarity}.webp" alt="">    
                     <p class="name">${heroData.name}</p>
+                    ${heroOwned(hero.owned)}
                     <div class="bottom">
                         <div class="star">
                             ${heroEvolution(hero.evolution)}
@@ -835,6 +848,15 @@ function heroSpell(spellArrayLevel) {
         spell += `<img src="./assets/img/hero-card/spell_lvl_${level}.webp" alt="">`
     })
     return spell
+}
+
+function heroOwned(number) {
+    console.log(number)
+    if (number > 1) {
+        return `<p class="owned">x ${number - 1}</p>`
+    } else {
+        return ""
+    }
 }
 
 function renderPersoDetail(hero) {

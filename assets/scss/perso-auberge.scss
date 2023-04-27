@@ -33,6 +33,17 @@
         z-index: 230;
     }
 
+    .owned {
+        position: absolute;
+        top: 13%;
+        right: 8%;
+        z-index: 230;
+        padding: 0.5rem;
+        background-color: rgba(255, 255, 255, 0.4);
+        border: 0.25rem solid rgba(215, 160, 9, 0.8);
+        border-radius: 9999px;
+    }
+
     .bottom {
         z-index: 230;
         margin-bottom: 1.9rem;

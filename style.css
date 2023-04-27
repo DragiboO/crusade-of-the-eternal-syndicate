@@ -1981,6 +1981,7 @@ body {
 .gui__in-auberge {
   height: 81.7%;
   width: 92.3%;
+  position: relative;
 }
 .gui__in-auberge hr {
   width: 90%;
@@ -2079,6 +2080,16 @@ body {
   margin-top: 1.6rem;
   font-size: 1.5rem;
   z-index: 230;
+}
+.perso-card .owned {
+  position: absolute;
+  top: 13%;
+  right: 8%;
+  z-index: 230;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 0.25rem solid rgba(215, 160, 9, 0.8);
+  border-radius: 9999px;
 }
 .perso-card .bottom {
   z-index: 230;
